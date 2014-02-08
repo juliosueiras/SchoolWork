@@ -7,6 +7,6 @@ import model.Avatar;
  */
 public interface Strategist
 {
-    void analyzeWeakness(Avatar a);
+    void analyzeWeakness(Avatar avatarName);
     boolean command(String strategy);
 }

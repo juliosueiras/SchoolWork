@@ -1,12 +1,13 @@
 package model.hero;
 
 import model.Avatar;
+import model.Superhero;
 import model.interfaces.Shooter;
 
 /**
  * Created by julio on 2/6/14.
  */
-public class GreenLantern implements Shooter
+public class GreenLantern extends Superhero implements Shooter
 {
     private int sector;
     private double ringCharge;
@@ -27,13 +28,19 @@ public class GreenLantern implements Shooter
     }
     
     @Override
-    public void shoot(String s, Avatar a)
+    public void shoot(String weaponName, Avatar avatarName)
     {
 
     }
 
     @Override
     public void blastArea()
+    {
+
+    }
+
+    @Override
+    public void fight(Avatar avatarName)
     {
 
     }

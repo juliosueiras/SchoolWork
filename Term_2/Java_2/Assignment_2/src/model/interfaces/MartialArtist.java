@@ -7,6 +7,6 @@ import model.Avatar;
  */
 public interface MartialArtist
 {
-    void stealthAttack(Avatar a);
+    void stealthAttack(Avatar avatarName);
     boolean evade();
 }

@@ -24,4 +24,10 @@ public class Villain extends Avatar
     {
         this.energy = energy;
     }
+
+    @Override
+    public void fight(Avatar avatarName)
+    {
+
+    }
 }

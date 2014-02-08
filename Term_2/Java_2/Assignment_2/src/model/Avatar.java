@@ -13,10 +13,7 @@ public abstract class Avatar
 
     private String firstName,lastName;
 
-    public void fight(Avatar a)
-	{
-
-	}
+    public abstract void fight(Avatar avatarName);
 
 	public int getFighting()
 	{

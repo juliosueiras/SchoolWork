@@ -9,7 +9,7 @@ import model.interfaces.*;
 /**
  * Created by julio on 2/6/14.
  */
-public class Batman implements Strategist, Shooter,MartialArtist,Brawler
+public class Batman extends Superhero implements Strategist, Shooter,MartialArtist,Brawler
 {
 
     private boolean armed;
@@ -48,7 +48,7 @@ public class Batman implements Strategist, Shooter,MartialArtist,Brawler
     }
 
     @Override
-    public void analyzeWeakness(Avatar a)
+    public void analyzeWeakness(Avatar avatarName)
     {
 
     }
@@ -60,19 +60,19 @@ public class Batman implements Strategist, Shooter,MartialArtist,Brawler
     }
 
     @Override
-    public void brawl(Avatar a)
+    public void brawl(Avatar avatarName)
     {
 
     }
 
     @Override
-    public void grapple(Avatar a)
+    public void grapple(Avatar avatarName)
     {
 
     }
 
     @Override
-    public void stealthAttack(Avatar a)
+    public void stealthAttack(Avatar avatarName)
     {
 
     }
@@ -84,13 +84,19 @@ public class Batman implements Strategist, Shooter,MartialArtist,Brawler
     }
 
     @Override
-    public void shoot(String s, Avatar a)
+    public void shoot(String weaponName, Avatar avatarName)
     {
 
     }
 
     @Override
     public void blastArea()
+    {
+
+    }
+
+    @Override
+    public void fight(Avatar avatarName)
     {
 
     }

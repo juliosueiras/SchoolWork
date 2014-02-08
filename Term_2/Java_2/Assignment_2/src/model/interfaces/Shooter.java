@@ -7,6 +7,6 @@ import model.Avatar;
  */
 public interface Shooter
 {
-    void shoot(String s, Avatar a);
+    void shoot(String weaponName, Avatar avatarName);
     void blastArea();
 }

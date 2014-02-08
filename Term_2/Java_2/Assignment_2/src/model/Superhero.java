@@ -35,4 +35,11 @@ public class Superhero extends Avatar
     {
         this.homeTown = homeTown;
     }
+
+
+    @Override
+    public void fight(Avatar avatarName)
+    {
+
+    }
 }

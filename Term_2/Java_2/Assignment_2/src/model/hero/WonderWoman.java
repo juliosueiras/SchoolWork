@@ -1,13 +1,14 @@
 package model.hero;
 
 import model.Avatar;
+import model.Superhero;
 import model.interfaces.*;
 
 
 /**
  * Created by julio on 2/6/14.
  */
-public class WonderWoman implements Strategist,Brawler
+public class WonderWoman extends Superhero implements Strategist,Brawler
 {
     private boolean armed;
     private int mysticEnergy;
@@ -28,7 +29,7 @@ public class WonderWoman implements Strategist,Brawler
     }
 
     @Override
-    public void analyzeWeakness(Avatar a)
+    public void analyzeWeakness(Avatar avatarName)
     {
 
     }
@@ -40,14 +41,20 @@ public class WonderWoman implements Strategist,Brawler
     }
 
     @Override
-    public void brawl(Avatar a)
+    public void brawl(Avatar avatarName)
     {
 
     }
 
     @Override
-    public void grapple(Avatar a)
+    public void grapple(Avatar avatarName)
     {
 
+    }
+
+    @Override
+    public void fight(Avatar avatarName)
+    {
+        super.fight(avatarName);
     }
 }

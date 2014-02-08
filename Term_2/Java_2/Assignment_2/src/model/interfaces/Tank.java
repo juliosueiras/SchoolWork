@@ -4,7 +4,7 @@ import model.Avatar;
 
 public interface Tank
 {
-    void defend(Avatar a);
-    void crush(Avatar a);
+    void defend(Avatar avatarName);
+    void crush(Avatar avatarName);
 }
 

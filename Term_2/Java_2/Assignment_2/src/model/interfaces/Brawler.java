@@ -7,6 +7,6 @@ import model.Avatar;
  */
 public interface Brawler
 {
-    void brawl(Avatar a);
-    void grapple(Avatar a);
+    void brawl(Avatar avatarName);
+    void grapple(Avatar avatarName);
 }

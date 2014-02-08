@@ -24,4 +24,10 @@ public class Civilian extends Avatar
     {
         this.questSource = questSource;
     }
+
+    @Override
+    public void fight(Avatar avatarName)
+    {
+
+    }
 }
