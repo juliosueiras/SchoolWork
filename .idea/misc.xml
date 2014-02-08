@@ -240,7 +240,7 @@
     <option name="OPTION_INCLUDE_LIBS" value="false" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/compilerOutput" />
+    <output url="file://$USER_HOME$" />
   </component>
   <component name="SuppressionsComponent">
     <option name="suppComments" value="[]" />

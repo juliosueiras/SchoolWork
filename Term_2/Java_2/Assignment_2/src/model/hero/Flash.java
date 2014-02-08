@@ -15,6 +15,13 @@ public class Flash extends Superhero implements MartialArtist, Shooter
     private boolean invisible,
                     intangible;
 
+    public Flash(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean invisible, boolean intangible)
+    {
+        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        this.invisible = invisible;
+        this.intangible = intangible;
+    }
+
     public void cyclone()
     {
         System.out.println("Flash use cyclone!");

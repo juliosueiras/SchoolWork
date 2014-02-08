@@ -15,7 +15,7 @@ public class Superman extends Superhero implements Tank, Brawler
 
     /**
      * Heat vision.
-     */
+     *
     public void heatVision()
     {
         System.out.println("Superman use heat vision! it melt through metal!!");

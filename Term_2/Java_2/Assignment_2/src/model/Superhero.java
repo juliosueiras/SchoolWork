@@ -6,6 +6,14 @@ public class Superhero extends Avatar
     private int energy;
     private String homeTown;
 
+    public Superhero(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    {
+        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName);
+        this.secretIdentity = secretIdentity;
+        this.energy = energy;
+        this.homeTown = homeTown;
+    }
+
     public boolean isSecretIdentity()
     {
         return secretIdentity;
