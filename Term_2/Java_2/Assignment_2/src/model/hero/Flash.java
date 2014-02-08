@@ -45,18 +45,18 @@ public class Flash extends Superhero implements MartialArtist, Shooter
     @Override
     public void shoot(String weaponName, Avatar avatarName)
     {
-
+        System.out.println("Flash shoot " + avatarName + " with " + weaponName);
     }
 
     @Override
     public void blastArea()
     {
-
+        System.out.println("Flash blasted the area away with his speed");
     }
 
     @Override
     public void fight(Avatar avatarName)
     {
-
+        System.out.println("Flash fight " + avatarName + " with his speed punch ");
     }
 }

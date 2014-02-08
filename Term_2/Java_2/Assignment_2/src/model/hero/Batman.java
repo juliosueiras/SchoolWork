@@ -17,16 +17,16 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
 
     public void nightVision()
     {
-
+        System.out.println("Batman use night vision!");
     }
 
     /***
      *
-     * @param a
+     * @param avatarName
      */
-    public void blind(Avatar a)
+    public void blind(Avatar avatarName)
     {
-
+        System.out.println("Batman use blind on " + avatarName);
     }
 
     /***
@@ -34,23 +34,23 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
      */
     public void thermalGrenade()
     {
-
+        System.out.println("Batman use thermal Grenade!");
     }
 
-    public void intimidate(Avatar a)
+    public void intimidate(Avatar avatarName)
     {
-
+        System.out.println("Batman use intimidate on " + avatarName);
     }
 
-    public void surprise(Avatar a)
+    public void surprise(Avatar avatarName)
     {
-
+        System.out.println("Batman use surprise on " + avatarName);
     }
 
     @Override
     public void analyzeWeakness(Avatar avatarName)
     {
-
+        System.out.println("Batman use analyze weakness on" + avatarName + ", now Batman know all weakness");
     }
 
     @Override
@@ -62,19 +62,19 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
     @Override
     public void brawl(Avatar avatarName)
     {
-
+        System.out.println("Batman use brawl on " + avatarName);
     }
 
     @Override
     public void grapple(Avatar avatarName)
     {
-
+        System.out.println("Batman use grapple on " + avatarName);
     }
 
     @Override
     public void stealthAttack(Avatar avatarName)
     {
-
+        System.out.println("Batman use stealth attack on " + avatarName);
     }
 
     @Override
@@ -86,18 +86,18 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
     @Override
     public void shoot(String weaponName, Avatar avatarName)
     {
-
+        System.out.println("Batman use " + weaponName + " on " + avatarName);
     }
 
     @Override
     public void blastArea()
     {
-
+        System.out.println("Batman blast the area away with his power attack!");
     }
 
     @Override
     public void fight(Avatar avatarName)
     {
-
+        System.out.println("Batman attack " + avatarName + " with his takedown");
     }
 }

@@ -13,21 +13,33 @@ public class Superman extends Superhero implements Tank, Brawler
     private Civilian girlfriend = new Civilian();
     private Civilian friend = new Civilian();
 
+    /**
+     * Heat vision.
+     */
     public void heatVision()
     {
         System.out.println("Superman use heat vision! it melt through metal!!");
     }
 
+    /**
+     * Cold breath.
+     */
     public void coldBreath()
     {
         System.out.println("Superman use cold breath! it freeze even atom!");
     }
 
+    /**
+     * X ray vision.
+     */
     public void xRayVision()
     {
         System.out.println("Superman use x ray vision! it see through everything");
     }
 
+    /**
+     * Fly void.
+     */
     public void fly()
     {
         System.out.println("Superman use fly! in sonic speed");

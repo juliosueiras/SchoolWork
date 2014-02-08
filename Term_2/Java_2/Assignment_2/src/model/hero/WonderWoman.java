@@ -13,25 +13,38 @@ public class WonderWoman extends Superhero implements Strategist,Brawler
     private boolean armed;
     private int mysticEnergy;
 
+    /**
+     * Deflect void.
+     */
     public void deflect()
     {
-
+        System.out.println("Wonder woman deflect the attack");
     }
 
-    public void lasso(Avatar a)
+    /**
+     * Lasso void.
+     *
+     * @param avatarName the avatar name
+     */
+    public void lasso(Avatar avatarName)
     {
-
+        System.out.println("Wonder woman use lasso on " + avatarName);
     }
 
-    public void interrogate(Avatar a)
+    /**
+     * Interrogate void.
+     *
+     * @param avatarName the avatar name
+     */
+    public void interrogate(Avatar avatarName)
     {
-
+        System.out.println("Wonder woman interrogated " + avatarName);
     }
 
     @Override
     public void analyzeWeakness(Avatar avatarName)
     {
-
+        System.out.println("Wonder woman analyze weakness of " + avatarName);
     }
 
     @Override
@@ -43,18 +56,18 @@ public class WonderWoman extends Superhero implements Strategist,Brawler
     @Override
     public void brawl(Avatar avatarName)
     {
-
+        System.out.println("Wonder woman use brawl on " + avatarName);
     }
 
     @Override
     public void grapple(Avatar avatarName)
     {
-
+        System.out.println("Wonder woman use grapple on " + avatarName);
     }
 
     @Override
     public void fight(Avatar avatarName)
     {
-        super.fight(avatarName);
+        System.out.println("Wonder woman attack " + avatarName + " with her wonder power");
     }
 }
