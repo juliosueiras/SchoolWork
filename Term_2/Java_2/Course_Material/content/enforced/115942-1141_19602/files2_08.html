@@ -1,0 +1,450 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>File Output</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+<script type="text/javascript">
+<!--
+
+//-->
+</script>
+
+</head>
+
+<body onload='window.focus()'>
+
+<h2>File Output</h2>
+
+<h3>Topics Covered:</h3>
+
+<ul class="outer">
+	<li><a href="#seq">About Sequential Files</a>
+	<li><a href="#create">Creating Character Files</a>
+        <li><a href="#ex">Exercise</a></li>
+</ul>
+
+<h3>Things To Do Before Reading This Section:</h3>
+<ul class="outer">
+	<!--<li><a href="files/GradesGui.zip">Download this file</a> and unzip
+    it into today's folder.-->
+	<li>Read chapter 9.6 and 9.7.1 in your textbook.
+	<li>Try questions 9.21 - 9.23 on page 334-5 of your
+            textbook.
+</ul>
+
+<h3>Things To Do After Reading This Section</h3>
+<ul class="outer">
+	<li>Do any homework assigned by your professor.
+</ul>
+
+<a name="seq"><h3>About Sequential Files</h3></a>
+
+<p>The character stream we use in this section will create plain-text
+files. For our files that store records and fields, we are going to
+work with <b>sequential files</b>.  In a sequential file, records are
+stored sequentially in the order in which they were added.  If you want
+your records sorted, you'll have to load some or all of the fields into
+memory (i.e. using arrays) and sort them.  You can't physically change
+the order of the records in the file unless you create a new file and
+copy the records over in the order you want.</p>
+
+<p>An important (and somewhat cumbersome) feature of sequential files
+is that records are accessed sequentially.  Think of a cassette tape
+with songs on it.  If you want to go straight to the fourth song on
+the tape, you'll have to fast-forward past the first, second and third
+songs in order to get to the fourth song.  In a sequential file, you
+have to write a loop that reads in the first three records before you
+get to the fourth record:</p>
+
+<pre>// print the fourth record only:
+Open file
+counter = 1
+While counter &lt;=4
+    Read record
+    Add 1 to counter
+Print record</pre>
+
+<p>Another issue with sequential files is that if you go to a certain
+record and then want to go back to the beginning of the file, you have
+to close the stream and then re-open it again.  We'll solve these
+problems when we get to Chapter 19.7 in your textbook.</p>
+
+<h4>Delimited Files</h4>
+
+<p>Data is stored in a file as a sequential series of bytes or
+characters.  Therefore, when you are storing and reading records from a
+data file, there needs to be a way to determine where one record ends
+and the next record begins, and also where one field ends and the next
+field begins.  For example, if you had a text data file that contained
+the following:</p>
+
+<pre>123456789FlintstoneFredPITPI2.954892 Main Street987654321RubbleBettyPITSC3.796894 MainStreet</pre>
+
+<p>Can you tell how many records are listed?  Can you tell how many
+fields or what the contents of those fields are?  (there are 2 records
+and each one has 7 fields!)</p>
+
+<p>With a file description, you can probably guess at some of the field
+contents, but your program can't evaluate this kind of information, so
+it's important for the programmer to ensure that a particular program
+is able to define the beginnings and endings of fields and records.
+If a file contains <b>fixed-width</b> records, where each record and
+field is always exactly the same size, then this is a matter of
+calculation.  However, we'll start off working with files that have
+<b>variable-length</b> fields and records, so we need a way to separate
+each record and field.</p>
+
+<p>A <b>delimited file</b> is a file that uses a special character or
+characters to separate fields and records.  As you design a file
+structure, you'll also have to decide what character(s) will be used
+to delimit fields and records.</p>
+
+<p>Most files use the carriage-return and line-feed (CR/LF) characters
+to delimit records (this is the equivalent of pressing the Enter key).
+An advantage of this is that if you want to look at the file's physical
+contents, it's easy to see the records because they're all on separate
+lines.</p>
+
+<table class="highlight"><tr><td class="highlight">What does
+"carriage-return/line-feed" mean??  This is actually a set of two
+characters!  Together these two characters make up the results of
+pressing the "Enter" or "Return" key!  The names of these characters
+comes from using the old typewriters (old as in REALLY old, not the
+electric kind -- these didn't even plug in!)  When you were typing on
+a typewriter, the paper was rolled into the device on a carriage.  As
+you typed, little hammers would come up and punch through and ink strip,
+making the mark of a character on the paper.  After each character you
+typed, the carriage would move along, taking the paper with it, such
+that the next character appeared in the next spot on the line.
+Eventually, you would reach the end of the line!  When this was about
+to happen, a little bell would go off to warn you that you only had a
+few spaces left to type in.  At this point, you would grab a little
+lever on the side of the carriage and use it to push the carriage back
+to the beginning of the line (carriage-return!)  At the same time, the
+carriage would also roll up to a new, clean line on the page where your
+next line of text would go (line-feed!)</td></tr></table>
+
+<p>The character used to delimit fields varies from program to program
+and from programmer to programmer.  For example, in Visual Basic, many
+programmers like to use a comma (,) to separate fields.  In Java, I like
+to use the pipe (|) symbol.  If I stored my previous file data example
+in a Java text data file, it could look like this:</p>
+
+<pre>123456789|Flintstone|Fred|PITPI|2.95|4|892 Main Street
+987654321|Rubble|Betty|PITSC|3.79|6|894 MainStreet</pre>
+
+<p>In the above example, the pipe symbol | was used to delimit the
+fields.  You can use other symbols, such as the comma:</p>
+
+<pre>123456789,Flintstone,Fred,PITPI,2.95,4,892 Main Street
+987654321,Rubble,Betty,PITSC,3.79,6,894 MainStreet</pre>
+
+<p>If you choose to use a comma as your field delimiter, keep in mind
+these very important points:</p>
+<ol>
+	<li>DO NOT put a space after the comma.  This can cause problems
+    when reading your data back into the program.
+	<li>Only use the comma if you know that your data will not contain 
+    a comma.  For example, I would not use a comma delimiter if I were
+    storing values with the thousands separator (e.g. 32,000) because
+    your input program won't be able to tell the difference between the
+    delimiter and the thousands separator.
+</ol>
+
+<a name="create"><h3>Creating Character Files</h3></a>
+
+<h4>Reference: Chapter 9.7.1</h4>
+
+<p>Creating a file requires 3 steps:</p>
+
+<ol>
+<li>Create an output stream to the file.
+<li>Write the data to the file.
+<li>Close the output stream.
+</ol>
+
+<p>With some stream objects, if you forget step #3, your data won't be
+saved!  If you are debugging a program and can't figure out why the
+data is not being written to the file, check that you've remembered to
+close the stream.</p>
+
+<div class="puzzle">The classes we'll be using in this session,
+including the exception classes, are all part of the <b>java.io</b>
+package.  Make sure you <b>import java.io.*;</b> when writing programs
+that use the File class, PrintWriter, BufferedWriter, and FileWriter
+classes, or when you're referring to exceptions such as IOException
+and FileNotFoundException.</div>
+
+<h4>Create an Output Stream</h4>
+
+<p>For this section, we'll be using the PrintWriter class to create our
+files.  The PrintWriter constructor will accept a String representing a
+file name, or it will take a File object.  For example:</p>
+
+<pre>PrintWriter fileOut1 = new PrintWriter("datafile.dat");
+File myFile = new File("afile.dat");
+PrintWriter fileOut2 = new PrintWriter(myFile);
+PrintWriter fileOut3 = new PrintWriter(new File("somefile.txt"));</pre>
+
+<p>The PrintWriter constructors throw a FileNotFoundException if the
+file is not writable (e.g. write protected), a new file can't be
+created (e.g. directory is write protected), or the file/directory is
+otherwise inaccessible.</p>
+
+<p>If successful, constructing the PrintWriter object opens the output
+stream to the file specified.  If the file does not exist, it will be
+created.  If the file does exist, all existing data in the file will be
+discarded.  Obviously this last point will cause a problem when you want
+to <i>append</i> to an existing file.  Don't worry; we'll cover that
+later.</p>
+
+<!--
+<p>Reading the first half Chapter 12.2 will get you familiar with the following:</p>
+
+<ul class="outer">
+	<li>the FileWriter, BufferedWriter, and PrintWriter classes
+	<li>why we use the BufferedWriter class
+	<li>why we use the PrintWriter class
+	<li>how to use these three objects to create an output stream to a file
+	<li>how to use these three objects to append to a file
+	<li>there are 2 ways to write the statement(s) that create these objects (pages 627-8)
+	<li>how to use the print() and println() methods to write data to the file
+	<li>how to close the output stream using the close() method
+</ul>
+
+<p>Other important things to note when instantiating the FileWriter class:</p>
+<ul class="outer">
+	<li>The string for the file name does not have to exist.  If this file does not exist, it will be created.  If it does exist, it will be overwritten.  If you want to <b>append</b> to the file (add to its current contents instead of deleting all the current contents), add a second parameter true indicating that you want to append to the file, not overwrite it.
+	<li>The constructor and the write() method throw an IOException, so this statement must be in a try-block, or the exception must be thrown from the method in which it resides.
+</ul>
+-->
+
+<table class="highlight"><tr><td class="highlight">You've actually
+used PrintWriter before!  PrintWriter is the class from which
+System.out is derived.  What methods do we use to write data to the
+console?  print() and println()!  System.out represents the default
+output device, which is the monitor.  We can wrap our FileWriter
+object inside a PrintWriter object, which allows us to use the print()
+and println() methods to send data to our file.  This will not affect
+the functionality of System.out.  System.out and our PrintWriter
+object are two different instances of the same class and will have
+no effect on each other.</td></tr></table>
+
+<h4>Write Data to the File</h4>
+
+<p>The next step to creating or adding to a file is to write the
+records or data to the file.  This can be easily done using the
+PrintWriter's print(), println(), and printf() methods.</p>
+
+<p>Just as you would expect, print() will add text to your file,
+whereas println() will add the text followed by a newline character
+sequence.  For example:</p>
+
+<pre>PrintWriter fileOut = new PrintWriter("example.dat");
+fileOut.print("Fred");
+fileOut.println("Flintstone");
+fileOut.println("End of File");</pre>
+
+<p>The statements above will place the following data in the file
+example.dat:</p>
+
+<pre>FredFlintstone
+End of File</pre>
+
+<h4>Closing the Output Stream</h4>
+
+<p>Closing the output stream is simple, just use the PrintWriter's
+close() method:</p>
+
+<pre>PrintWriter fileOut = new PrintWriter("example.dat");
+fileOut.print("Fred");
+fileOut.println("Flintstone");
+fileOut.println("End of File");
+fileOut.close()</pre>
+
+<p>In some programs, it is extremely important that you close the
+stream when you're finished, before you exit the program.  Exiting
+the program does not always close the stream (as you'll see later).
+If the stream is not closed, some data stored in memory buffers before
+being written to the file might be lost.</p>
+
+
+<h4>Exercises</h4>
+
+<p><b>1. a.</b> Write a program that saves your first name and your
+last name to a file called ex1.txt.  Store your first name on one line
+and your last name on the second line.  How many bytes should your
+file contain? In My Computer, find the file and right-click on it,
+selecting Properties.  How many bytes does it say are in your file?
+Open the Command Prompt, navigate to the folder where ex1.txt is
+stored.  Type the following followed by Enter:</p>
+
+<pre>debug ex1.txt</pre>
+<div class="puzzle"><b>Eclipse Users</b>:
+If you're using Eclipse, your data files should
+be stored in the main project folder in your default Java workspace.
+When you first started Eclipse, you specified the location in your
+directory structure for the Java workspace.  If you don't know what
+this is, right-click your project name in the Package Explorer and
+select "Properties".  You should see your workspace location in the
+main area of the dialog under the heading Resource as "Location:".
+In that directory, you should see a directory with your project name;
+that is the "home" directory for your project, and is where your data
+file can be found.  For example, my workspace is D:\JavaWorkspace.
+If my project were called FileExamples, then then my data file will
+be found in D:\JavaWorkspace\FileExamples.<br />
+<b>NetBeans Users</b>: If you're using NetBeans, your data file is
+in the main project root directory.  For example, if you store your
+NetBeans projects in C:\courses\prog24178\programs and the project is
+called "FileExamples", then your data files are stored in the
+C:\courses\prog24178\programs\FileExamples directory.</div>
+
+<p>You should see a dash at the prompt.  Type the "d" key and press
+Enter.  Then type "q" and press Enter to go back to the main prompt.
+You should see something such as:</p>
+
+<pre>D:\Courses\prog24178\programs\files2>debug ex1.dat
+-d
+13D2:0100  6B 61 6C 75 68 61 0D 0A-6A 6F 6C 6C 79 6D 6F 72   kaluha..jollymor
+13D2:0110  65 00 00 00 00 00 00 00-00 00 00 00 34 00 C1 13   e...........4...
+13D2:0120  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00   ................
+13D2:0130  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00   ................
+13D2:0140  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00   ................
+13D2:0150  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00   ................
+13D2:0160  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00   ................
+13D2:0170  00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 00   ................
+-q
+
+D:\Courses\prog24178\programs\files2></pre>
+
+<p>The first column of data is a list of memory addresses.  The
+middle block that contains the pairs of numbers and letters are the
+contents of that block of memory in hex.  The last column is the text
+contained in that block of memory.  Each text character corresponds
+to a pair of hex values.  For example, my first character is a "k",
+which is stored as the value "6B".  6B is 107 in decimal.  According
+to the chart on page 66 of your textbook, what is the value of the
+letter "k"?</p>
+
+<p>What are the hex values of each character of your first name?
+What are the values of each character of your last name?  What hex
+values are stored in between your first name and last name?  What
+do these two characters mean?  Check your chart on page 66 if you
+aren't sure!</p>
+
+<p><b>1. b. </b>Run the program a second time.  What would you
+expect to see in your file?  What is actually contained in your
+file after you run the program a second time?</p>
+
+<h4>Appending to an Existing File</h4>
+
+<p>When you run the program in question 1.a. above a second time,
+you don't see two occurences of your first/last name in the file.
+You might think that if you open an existing file and add data to
+it, that new data would be added to the end of the file.  Using
+PrintWriter on its own, this is not the case.  When you construct
+a new PrintWriter object on an existing file, the file's contents
+are deleted when the stream is opened.  This is not very useful in
+many programs!  Ideally, you will want to open a data file and add
+records to the records that are already there!</p>
+
+<p>To <b>append</b> to an existing file requires a couple of extra
+output streams:</p>
+
+<ul class="inner">
+	<li><b>FileWriter</b>
+	<ul class="inner">
+		<li>A character stream used to write text data to text files.
+		<li>Constructors FileWriter(File f) and FileWriter(String 
+        fileName) will construct a new FileWriter stream to the File
+        object f or the file with the name fileName.
+		<li>Adding a second boolean argument of
+        <font face="Courier New">true</font> to either constructor will
+        cause new data to be appended to the file (no argument, or an
+        argument of false, acts the same as the PrintWriter constructors)
+		<li>These constructors throw an IOException if the file is a
+        directory, or the file can't be accessed or written to.
+	</ul>
+	<li><b>BufferedWriter</b>
+		<ul class="inner">
+			<li>Is "wrapped around" the FileWriter object by using the
+            BufferedWriter(FileWriter fw) constructor.
+			<li>Adds efficiency to file writing by buffering characters
+            in memory.
+			<ul>
+			<li>Normally, when you write data with FileWriter, you are
+            sending a few bytes of data at a time.
+			<li>Device drivers that handle writing to files work with
+            blocks of data (usually around 1KB).
+			<li>This is very inefficient, since each write requires
+            calls to the operating system, CPU, hard drive, etc.
+			<li>BufferedWriter saves up the characters in memory 
+            blocks (buffers) that can be flushed to the file in one
+            shot.
+			<li>This saves on the amount of work required to write
+            data to a file.
+			</ul>
+		</ul>
+</ul>
+
+<p>To make use of these stream objects, you construct the FileWriter
+to a specific file object or file-name string.  Then you give that
+FileWriter object to a BufferedWriter object, and give that
+BufferedWriter object to a PrintWriter object:</p>
+
+<pre>FileWriter fw = new FileWriter(fileObject, true);
+BufferedWriter bw = new BufferedWriter(fw);
+PrintWriter fileOut = new PrintWriter(bw);</pre>
+
+<p>Of course, you don't need to "remember" the FileWriter and
+BufferedWriter later in your code, so most programmers will do
+this all in one statement:</p>
+
+<pre>PrintWriter fileOut = new PrintWriter(new 
+     BufferedWriter(new FileWriter(fileObject, true)));</pre>
+
+<p>Regardless of whether you do it in 3 statements or 1 statement,
+fileOut will now contain an output stream that will allow you to
+append records to a file.  In fact, even if you are not wishing to
+append records, this is still a more efficient way to write data to
+a file.</p>
+
+<a name="ex"></a>
+<h4>Exercise</h4>
+
+<p>Write a program that creates a text file for your assignments/tests
+and their grades.  The file should have the following structure:</p>
+
+<table border=1>
+<tr><td colspan=4><b>File Name:</b> grades.dat</td></tr>
+<tr><th>Field Description</th><th>Data Type</th><th>Comments</th><th>Example</th></tr>
+<tr><td>course code</td><td>string/text</td><td>the unique course code</td><td>PROG24178</td></tr>
+<tr><td>evaluation name</td><td>string/text</td><td>the assignment/test/quiz/etc. name</td><td>Mid Term Exam</td></tr>
+<tr><td>actual grade</td><td>double</td><td>what you got on this evaluation</td><td>60</td></tr>
+<tr><td>maximum grade</td><td>double</td><td>what the evaluation was out of</td><td>65</td></tr>
+<tr><td>weighting</td><td>double</td><td>how of your final grade is this evaluation worth (percent)?</td><td>35</td></tr>
+</table>
+<!--Provide appropriate prompts to get the field data from the user-->
+<p>Use <a href="files/GradesOP_ExGui.zip">this gui</a> if you like.  Write
+each field value to the file.  A set of fields make one record.  Don't
+forget to add your delimiters!</p>
+
+<p><b>Hints</b>:  For this exercise, you'll want to open the connection to the
+file at the start of the program (constructor method), write the data each
+time the Save button is pressed, then close the file stream at the end of
+the program (Exit).  <b><i>Your professor will provide additional information
+during class.</i></b></p>
+
+<p><b>Extras (for bonus marks if this is an assignment):</b>  What happens if
+    the user enters invalid data?  In this case,
+    the record should not be added to the file.  A meaningful error message
+    should be shown, instead.  You should never save invalid data to the data
+    file.</p>
+
+<script type="text/javascript" src="../scripts/copynote.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Layout Managers 1</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+
+</head>
+
+<body onload='window.focus()'>
+
+<h2>Layout Managers 1</h2>
+
+<h3>Topics Covered:</h3>
+
+<ul class="outer">
+    <li><a href="#basic">Basic Layout Managers</a></li>
+    <ul class="inner">
+	<li><a href="#layout">Layout Managment</a>
+	<li><a href="#flow">FlowLayout</a>
+	<li><a href="#grid">GridLayout</a>
+	<li><a href="#border">BorderLayout</a>
+    </ul>
+    <li><a href="#summary">Summary of Basic Layout Managers</a></li>
+    
+    <!--
+    <li><a href="#complex">Complex Layouts</li>
+    <ul class="inner">
+	<li><a href="#pack">Using the pack() Method</a>
+	<li><a href="#nest">Nesting Layouts</a>
+	<li><a href="#size">Setting Component Sizes</a>
+    </ul>-->
+</ul>
+
+<h3>Things To Do Before Class</h3>
+<ul class="outer">
+	<li>Read Chapter 12.4 to 12.6 in your textbook.</li>
+	<li>Go through the tutorials at Sun's <a href="http://java.sun.com/docs/books/tutorial/uiswing/layout/index.html" target="_new">Laying Out Components Within a Container</a>
+        <li>You can read about more advanced layout managers in Chapter 33.</li>
+</ul>
+
+<h3>Things To Do After Class</h3>
+<ul class="outer">
+    <li>Do any work/exercises assigned by your professor.</li>
+    <li>Check out some articles on UI design:</li>
+    <ul class="inner">
+        <li><a href="http://www.classicsys.com/css06/cfm/article.cfm?articleid=20">Principals of Good GUI Design</a></li>
+        <li><a href="http://www.ambysoft.com/essays/userInterfaceDesign.html">User Interface Design Tips, Techniques, and Principles</a></li>
+        <li><a href="http://www.useit.com/alertbox/application-mistakes.html">Top-10 Application-Design Mistakes</a></li>
+        <li><a href="http://toastytech.com/guis/uirant.html">Good User Interface Design Tips</a>
+            (If you want to whiz off your users) NOTE this is *sarcasm* - it's a list of what NOT to do.</li>
+    </ul>
+</ul>
+
+<a name="basic"></a>
+<h3>Basic Layout Managers</h3>
+
+<p>Later in the course, you'll learn how to make complex layouts using the
+    Netbeans GUI builder.  However, in order to understand how
+    layout management works, you need to learn some basic layout
+    management concepts and tools.  The key thing to remember as you're
+    learning about layout management is that a Java program's 
+    interface needs to be <i>liquid</i>:  The screen should resize without
+    the components shifting too much, it should be professional,
+    user-friendly, and all components should be clearly visible no matter
+    what the user's screen settings are set too (e.g. large fonts,
+    high-contrast, etc).  There shouldn't be any large gaps or "whitespace"
+    in your interface and you should always resize and maximize
+    your interface to ensure that it always keeps its professional and
+    user-friendly appearance.</p>
+
+<a name="comp"><h3>Layout Management</h3></a>
+
+<p>In Java, layout management helps you to lay out your components
+    in a container.  Layout Managers are classes you can use to
+    define how you would like a component or set of components to
+    be placed in a container.  Layout managers generally work by
+    dividing a container into cells or areas.  Each cell of a layout
+    has a preferred height and width, and components that are placed
+    into cells will often be resized to fit with other components in
+    other cells.  For this reason, we often combine layout managers:
+    You might place a label and text field pair into one container,
+    laid out so that they are placed together.  You might then do
+    this to similar pairs of labels and text fields.  Then you might
+    place each of these label/text field containers into a container
+    that lines them up in rows.</p>
+
+<p>Container classes (such as the content pane and panels, which 
+    we'll learn about shortly) have a setLayout() method that
+    accepts a Layout object as an argument.  This layout object
+    is assigned to the container and will affect how objects are
+    placed when you put them into the container.</p>
+
+<a name="flow"><h3>FlowLayout</h3></a>
+
+<p>FlowLayout is one of the more basic layout classes and
+    it is part of the java.awt package.  FlowLayout likes to keep
+    its components in a row.  If it runs to the edge of the screen,
+    it will wrap to the next line and place the rest of the components
+    on the next row.  Its preferred height is the height of the tallest
+    item in the row plus whatever vertical gap size you set for it.
+    Its preferred width is the sum of the widths of all its components
+    plus any horizontal gap space you place between components and the
+    end of the row.</p>
+
+<h4>FlowLayout Constructors:</h4>
+
+<ul class="outer">
+	<li><font face="Courier New">FlowLayout(int align)</font> 
+            - takes one integer argument that indicates how the
+            components in the container should be aligned.
+            Possible values are FlowLayout.LEFT, FlowLayout.RIGHT,
+            and FlowLayout.CENTER.
+	<li><font face="Courier New">FlowLayout(int align, int vGap,
+                int hGap)</font> - takes an integer argument for alignment,
+                an integer argument for the size of any vertical gap space
+                you'd like between components and the top and bottom of
+                the container, and another integer argument for the size
+                of any horizontal gap space you'd like between components,
+                and between the components and the ends of the container.
+                The vertical and horizontal gap space is measured in pixels.
+</ul>
+
+<p>Try this out.  Create a new Swing interface with 4 buttons
+    (whatever text you like).  Set the layout of the content pane to a
+    left-aligned FlowLayout and vertical & horizontal gap space of 5
+    pixels.  Add your buttons to the content pane.</p>
+
+<p>Try out your interface to see how it appears.  Try making the following
+    changes:</p>
+<ul class="outer">
+	<li>Try it with right alignment; try it with center alignment.
+	<li>Try it with a vGap and hGap of 0.  Try with a vGap and hGap of 20.
+	<li>What happens when you resize the frame with the different
+            alignment settings?
+</ul>
+
+
+<a name="grid"><h3>GridLayout</h3></a>
+
+<p>GridLayout uses a grid, or rows and columns, to lay out components:  
+    It will add components one row at a time, going left to right,
+    then continue with the next row.  GridLayout will stretch all
+    components to be of equal size in the grid, so the preferred size
+    of a particular cell will be the height and width of the largest
+    component in the layout.  One other important thing about GridLayout
+    is that you can only place one component into a cell.</p>
+
+<h4>GridLayout Constructors:</h4>
+
+<ul class="outer">
+	<li><font face="Courier New">GridLayout(int numRows, int numCols)</font> - Takes two integer values representing the number of rows and columns the grid should have.  If you place a 0 in one of these values, it makes one dimension of the layout dynamic.  For example, if you specify 2 rows and 0 columns, the grid will always contain two rows, regardless of the number of components (it will add columns in order to keep the two rows).
+	<li><font face="Courier New">GridLayout(int numRows, int numColumns,
+                int vGap, int hGap)</font> - in addition to the number
+                of rows and columns, also specifies the amount of space
+                (vertically and horizontally) to place between each
+                component and the border of its cell.  Gap space is
+                measured in pixels.
+</ul>
+
+<p>Try it out:  Change the layout of your content pane to a GridLayout
+    with 2 rows, 2 columns, and 5 pixels of vertical and horizontal gap space.  What happens as you resize the frame?</p>
+
+<p>Try the following changes:  </p>
+<ul class="outer">
+	<li>Change the order in which you add the buttons to the content pane.
+	<li>Change the number of rows to 3 and the number of columns to 2.
+        <li>Change the number of rows to 2 and the number of columns to 3.
+	<li>Change the number of rows to 1 and the number of columns to 0.
+	<li>Change the number of rows to 0 and the number of columns to 3.
+</ul>
+
+<h4>Exercise</h4>
+
+<p>Create the following interface:</p>
+<p><img src="images/sess2-3_ex1.jpg"></p>
+
+<a name="border"><h3>BorderLayout</h3></a>
+
+<p>BorderLayout divides your container into 5 areas labeled "North", "South",
+"East", "West", and "Center".  This looks like a pretty useless layout manager
+but it's actually very useful when you combine it with other layout managers.</p>
+
+<p>As with GridLayout, you can only place one component in the cell of a
+    BorderLayout.  In addition, when you add a component to a container
+    with a BorderLayout, you must include a second argument to the add()
+    method that specifies which cell the component must go in.  For example:</p>
+
+<pre>add(cmdExit, BorderLayout.SOUTH);</pre>
+
+<p>This places the component cmdExit into the South cell of the
+    BorderLayout.  Possible values are BorderLayout.SOUTH,
+    BorderLayout.NORTH, BorderLayout.EAST, BorderLayout.WEST, and
+    BorderLayout.CENTER.</p>
+
+<p>The preferred size for a cell in a BorderLayout depend on which
+    position your component is in:</p>
+
+<ul class="outer">
+	<li>NORTH and SOUTH:  The preferred height of the North and
+            South cells are the height of the component contained in
+            the cell.  These cells' preferred width is whatever they
+            can get, so they will stretch as much as they can to the
+            left and right, limited only by the width of the window.
+	<li>EAST and WEST:  The preferred width of the East and West 
+            cells is the width of the component contained in the cell.
+            These cells' preferred height is whatever they can get, so
+            they will stretch as much as they can up and down, limited
+            only by the height of the window.
+	<li>CENTER:  This cell will take up whatever space it can get.
+            What ever height is not taken by North and South, and
+            whatever width is not taken by East and West, will be
+            taken up by the Center.  In other words, Center will take
+            up any left over space, so its preferred size is whatever
+            it can get.
+</ul>
+
+<h4>BorderLayout Constructors:</h4>
+
+<ul class="outer">
+	<li><font face="Courier New">BorderLayout()</font> - creates
+            a BorderLayout object.
+	<li><font face="Courier New">BorderLayout(int vGap, int hGap)</font>
+            - specifies the amount of space (vertically and horizontally)
+            to place between each component and the border of its cell.
+            Gap space is measured in pixels.
+</ul>
+
+<p>Try it:  Add a fifth button to your interface and place all five
+    buttons into cells of a BorderLayout.</p>
+
+<h4>Exercise</h4>
+
+<p>Create the following interface:</p>
+<p><img src="images/sess2-3_ex2.jpg"></p>
+
+<a name="summary"></a>
+<h3>Summary of Basic Layout Managers</h3>
+
+<table border="1" cellpadding="2" cellspacing="0">
+    <tr><th>Layout Manager</th><th colspan="2">Components' Preferred Size</th><th>Behaviour</th></tr>
+    <tr valign="top" align="left"><td>FlowLayout</td><td colspan="2">Keeps natural height and width</td>
+        <td>Lays out components in a row and then wraps to the next row when there
+        is no more width.</td><tr>
+    <tr valign="top" align="left"><td>GridLayout</td><td colspan="2">Will resize all components to the width of the
+        widest component and the height of the tallest component, unless the container
+        is too small, in which case it will divide the available height and width
+        evenly among all components. All components will
+        always be the exact</td><td>Components fill a grid from left to
+        right in the order they were added; when one row is filled, they are then added
+        to the next row. Only one component allowed per "cell".</td></tr>
+    <tr valign="top" align="left"><td rowspan="4">BorderLayout</td><td colspan="2">Depends on the area.</td><td>Divides the container into
+        five cells or areas labeled NORTH, SOUTH, EAST, WEST, and CENTER.</td></tr>
+    <tr valign="top" align="left"><td>NORTH, SOUTH</td><td>Keeps preferred height.<br />Will try to stretch
+        width-wise as far as it can go, even to the edge of the container.</td>
+        <td>Helpful when you want a component to stay anchored to the top or bottom
+        of the container and you want it to stretch across the container's width.</td></tr>
+    <tr valign="top" align="left"><td>WEST, EAST</td><td>Keeps preferred width.<br />Will try to stretch
+        height-wise as far as it can go, either to the top/bottom edge of the container
+        or until it meets up with a component in the NORTH/SOUTH area.</td>
+        <td>Useful if you want a component to stretch up and down in a container but keep
+        its natural width while staying anchored to the side of the container.</td></tr>
+    <tr valign="top" align="left"><td>CENTER</td><td>Will try to stretch the height and width of component to
+        take up all available space in the container that is not taken up by
+        components in the other 4 areas.</td><td>Often used for components like
+        text areas that need to fill most of the screen.</td></tr>
+</table>
+<!--
+<a name="complex"></a>
+<h3>Complex Layouts</h3>
+
+<p>Most of your layouts won't use only one layout manager.  It's possible to create complex layouts by combining two or more layout managers
+in different containers (panels).  This section will give you the tools and concepts needed to create more advanced layouts using the basic
+layout managers learned previously.  Note that there are other, more sophisticated layout managers available:  you might wish to explore
+these on your own.  See the link at the top of this page for Sun's Layout Manager tutorials for more information.</p>
+
+
+<a name="pack"><h3>Using the pack() Method</h3></a>
+
+<p>One of the more difficult parts of writing the constructor for your
+interface is knowing what size your frame should be.  You can eliminate
+this confusing decision by using the pack() method of the JFrame object.
+This method calculates the preferred size of components and containers and
+adds them together, then uses this information to pack the components together
+and set the size of the frame.</p>
+
+<p>Try it out so you can see the difference.  In your previous examples,
+comment out the setSize() method and add the pack() method, before
+setVisible().</p>
+
+<a name="nest"><h3>Nesting Layouts</h3></a>
+
+<p>In many of the examples we did in the previous session, you noticed that
+when you resize your frames, the components shift position, wrap around to a
+new line, or change size.  You can eliminate this behavior by using nested
+flow layouts.  You will also often combine layouts in order to get a specific
+look to your interface.  We combine layouts by creating Panel objects (these
+are just another type of container, but they are invisible to the user, so
+they're perfect for programming interfaces).  We can assign a layout to a
+panel, and then add that panel to another container.  Doing this with many
+panels means you can combine layouts.  Sometimes we call this "nesting
+layouts" because we are placing one panel (with a particular layout) inside
+another container (with another layout).  For example, the following interface
+uses nested layouts:</p>
+
+<p><img src="images/sess2-1_interface.jpg"></p>
+
+<p>To make use of nested layout managers, we often create one or more JPanel
+objects.  A JPanel is just a simple container that is invisible to the user,
+but it includes the setLayout() method so you can give it any layout you
+want.  You can also give the JPanel it's layout manager object in the
+constructor, if you prefer.  JPanel also has the add() method so you can
+add components to a panel.  Other than that, there is little functionality
+in JPanel, it simply contains other components (including other JPanel
+objects).</p>
+
+<p>For example, if I wanted to create a panel that contained two buttons
+in a 1-by-2 grid, I might type code such as:</p>
+
+<pre>JButton cmdSearch = new JButton("Search");
+JButton cmdExit = new JButton("Exit");
+JPanel pnlButtons = new JPanel(new GridLayout(1, 2));
+pnlButtons.add(cmdSearch);
+pnlButtons.add(cmdExit);</pre>
+
+<p>A JPanel is a container, and a component, so you can place the panel
+pnlButtons into another container that is only allowed to contain one object.
+For example, recall that in GridLayouts and BorderLayouts, a cell can only
+contain one component.  If I want these two buttons to go into the SOUTH
+cell of a BorderLayout, I can just put pnlButtons in the SOUTH cell:</p>
+
+<pre>this.setLayout(new BorderLayout());
+this.add(pnlButtons, BorderLayout.SOUTH);</pre>
+
+<p>When you are designing an interface that has multiple and nested layout
+managers, it's a good idea to sketch the interface on paper and see if you
+can figure out where the layouts lie.  Try these examples for practice:</p>
+
+<p><img src="images/sess3-1_layout1.jpg"></p>
+
+<p><img src="images/sess3-1_layout2.jpg"></p>
+
+<p><img src="images/sess3-1_layout3.jpg"></p>
+
+<div class="puzzle"><b>Resizable?</b><br>
+Your panels and components will often resize and shift when the user resizes
+a frame.  To prevent the user from resizing a frame, use the
+setResizable(false) method on your JFrame object.  You can also prevent
+panels and components from resizing by placing them into FlowLayouts.</div>
+
+<h4>Exercise</h3>
+
+<p>Create the Address Book interface shown near the beginning of this
+section.</p>
+
+<a name="size"><h3>Setting Component Sizes</h3></a>
+
+<p>You will notice that you haven't have much control over the size of
+your components when you use certain layout managers.  This is because a
+component's preferred size becomes the preferred size of it's cell or
+container.  You can change this in some cases by using a component's
+<b>setPreferredSize() method</b>.</p>
+
+<p>the setPreferredSize() method takes a <b>Dimension object</b>.  A
+Dimension object's constructor takes an int value for width and an int
+value for height.  For example, the following statement will set a
+JButton's preferred size to 100 x 25 pixels:</p>
+
+<pre>cmdExit.setPreferredSize(new Dimension(100, 25));</pre>
+-->
+
+<script type="text/javascript" src="../scripts/copynote.js"></script>
+
+
+</body>
+</html>

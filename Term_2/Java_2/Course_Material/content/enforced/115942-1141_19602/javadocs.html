@@ -1,0 +1,207 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>JavaDoc Comments</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="../prog.css">
+</head>
+
+<body onload='window.focus()'>
+
+<h2>JavaDoc Comments</h2>
+
+<h3>Topics Covered:</h3>
+
+<ul class="outer">
+	<li><a href="#javadoc">JavaDoc Comments</a>
+	<li><a href="#generate">Generating Javadocs</a></li>
+        <li><a href="#where">Where to Use Javadocs</a></li>
+</ul>
+
+<h3>Things To Do Before Reading Section:</h3>
+<ul class="outer">
+	<!--<li>Download the <a href="files/javadocExample.zip">Javadoc Example Zip file</a> and extract it into today's directory (e.g. c:\Prog24178\Programs\Session1.3\).-->
+	<li>Read the tutorial on <a href="../javaref/refDocs.html">Using Java Documentation</a>
+</ul>
+
+<h3>Things To Do After Reading This Section</h3>
+<ul class="outer">
+	<li>Read over <a href="http://java.sun.com/j2se/1.5.0/docs/tooldocs/windows/javadoc.html">Sun's Javadoc Reference</a> and <a href="http://java.sun.com/j2se/javadoc/writingdoccomments/index.html">How to Write Doc Comments for the Javadoc Tool</a>
+</ul>
+
+<a name="javadoc"></a>
+<h3>Javadoc Comments</h3>
+
+<p>Internal program documentation is used inside source code to help or remind a programmer what the code actually does.  We often use it to summarize groups of statements, explain what the variables are used for, or identify areas of the code that contain bugs or are unfinished.</p>
+
+<p><b>External program documentation</b> is documentation that is used to explain how a program works and what to do when errors occur.  For object-oriented programs, you will need to create external documentation that describes a class, its fields and methods, how the methods should work (what goes in, what comes out), and what Exceptions the methods might throw.  You've already been exposed to this kind of documentation - you read it when you "go to the Java Docs" to find out more about a class or its methods.</p>
+
+<p>To create external program documentation in other languages, you would normally have to write these documents yourself using an editor or word processor after the program has been written.  In Java, you can write your external documentation as you write your code.  In addition, some of these comments can do double duty as internal documentation.  To do this, we surround the comments with the  <font color="#006600" face="Courier New">/**</font> and <font color="#006600" face="Courier New">*/</font> characters.  Note that we start with a slash and two asterisks, instead of one.</p>
+
+<p>These special comments are usually just called <b>"javadocs"</b> after the name of the utility that compiles them for you.  You write your javadocs before each class declaration (<font face="Courier New">public class Whatever {</font>) and method signature.  When your documentation is finished, you compile the documents in HTML format using the javadoc utility.  The JAVADOC.EXE file is in the JDK directory's bin directory, along with the compiler and interpreter.</p>
+
+<h4>Creating Javadoc Comments</h4>
+
+<p>In Netbeans, when you start a comment with the /** characters above a method, Netbeans will
+automatically complete the set of comments for you, and even include any @tags it sees.  For example,
+if you type /** above a set-method, the comments will automatically include @param followed by the
+parameter name.  Similarly, typing /** above a get-method will automatically include the @return tag.</p>
+
+<p>In addition, the Hint icon will often appear when you are creating javadoc comments for any public class
+members in your code.  You can click this icon for extra help, tips, and other time-saving features while
+coding your javadocs.</p>
+
+<p>When writing javadoc for a class or method, you should first write a brief 
+    sentence that describes the purpose of the class or method.  This should 
+    then be followed by whatever additional explanation is required.  For 
+    constructors/methods, the first sentence is shown in the "Constructor 
+    Summary" or "Method Summary" section, and the rest of the text is shown 
+    in the details area for that constructor/method.</p>
+
+<p>Example:</p>
+
+<pre>/**
+ This class models a very simple bank account that keeps a balance
+ and an interest rate.  The class is not fully functional, and only 
+ the most basic methods have been included.  This is for demonstration
+ of encapsulation and information hiding.
+ @author Wendi Jollymore
+ */
+public class Account
+{
+    private double balance;
+    private double rate;
+    
+    /**
+     Default constructor sets the balance to 0 and the interest
+     rate to a default value of 3.5%.
+     @throws IllegalArgumentException if the balance or rate are invalid
+     */
+    public Account() throws IllegalArgumentException
+    {
+        this(0, 3.5);
+    }
+
+    /**
+     Constructs an Account object with a given balance and interest
+     rate.
+     
+     @param b the inital balance of the account
+     @param r the intial interest rate of the account
+     @throws IllegalArgumentException if balance or interest rate contain invalid values
+     */
+    public Account(double b, double r) throws IllegalArgumentException
+    {
+        setBalance(b);
+        setRate(r);
+    }
+
+    /**
+     Retrieves the account balance.
+     @return the account balance
+     */
+    public double getBalance() { return balance; }
+... etc...
+}</pre>
+<p>If you examine the code segment above, you'll see how the javadoc comments 
+    are written.  You'll notice a few interesting things such as "@throws", 
+    "@param", and "@return" in the documentation.  These are called <b>tags</b> and 
+    they define parts of the javadocs that you'll see when you read the actual 
+    documents that are created.</p>
+<!--<p>If you examine the Cat.java and Account.java source files included 
+    in the ZIP file for this session, you'll see how the javadoc comments 
+    are written.  You'll notice a few interesting things such as "@param" 
+    and "@return" in the documentation.  These are called <b>tags</b> and 
+    they define parts of the javadocs that you'll see when you read the actual 
+    documents that are created.</p>
+
+<p>If you go into the "docs" folder that was included in the ZIP file and 
+load up "index.html" in your browser, you can see the effects of some of 
+these tags in the documentation.</p>
+-->
+
+<p>Here is a description of a few of these tags.  We'll learn more as we learn more about Java.</p>
+
+<p><b>@param</b> - this tag defines one parameter in a method.  After the tag, you state the name of the parameter variable, then a brief explanation of what the parameter is for.  E.g.:<br>
+@param name the name of the cat object</p>
+
+<p><b>@return</b> - this tag defines the return value of a method.  After the tag, you state a brief description of the value returned.  E.g.:<br>
+@return the amount of pay this employee gets for the week</p>
+
+<p><b>@throws</b> - if a method throws an exception, you need to specify what exception is thrown and why.  E.g.:
+@throws IOException if there is a problem reading a record from the file</p>
+
+<p><b>@author</b> - if you compile your javadocs with the -author switch (see below), the documentation will contain a special Author heading under the class description.</p>
+
+<p><b>@version</b> - if you compile your javadocs with the -version switch (see below), the documentation will contain this information below the class description.</p>
+
+<a name="generate"></a>
+<h3>Generating Javadocs</h3>
+
+<p>In Netbeans, to compile or generate your Javadocs, simply click the <b>Run</b> menu and select <b>"Generate Javadoc"</b>.</p>
+<p>Alternatively, you can also select <b>"Generate Javadoc"</b> after right-clicking the project's node in your Project window.</p>
+
+<p>You can configure how your Javadocs are generated by right-clicking the project's node
+    in the Project window and selecting <b>"Properties"</b>.</p>
+
+<p>In the Properties window, open the <b>"Build"</b> node and select <b>"Documenting"</b>.  Here
+    is where you can select the various preferences for generating your Javadocs for this project.
+    For example:</p>
+<ul class="inner">
+    <li>The @author tag is not normally included in your docs.  To include it, check the @author checkbox.</li>
+    <li>To change the title in the browser window's title bar when viewing your docs, type the
+    desired title into the "Browser Window Title" field.</li>
+    <li>The "Additional Javadoc Options" field can be used for any additional switches you'd like
+    to use when generating your Javadocs.</li>
+</ul>
+
+<p>Netbeans will generate the Javadoc to the dist/javadoc folder in your project directory.  It will also
+open the index page in NetBeans default web browser (see Options to change the default browser).</p>
+
+<h4>Generating Javadocs Manually</h4>
+
+<p>To compile your javadocs manually, you run the javadoc utility on the .java source file:</p>
+
+<pre>javadoc MyFirstPgm.java</pre>
+<p>Or if you want to create javadocs for all the files in the current folder:</p>
+<pre>javadoc *.*</pre>
+<p>If you want to make javadocs for a certain set of files, for example:</p>
+<pre>javadoc FirstFile.java SecondFile.java</pre>
+
+<p>You can add the following switches after the javadoc command, before the file name:</p>
+
+<p><b>-version</b><br>
+Will include the @version information in the documentation.  This needs to be specified before -author.</p>
+
+<p><b>-author</b><br>
+Will include the @author information in the documentation.</p>
+
+<p><b>-d [folder]</b><br>
+Will store all the documentation files in the subdirectory named in [folder].  For example <font face="Courier">-d docs</font> will put all the documentation files in a subfolder called "docs".  This folder must already exist, so you'll have to create it before you run the javadoc utility.</p>
+
+<p>Example:</p>
+<pre>javadoc -version -author -d docs FirstFile.java SecondFile.java</pre>
+<p>This command will create javadocs, including the version and author information, for the FirstFile.java and SecondFile.java source files and store all the doc files in the docs folder of the current directory.</p>
+
+<div class="puzzle">More information on Javadoc:  <a href="http://java.sun.com/j2se/1.5.0/docs/tooldocs/windows/javadoc.html">Sun's Javadoc Reference</a> and <a href="http://java.sun.com/j2se/javadoc/writingdoccomments/index.html">How to Write Doc Comments for the Javadoc Tool</a></div>
+
+<a name="where"></a>
+<h3>Where to use Javadocs</h3>
+
+<p>You should use javadoc comments for:</p>
+<ul class="inner">
+	<li><b>classes</b> - a set of comments should go before a class statement to describe the purpose of the class and any special features it has.  Here is where you would also use the @version and @author tags.
+	<li><b>methods</b> - always use a set of javadoc comments before a method signature to explain what the method does, and to identify any parameters (@param tag) or a return value (@return tag).
+	<li><b>fields</b> - if you have any instance variables or constants that are declared as public or protected, you should place a small javadoc comment before each to explain what the field is for.  This is not necessary for private instance fields!
+</ul>
+
+<p><b>NEVER</b> create javadoc comments <i><b>inside</b></i> a method!  Javadocs are meant
+    to create help documentation for your class and its members so that other programmers can
+    learn how to use your classes and any objects instantiated from those classes.  Programmers
+    don't need to know anything about the actual code inside your methods.</p>
+
+<script language="JavaScript" type="text/javascript" src="../scripts/copynote.js"></script>
+
+
+</body>
+</html>

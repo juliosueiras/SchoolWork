@@ -1,0 +1,70 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>File I/O - JFileChooser</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+<script type="text/javascript">
+<!--
+
+//-->
+</script>
+
+</head>
+
+<body onload='window.focus()'>
+
+<h2>Using a FileChooser</h2>
+
+<h3>Topics Covered:</h3>
+
+<ul class="outer">
+	<li><a href="#dlg">File Dialog Box</a>
+</ul>
+
+<a name="dlg"><h3>File Chooser Dialog</h3></a>
+
+<p>You can use this class when you want to have a file dialog box that allows the user to choose a file to open or save.  There is no relationship between random files and JFileChooser - you can use the dialog box with any kind of file you wish.</p>
+
+<p>Check the JFileChooser documentation for a complete list of constructors and methods available.  To instantiate a file chooser dialog that is set to the application's directory:</p>
+
+<pre>JFileChooser chooseFile = new JFileChooser(new File("."));</pre>
+
+<p>The "." represents the current directory.  To refer to the parent directory, use ".." and to refer to the root directory, use "\".</p>
+
+<p>You can also use the setCurrentDirectory() method in your code to change the current directory that the file chooser will open in.</p>
+
+<p>Other useful  methods include:</p>
+
+<ul class="outer">
+	<li><b>setDialogType()</b>: determines what type of file chooser you are going to use.  Options you will probably want to use include JFileChooser.OPEN_DIALOG or JFileChooser.SAVE_DIALOG.</p>
+	<li><b>setDialogTitle(String title)</b>: places the String title into the title bar of the dialog box when it appears on the screen.
+	<li><b>showOpenDialog(Component parent)</b>: shows the Open File dialog box which allows the user to choose a file to open.  This method accepts a parent component (e.g. this or null) on which the dialog will be centered.  The method returns an integer value indicating whether the file was chosen successfully (JFileChooser.APPROVE_OPTION), the user pressed the Cancel button (JFileChooser.CANCEL_OPTION), or some kind of error occurred (JFileChooser.ERROR_OPTION).
+	<li><b>showSaveDialog(Component parent)</b>: shows the Save File dialog box, which works similarly to the Open File dialog described above.
+	<li><b>getSelectedFile()</b>: returns a File object for the file that was selected (or typed into the file box).
+</ul>
+
+<p>Note that the JFileChooser class only provides a means for the user to <b>select</b> a file.  It does not open the file!  It is up to the programmer to write the code that opens a random access file stream to the chosen file (if a file was chosen successfully).</p>
+
+<p>The following example shows how you might use the JFileChooser:</p>
+
+<pre>JFileChooser fd = new JFileChooser(new File("."));
+fd.setDialogTitle("Pick a Grades File");
+fd.setDialogType(JFileChooser.OPEN_DIALOG);
+int result = fd.showOpenDialog(null);
+if (result == JFileChooser.APPROVE_OPTION) {
+	File f = fd.getSelectedFile();
+
+	// do whatever you would do when you have an open file here:
+
+}  
+else if (result == JFileChooser.ERROR_OPTION) {
+	JOptionPane.showMessageDialog(null, "Error!  No file opened.",
+			"Error", JOptionPane.ERROR_MESSAGE);
+}</pre>
+
+<script type="text/javascript" src="../scripts/copynote.js"></script>
+
+</body>
+</html>

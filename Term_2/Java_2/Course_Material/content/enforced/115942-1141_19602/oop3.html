@@ -1,0 +1,234 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Abstract Classes & Interfaces</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+
+</head>
+
+<body onload='window.focus()'>
+<h2>Abstract Classes &amp; Interfaces</h2>
+<h3>Topics Covered:</h3>
+<ul>
+<li>Abstract Classes &amp; Methods</li>
+<li>Interfaces</li>
+</ul>
+<h3>Things To Do Before Reading This Section:</h3>
+<ul>
+<li>Read chapter 11 (from the beginning up to and including 11.5; 11.7 and 11.8.</li>
+<li>Try questions 11.1 to 11.7, and 11.9 to 11.13.</li>
+</ul>
+<h3>Things To Do After Reading This Section</h3>
+<ul>
+<li>Do any homework assigned by your professor.</li>
+</ul>
+<h3>Abstract Classes &amp; Methods</h3>
+<p>A lot of the time, when you're working on programs with many different objects and classes, especially those that are part of a class hierarchy of child and parent classes, you will be working with a team of programmers. Each programmer might be responsible for a different class or set of classes. The design of the classes is usually created ahead of time, before any programming takes place. In this kind of situation, everyone wants to make sure that there is consistency between the different attributes and methods of each class. For example, say you designed the Circle and Sphere class for a graphics program, and later you assign one of your team members to design the Cylinder class to be used in that same graphics program. What if your team member was not as skilled or as professional as you, and they called the getArea() and getVolume() methods getSurfaceArea() and calculateVolume()? This will cause problems in a method such as:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public static void displayShapeInfo(Circle c) { &nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">System.out.println(c); &nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">System.out.println("Area: " + c.getArea()); &nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">// is the object c an instance of the Cylinder class? &nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">// (in other words, is&nbsp; c a Cylinder?) &nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">if (c instanceof Cylinder) { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">Cylinder temp = (Cylinder)c; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">System.out.println("Volume: " + temp.getVolume()); &nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">} </span></p>
+<p>You would have to either change your method to handle the Cylinder's different method names or correct your teammate's code. Neither solution is a good one - your teammate should know better than to do something that's going to cause everyone extra work.</p>
+<p>When there is a lot of consistency to worry about, there will often be a parent class that defines the basic "template" for all the other classes in the hierarchy. This class could be defined as an abstract class. An abstract class contains a set of abstract methods. Abstract methods are methods that have only signatures but no body, and they include the keyword abstract in the signature:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public abstract double calcWeeklyPay();</span></p>
+<p>Note the semi-colon at the end of that statement: An abstract method has no body, or no implementation, so there is no need for braces - there is no code to go in them!</p>
+<p>A class that contains at least one abstract method must also be designed as abstract:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public abstract class Employee</span></p>
+<p>Since the abstract class would have the abstract methods already defined, any class that is derived from the abstract class must use the exact same method names when the methods are overridden. These keeps the consistency throughout all the classes in the hierarchy.</p>
+<p>Not all the methods in an abstract class have to be abstract: you can have concrete methods, also. You can also have attributes in an abstract class.</p>
+<p>Another important feature of abstract classes is that they can't be instantiated; you can't create an object of an abstract class. The purpose of an abstract class is simply to provide a set of "rules" for methods and attributes. For example, we might want an abstract class called "GeoShape" that includes an abstract getArea() method. Then we would make Circle a child of GeoShape, and that would ensure that Circle, and all its child classes would be forced to use "getArea()" as the method to return the area (or surface area) of a shape.</p>
+<h4>Exercise</h4>
+<p>A bank determines that there are two specific kinds of bank accounts. Savings accounts have a customer id, balance, interest rate, and overdraft amount. A customer can withdraw an amount of money from the account, but only if they don't go over the overdraft amount. For example, if the balance is $100 and the overdraft is $200, the customer can withdraw no more than $300. The customer can also deposit an amount of money to the account. A Checking account has a customer id, balance, and interest rate. A customer can withdraw an amount of money from the account, but they can't withdraw more than the current balance. The customer can also deposit an amount of money to the account.</p>
+<p>What classes would you define for a program that manages the accounts, and what attributes and methods would you give each? Where would you use an abstract class? Sketch the details out on paper.</p>
+<h4>Exercise</h4>
+<p>Think about a company that has many different kinds of employees: Full-Time employees have an id, first name, last name, salary, and number of weeks that they work per year. Part-time employees have an id, first name, last name, rate of pay, and number of hours that they work each week. Commissioned employees have an id, first name, last name, commission rate, and an amount of sales that they make during a week. Some commissioned employees are temporary and some are permanent. The permanent commissioned employees get a base amount of pay each week on top of their commissions from sales. The way you calculate weekly pay for each type of employee is different:</p>
+<p style="padding-left: 30px;"><strong>Full-Time</strong>: salary / number of weeks</p>
+<p style="padding-left: 30px;"><strong>Part-Time</strong>: hourly rate * number of hours</p>
+<p style="padding-left: 30px;"><strong>Temporary Commission</strong>: sales * commission rate</p>
+<p style="padding-left: 30px;"><strong>Permanent Commission</strong>: base pay + sales * commission rate</p>
+<p>In designing classes for each type of employee:</p>
+<ul>
+<li>Sketch out each class. For each class, list the attributes and methods it might need.</li>
+<li>Examine each of your class designs. What attributes and methods are common?</li>
+<li>Design a class hierarchy. Put all the common items in the top-most class. Should this class be abstract?</li>
+<li>Code it! Start with the class at the top and work your way down.</li>
+</ul>
+<p>In planning these classes, think about the code you would write to use the classes. For example, imagine a program that read the employee data from a file or from time sheets and then calculated and displayed the weekly pay for each employee.</p>
+<h3>Interfaces</h3>
+<p>An interface is a class that should not be confused with an abstract class. An interface contains public constants in addition to public abstract methods. This is all that an interface is allowed to contain. It may only contain constants and abstract methods, and both of these must all be public.</p>
+<p>An interface can also be used to ensure consistency among classes, but is more useful when a child class requires additional functionality. For example, imagine a college has a Person class which is a parent class for the classes Student and Teacher. What if a teacher wanted to take courses part time? You could not make Teacher a child of Student because in Java, a class is only allowed to have one parent (this is called simple inheritance or single inheritance). Instead, you could create a student interface that would add the necessary methods and constant values to the Teacher class. We would say that the Teacher class can implement the student interface.</p>
+<p>Another example: Examine our shape class hierarchy so far. Every shape class has a getArea() method, so that's a method we might think of putting in an abstract Shape class. In addition, three-dimensional shapes such as Cylinder and Cube could have the getVolume() method. In order to be consistent, we would want an abstract getVolume() method defined somewhere. However, it wouldn't go in the abstract Shape class because the other child classes like Circle don't require getVolume(). Instead, we could define an interface called ThreeD that would contain the getVolume() abstract method:</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Shape &lt;abstract&gt;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>+getArea() : double</p>
+<p>+toString() : String</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td>ThreeD &lt;interface&gt;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>+getVolume() : double</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Square extends Shape</td>
+</tr>
+<tr>
+<td>-side:double</td>
+</tr>
+<tr>
+<td>
+<p>+Square()</p>
+<p>+Square(double side)&nbsp;</p>
+<p>+setSide(double side):void</p>
+<p>+getSide():double&nbsp;</p>
+<p>+getArea():double&nbsp;</p>
+<p>+toString():String</p>
+<p>+equals(Square s):boolean&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Cube extends Square implements ThreeD</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>+Cube()</p>
+<p>+Cube(double side)&nbsp;</p>
+<p>+setSide(double side):void</p>
+<p>+getSide():double&nbsp;</p>
+<p>+getArea():double</p>
+<p>+getVolume():double&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Circle extends Shape</td>
+</tr>
+<tr>
+<td>-radius:double</td>
+</tr>
+<tr>
+<td>
+<p>+Circle()</p>
+<p>+Circle(double radius)&nbsp;</p>
+<p>+setRadius(double radius):void</p>
+<p>+getRadius():double&nbsp;</p>
+<p>+getArea():double</p>
+<p>+String toString():boolean&nbsp;</p>
+<p>+equals(Circle c):boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Sphere extends Circle implements ThreeD</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>+Sphere()</p>
+<p>+Sphere(double radius)&nbsp;</p>
+<p>+setRadius(double radius):void</p>
+<p>+getRadius():double&nbsp;</p>
+<p>+getArea():double</p>
+<p>+getVolume():double&nbsp;</p>
+<p>+toString():String</p>
+<p>+equals(Sphere s):boolean&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Cylinder extends Circle implements ThreeD</td>
+</tr>
+<tr>
+<td>-height:double</td>
+</tr>
+<tr>
+<td>
+<p>+Cylinder()</p>
+<p>+Cylinder(double radius, double height)&nbsp;</p>
+<p>+setRadius(double radius):void</p>
+<p>+getRadius():double&nbsp;</p>
+<p>+setHeight(double height):void</p>
+<p>+getHeight():double&nbsp;</p>
+<p>+getArea():double</p>
+<p>+getVolume():double&nbsp;</p>
+<p>+toString():String</p>
+<p>+equals(Cylinder c):boolean&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;To code an interface, you would define it an interface:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public interface ThreeD { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public abstract double getVolume(); </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">}</span></p>
+<p>To make a class implement an interface, we would use the implements keyword in the class header:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Cube extends Square implements ThreeD { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Cube() {} &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Cube(double side) { </span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">super(side); </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public double getVolume() { </span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return getSide() * getSide(); </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public double getArea() { </span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return super.getArea() * 6; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">}</span></p>
+<h4>Exercise</h4>
+<ol>
+<li>Modify your shape classes to include the Shape abstract class and the ThreeD interface. Test your classes in a test program.</li>
+</ol>
+</body>
+</html>

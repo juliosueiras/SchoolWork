@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+</head>
+<body style="font-family: 'PTSansRegular', Verdana, sans-serif;">
+<h1>Lab 5:&nbsp; Artificial Intelligence - A Lexicon</h1>
+<h2>Due: Friday, April 5, 2013 @ 5pm</h2>
+<h3>About this lab (30 points)</h3>
+<p>The field of artificial intelligence is growing and changing.&nbsp; We are building more machines which are able to learn and interact with users in unique ways. A learning machine forms the basis of artificial intelligence.&nbsp; To begin a study in artificial intelligence, you must establish a means of communicating and interacting with the artifice.&nbsp; This goes deeper than computer programming - programming is the set of instructions under which the artifice operates.&nbsp; You also need to be able to give the machine simple, non-programmatic instructions, have it understand those instructions, make decisions, and process them.&nbsp; This is a tedious, and difficult process, but one starting point is to provide the machine with a lexicon.&nbsp;</p>
+<p>A lexicon is a catalog of words which the machine can use to help understand its directives.&nbsp; When its issued a command, the machine can search its lexicon for the appropriate match and use that match to make a decision.&nbsp; In this final assignment, you will use collections to be able to parse sentences and start to build a simple lexical framework for an artificial intelligence.</p>
+<h3>Part 1: Build the Lexcion (5 points)</h3>
+<p>The <em>Lexicon</em> is a Java class composed of several collections.&nbsp; These collections represent the parts of speech which the machine can process.&nbsp; There will be seven collections in your lexicon:</p>
+<ul>
+<li><strong>Determiners</strong>:&nbsp; words like 'the', 'a', and 'an'</li>
+<li><strong>Nouns</strong>: persons, places, things ('rock', 'car', 'tank', 'you', 'me', etc.)</li>
+<li><strong>Verbs</strong>: action words ('roll', 'drive', 'fly', etc)</li>
+<li><strong>Adjectives</strong>: words which describe nouns ('smart', 'happy', 'hungry', etc.)</li>
+<li><strong>Adverbs</strong>: words which describe verbs (typically, words that end in '-ly')</li>
+<li><strong>Conjunctions</strong>: words which combine two sentences, like 'and', 'but', and 'or'</li>
+<li><strong>Miscellaneous</strong>: any other word that doesn't fit in these categories</li>
+</ul>
+<p>These categories <span style="text-decoration: underline;">must</span> be collections: you may choose ArrayList or LinkedList.&nbsp;</p>
+<p>Rules for the Lexicon class</p>
+<ol>
+<li>It must be Serializable</li>
+<li>It must have one field which describes the language.&nbsp; The default language is English.</li>
+<li>It must be able to print any or all lexical categories to the System.out console.</li>
+<li>Initialize the categories with the following sentence:&nbsp; "The brown fox jumped quickly over a lazy dog."&nbsp;&nbsp;</li>
+<ul>
+<li>'the' and 'a' are Determiners</li>
+<li>'fox' and 'dog' are Nouns</li>
+<li>'jumped' is a Verb</li>
+<li>'brown' and 'lazy' are Adjectives</li>
+<li>'quickly' is an Adverb</li>
+<li>'over' is a preposition, to be placed in the 'Miscellaneous' collection</li>
+</ul>
+</ol>
+<h3>Part 2: Function (10 points)</h3>
+<p>Write a class, <em>AI_Menu</em>, which includes a main() method.&nbsp; When you run the main() method:</p>
+<ul>
+<li>Start with a main menu.&nbsp; The main menu displays the options for running the program</li>
+</ul>
+<blockquote><ol>
+<li>
+<table style="background-color: #ccffff;">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: courier new,courier;">MAIN MENU</span></p>
+<p><span style="font-family: courier new,courier;">1. Enter a sample sentence.</span></p>
+<p><span style="font-family: courier new,courier;">2. Save the Lexicon to a file.</span></p>
+<p><span style="font-family: courier new,courier;">3. Print the Lexicon.</span></p>
+<p><span style="font-family: courier new,courier;">9. Quit</span></p>
+<p><span style="font-family: courier new,courier;">Enter your selection &gt;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol></blockquote>
+<ul>
+<li>The program will only accept these entries on the main menu.</li>
+<li>When the user presses 9, the program quits</li>
+<li>When the user presses 1, the program will ask the user to type in a sentence.&nbsp; Then the program will parse the sentence (see Part 3, Parser)</li>
+<li>When the user presses 2, the program will write the entire Lexicon to a file.&nbsp; The user should be able to select the path and filename to save the Lexicon.&nbsp; Use an ObjectOutputStream to write the Lexicon to a file.</li>
+<li>When the user presses 3, a sub-menu appears:</li>
+</ul>
+<blockquote><ol>
+<li>
+<table style="background-color: #ccffff;">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: courier new,courier;">PRINT MENU<br /></span></p>
+<p><span style="font-family: courier new,courier;">1. Print Nouns</span></p>
+<p><span style="font-family: courier new,courier;">2. Print Verbs</span></p>
+<p><span style="font-family: courier new,courier;">3. Print Adjectives &amp; Adverbs</span></p>
+<p><span style="font-family: courier new,courier;">4. Print all</span></p>
+<p><span style="font-family: courier new,courier;">9. Return to Main Menu.<br /></span></p>
+<span style="font-family: courier new,courier;">Enter your selection &gt;</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol></blockquote>
+<ul>
+<li>
+<pre><span style="font-family: verdana,geneva;">Option 1 prints all the nouns from the lexicon to the screen, then returns to the main menu.</span></pre>
+<pre><span style="font-family: verdana,geneva;"></span></pre>
+</li>
+<li>
+<pre><span style="font-family: verdana,geneva;">Option 2 prints all the verbs from the lexicon to the screen, then returns to the main menu.</span></pre>
+</li>
+<li>
+<pre><span style="font-family: verdana,geneva;">Option 3 prints all the adjectives and adverbs from the lexicon to the screen, then returns to the main menu.</span></pre>
+</li>
+<li>
+<pre><span style="font-family: verdana,geneva;">Option 4 prints the entire lexicon to the screen, then returns to the main menu.</span></pre>
+</li>
+<li>
+<pre><span style="font-family: verdana,geneva;">Option 9 returns to the main menu.</span></pre>
+</li>
+</ul>
+<h3>Part 3: Build the parser (10 points)</h3>
+<p>A parser is a class which breaks the sentence in to chunks and categorizes each word.&nbsp; When the user types in a sentence, the parser will:</p>
+<ul>
+<li>Break the sentence in to individual words</li>
+<li>Analyze each word - search for the word in its lexicon. If it finds the word, it does nothing, and moves on to the next word.&nbsp;&nbsp; If it does not find the word, it will:</li>
+<ul>
+<li>ask the user what part of speech the word is</li>
+<li>add the word to the appropriate category in the lexicon</li>
+<li>sort the category</li>
+</ul>
+<li>Note: the parser cannot distinguish singular from plural or different forms of the same verb (ie, 'sleeps', 'sleeping', 'slept').&nbsp; They will all appear as entries in the lexicon.</li>
+<li>The Parser is an interface with abstract methods - parseSentence(String s) and categorize(String word).&nbsp; EnglishParser implements the parser and works with the English Lexicon.</li>
+</ul>
+<h3>Submission</h3>
+<ul>
+<li>Submit a minimum of four classes/interfaces: Lexicon, AI_Menu, Parser, and EnglishParser. The menu class contains the main() method&nbsp;</li>
+<li>Use NetBeans to export your project to a ZIP file.</li>
+<li>Put the ZIP file in the Dropbox.</li>
+<li>5 points are awarded for proper packaging, comments, Javadoc, and discretionary.</li>
+</ul>
+</body>
+</html>

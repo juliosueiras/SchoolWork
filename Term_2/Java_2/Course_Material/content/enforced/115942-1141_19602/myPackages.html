@@ -1,0 +1,67 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+
+<title>Packages</title>
+
+</head>
+
+<body onload='window.focus()'>
+<h2>Packages</h2>
+<h3>Topics Covered:</h3>
+<ul class="outer">
+<li><a href="#pckg">What is a Package?</a></li>
+<li><a href="#why">Why Should I Use Packages?</a></li>
+<li><a href="#how">How to Create a Package</a></li>
+<li><a href="#use">Using Packaged Classes</a></li>
+</ul>
+<h3>Things To Do Before This Section</h3>
+<ul class="outer">
+<li>Go to the <a ref="http://www.cs.armstrong.edu/liang/intro8e/supplement.html">Textbook's Supplements Page</a> and download Supplement F - F.Using Packages to Organize the Classes in the Text. Open it and read it.</li>
+<li>Download the <a href="http://cs.armstrong.edu/liang/intro7e/supplement/SupplementPackage.doc">7th Edition Supplement</a> as it contains extra information that the newer one doesn't.</li>
+</ul>
+<h3>Things To Do After This Section</h3>
+<ul class="outer">
+<li>Complete and/or submit any exercises assigned for homework.</li>
+</ul>
+<h3>What is a Package?</h3>
+<p>Make sure you've read the Packages Supplements:</p>
+<ul class="outer">
+<li>Supplement F from <a href="http://www.cs.armstrong.edu/liang/intro8e/supplement.html">the textbook supplement's page</a></li>
+<li><a href="http://cs.armstrong.edu/liang/intro7e/supplement/SupplementPackage.doc">7th Edition Supplement</a> from the previous edition.</li>
+</ul>
+<p>The first paragraph of Supplement F explains what packages are. You've been using some of Java's existing packages whenever you use an import statement. For example, when you use the Scanner or JOptionPane class, you were using classes in another package. Classes like String and Math are in the java.lang package, which is automatically available to all programs without using import statements.</p>
+<p>Programmers usually create their own packages (for reasons discussed in the next section). For example, in Logic class you worked with Dr. Becker's Robots. This collection of classes were organized into a variety of packages, such as becker.robots.</p>
+<p>When you create your own packages, you are basically deciding how you will organize your classes.</p>
+<p><a name="why"></a></p>
+<h3>Why Should I Use Packages?</h3>
+<p>The textbook supplement from the 7th Edition explains 4 reasons why programmers use packages. Make sure you know them!</p>
+<p><a name="how"></a></p>
+<h3>How to Create a Package</h3>
+<p>The first step to creating a package is choosing a name for your package. It is likely that you'll be creating more than one package in your career, so choose wisely! You also have to be careful not to choose a name that someone else has chosen. For this reason, the standard convention is to use your own domain name backwards. For example, my package name would be com.terminallearning. I actually use wsj.terminallearning because wsj are my initials and I figure my packages would be easier to find (there are a lot of packages out there starting with com!).</p>
+<p>The last part of your package name is more specific to what the package contains. For example, I have the following packages that I use in my Java programs:</p>
+<ul class="outer">
+<li>wsj.terminallearning.gui.utils</li>
+- various utility methods and constants that I use for creating GUI applications
+<li>wsj.terminallearning.gui</li>
+- general stuff I've created to use with GUI programs
+<li>wsj.terminallearning.net</li>
+- some networking methods and classes I created for a network programming course I took; I figured I might use these again some day!
+<li>wsj.terminallearning.io</li>
+- methods and classes I made to use with file I/O
+<li>wsj.terminallearning.db</li>
+- lots of methods and classes I wrote to use with database programs</ul>
+<p><img title="Sample package hierarchy" hspace="15" alt="Sample package hierarchy" vspace="15" align="left" src="images/samplePackages.jpg" />Page 2 of the supplement explains how each portion of the package name that is separated by the periods is actually part of a directory structure. For example, in Java there are some packages called javax.swing, javax.swing.border, and javax.swing.event. There is actually a directory called "javas", and in that directory is a subdirectory called "swing". In the javax\swing directory is a collection of generic Swing classes (such as JOptionPane). Also in the javax\swing directory are two sub-directories (there's actually a lot more, but I only mentioned two here, so we'll stick with that) called "border" and "event". In the javax\swing\border directory are classes that deal with creating borders on GUI components, and in the javax\swing\event directory are classes that deal with newer Swing event-handling techniques.</p>
+<p>You'll find later today that when you evenutally create your own packages, you'll see a similar directory structure. My directory structure for my packages starts with wsj, which contains a sub-directory terminallearning. This directory contains the sub-directories gui, net, io, and db, and so on...</p>
+<p>Once you've decided on a name for your packages, you simply write the classes and methods that you want your package to contain. Each of these classes and files must start with the <span style="font-family: Courier New;" face="Courier New">package</span> statement. The <span style="font-family: Courier New;" face="Courier New">package</span> statement must be the first statement in your file, above the <span style="font-family: Courier New;" face="Courier New">import</span>statement (don't worry about comments/documentation). In such a statement, the keyword package is followed by the name of the package that this class will belong to. For example:</p>
+<pre>package prog24178.week1;</pre>
+<p>The statement above indicates that this class belongs to the <b>prog24178.week1</b> package.</p>
+<p>Once you compile the classes, the bytecode (.class) files will be stored in the directory structure described above (in our example, the class will be in prog24178\week1. You can then include this package of classes in a larger application by using the import statement and including the packages with your deployed program. How you include your package with your application depends on what method you're using to create your application. We'll be using NetBeans, which does most of the work for you, so we'll discuss this when we get to deployment.</p>
+</body>
+<p>All content © Wendi Jollymore, Sheridan College, 2011</p>
+<p>May not be published or modified without permission.</p>
+
+
+</html>

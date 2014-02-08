@@ -1,0 +1,834 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Coding Window Events</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+
+
+</head>
+
+<body onload='window.focus()'>
+
+   <h2>Coding Window Events</h2>
+
+<h3>Topics Covered:</h3>
+
+<ul class="outer">
+    <li><a href="#events">Window Listeners and Events</a></li>
+    <li><a href="#multi">Working with Multiple Windows</a></li>
+    <li><a href="#data">Passing Data/Objects Between Windows</a></li>
+</ul>
+
+<h3>Things To Do Before Reading This Section</h3>
+<ul class="outer">
+    <li><a href="files/WindowEvents.ppt">Download the slides</a> for this lesson.</li>
+	<li>Read over Chapter 16.8 and 16.9 in your textbook.
+	<li>Read the 
+            <a href="http://download.oracle.com/javase/tutorial/uiswing/events/windowlistener.html" target="_new">How to Write a Window Listener</a>
+            tutorial from the java.sun website.</li>
+</ul>
+
+<h3>Things To Do After Reading This Section</h3>
+<ul class="outer">
+	<li>Do any homework or assignments assigned by your professor.</li>
+
+</ul>
+
+<a name="events"></a>
+<h3>Window Listeners and Events</h3>
+
+<h4>First, read Chapter 16.8 in your textbook</h4>
+
+<p>At this point you've learned about ActionListener and ActionEvents, and
+    also about handling mouse events and keyboard events.  You might have also
+    explored other kinds of events.  Window events work similarly to other
+    events you've been working with.  With window events, you can write code
+    to execute when a window loads, before it closes, when it maximizes or
+    minimizes, or even when the user switches between your window and
+    another window.</p>
+
+<p>Window listeners are used for a variety of reasons.  For example, if you want to
+    perform an action before the user closes the application, such as saving data to
+    a file.  You can also use a window listener to pass data back and forth from one
+    window to another.  In a more complex application, you can use window listeners
+to terminate certain processes while a window is minimized, and then restart those
+processes when the window becomes maximized, which can result in huge resource savings.</p>
+
+<p>There are three classes that can be used to listen for window events:</p>
+
+<ul class="outer">
+
+    <li><b>WindowListener</b>: used to handle most window events; it has the following event
+        handler methods:
+        <ul class="inner">
+            <li><b>windowActivated()</b> - occurs just after the window becomes the
+                active window (e.g. the user had switched to another window and then
+                returned to the window that is registered with the WindowListener)</li>
+            <li><b>windowDeactivated()</b> - occurs just after the window is no longer
+                the active window (e.g. the user switches to another window)</li>
+            <li><b>windowIconified()</b> - occurs just after the user minimizes the window</li>
+            <li><b>windowDeiconified()</b> - occurs just after the user restores the window
+                after it was minimized</li>
+            <li><b>windowOpened()</b> - just after the window opens for the first time (the
+                first time it is made visible) NOTE: if you dispose of a window (e.g. dispose())
+            and then load it again, windowOpened() will be triggered.</li>
+            <li><b>windowClosing()</b> - occurs when a request has been made to close the window 
+            (e.g. when the user clicks the X button in the top-right corner of the window)</li>
+            <li><b>windowClosed()</b> - occurs just after a window has been disposed of (e.g. using
+                the dispose() method)</li>
+        </ul>
+        
+    <li><b>WindowFocusListener</b>: contains event handler methods used when a window receives or
+        loses the focus (this listener is usually used for Window/JWindow objects since they don't
+    trigger windowActivated() and windowDeactivated(); with a JFrame you can use the
+    windowActivated() and windowDeactivated() methods to handle window focus).</li>
+    <li><b>WindowStateListener</b>: contains one event handler method, windowStateChanged(),
+        to detect the state change of the window.</li>
+        <ul class="inner"> 
+            <li>state changes include iconified, deiconified, maximized, and restored.</li>
+            <li>most programmers only use WindoStateListener when they want to do things when
+                the window is maximized, since it's the only listener that has this feature.</li>
+        </ul>
+</ul>
+
+<div class="puzzle">If you're familiar with Adapter Classes, you can extend WindowAdapter as your
+window event listener.  WindowAdapter implements all 3 window listener classes so you can use
+WindowAdapter if you prefer.</div>
+
+<p>At first it might seem that WindowListener and WindowStateListener are the same thing; why
+    would you use one over the other?</p>
+
+<ul class="outer">
+    <li>WindowStateListener has only one event handler method, windowStateChanged().
+        WindowListener has seven.</li>
+    <li>WindowStateListener can only handle the state changes iconified, deiconified,
+        maximized and restored.  WindowListener can handle opening and closing events,
+        although it can't detect if a window is maximized, only reset to normal after
+        being minimized.</li>
+    <li>WindowStateListener allows you to detect if a window is maximized completely,
+        or if it was only maximized vertically or horizontally.  WindowListener can't
+        detect any of these.</li>
+</ul>
+
+<p>In addition to the listener classes, there is the WindowEvent class.  Window listener methods
+    include a WindowEvent parameter that contains information about the window event that
+    occured:</p>
+<ul class="outer">
+    <li><b>getNewState()</b> - returns an integer value that indicates the new state of the
+        window if the event was a state change.</li>
+    <li><b>getOldState()</b> - returns an integer value that indicates the previous state of
+        the window if the event was a state change.</li>
+</ul>
+
+<p>The state returned by getNewState() and getOldState() can be detected using the java.awt.Frame class
+    constants:</p>
+<ul class="outer">
+    <li><b>ICONIFIED</b> - the state change was caused by minimizing the window.</li>
+    <li><b>NORMAL</b> - the state change was caused by returning the window to it's "normal" state, for
+        example, restoring the window after being minimized.</li>
+    <li><b>MAXIMIZED_HORIZ</b> - the state change was caused by maximizing the window horizontally.</li>
+    <li><b>MAXIMIZED_VERT</b> - the state change was caused by maximizing the window vertically.</li>
+    <li><b>MAXIMIZED_BOTH</b> - the state change was caused by maximizing the window (MAXIMIZED_BOTH =
+        MAXIMIZED_HORIZ + MAXIMIZED_VERT).</li>
+</ul>
+
+<p>Since JFrame is a child of java.awt.Frame, you can access these constants using the JFrame class
+    as the qualifier.  E.g:</p>
+<pre>if (event.getNewState() == JFrame.ICONIFIED) {
+     // code that suspends a thread of execution
+} else if (event.getNewState() == JFrame.NORMAL) {
+     // code that continues executed the suspended thread
+} ...</pre>
+
+
+<h4>Exercise</h4>
+
+<p>To see how window events work, create a GUI program with a text area component.  We
+    will write the code that allows us to see how the different window events work:</p>
+
+<ol>
+    <li>Implement the WindowListener interface.</li>
+    <li>Register your JFrame GUI with the window listener.
+        <ol type="a">
+            <li>The method to register a component
+    with the WindowListener class is addWindowListener().</li>
+            <li>The component you're registering is your GUI (<font face="Courier New"><b>this</b></font>)</li>
+            <li>As with other listeners, the component you're registering the GUI with is also
+                your JFrame GUI (<font face="Courier New"><b>this</b></font>)</li>
+    </ol>
+    <li>Add each of the seven WindowListener event handler methods and add a statement in each one that appends a line
+    to the text area describing the event being triggered.  You can copy/paste the code below, if
+    you wish.</li>
+
+</ol>
+
+<pre>public void windowClosing(WindowEvent event) {
+        txtDisplay.append("Window Closing Event occurs\n");
+    }
+    public void windowClosed(WindowEvent event) {
+        txtDisplay.append("Window Closed Event occurs\n");
+    }
+    public void windowOpened(WindowEvent event) {
+        txtDisplay.append("Window Opened Event occurs\n");
+    }
+    public void windowActivated(WindowEvent event) {
+        txtDisplay.append("Window Activated Event occurs\n");
+    }
+    public void windowDeactivated(WindowEvent event) {
+        txtDisplay.append("Window Deactivated Event occurs\n");
+    }
+    public void windowIconified(WindowEvent event) {
+        txtDisplay.append("Window Iconified Event occurs\n");
+    }
+    public void windowDeiconified(WindowEvent event) {
+        txtDisplay.append("Window Deiconified Event occurs\n");
+    }
+</pre>
+
+<p>Notice what appears in your text area when your program starts:</p>
+
+<p><img src="images/windowEvents1.png" alt="window activated comes before window closing" /></p>
+
+<p>We can see from reading the text area's contents that the windowActivated() event
+is triggered before the windowOpening() event.  Keep this in mind when you want to
+write code for these two events; code in your windowActivated() event will occur
+before your windowOpening() event code.</p>
+
+<p>Now try minimizing your window and then restoring it again.  See what appears
+    in the text area when you restore the window back to its normal state:</p>
+
+<p><img src="images/windowEvents2.png" alt="mutiple events occur when you minimize and restore a window" /></p>
+
+<p>Notice that when the window is minimized, the windowIconified() event occurs,
+    and then the windowDeactivated() event occurs.  This should make sense, since
+    the window obviously is no longer the active window when it's minimized.</p>
+
+<p>Similarly, you'll see that when the window is restored, the windowDeiconified()
+    event occurs, followed by the windowActivated() method.  Once the window is
+    restored to its normal state, it then becomes the active window.</p>
+
+<p>You can see after doing this test that multiple events can occur when you
+    perform an action with a window.  Keep this in mind when you code multiple
+    events - some of these events execute in sequence with each other.</p>
+
+<p>We've had an opportunity to test the windowOpening(), windowIconified(),
+    windowDeiconified(), windowActivated(), and windowDeactivated() events.  Now
+    let's try to test the windowClosing() and windowClosed() events.</p>
+
+<p>What happens when you press the close (X) button on the JFrame component?
+    Your program terminates and you have no chance to see the output in the text
+    area!</p>
+
+<p>Recall that the windowClosing() event occurs when a request is made to close the
+    window; this method doesn't actually close the window.  Normally the windowClosing()
+    event would be a good place to put code that confirms exit with the user, such as:</p>
+
+<pre>int ok = JOptionPane.showConfirmDialog(null,
+        "Are you sure you wish to exit?", "Exit Program",
+        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+     if (ok == JOptionPane.YES_OPTION)
+          System.exit(0);
+</pre>
+
+<p>As we know, if the user clicks YES in the dialog, the program will exit.  Otherwise,
+    nothing will happen.  However, if you add this code to your windowClosing() event
+    right now, you'll find that the program exits even if you click NO!</p>
+
+<p>This is actually because the JFrame's setDefaultCloseOperation() is already
+    set to EXIT_ON_CLOSE by default.  So when you click the close button, the
+    program exits.  Using EXIT_ON_CLOSE is the equivalent of using System.exit(0),
+    so the program terminates and the frame is unloaded from memory.</p>
+
+<p>To fix the problem, we should ensure that the program does nothing when the user
+    clicks the close button.  We'll write the code to exit ourselves in the
+    windowClosing() event.</p>
+
+<p>Go to your form's design screen and make sure your form is selected.  Find the
+    defaultCloseOperation property and set it to "DO_NOTHING".</p>
+
+<p>Now run the program again and click the close button.  You'll see that
+"Window Closing Event occurs" is appended to the text area each time you press
+the X button.  Of course, our program won't exit now, but that's ok.  We want
+the program only to exit when the user says it's ok :)</p>
+
+<p>Since you can't close the application right now, just click the small red button
+    on the left side of your output window (this is the window below your editor
+    window).  If you don't see your output window, press Ctrl-4 and it should appear.</p>
+
+<p>It is preferred that when the X is clicked in our application, the user is
+asked if they would like to exit, and if they say yes, we exit the program using
+System.exit(0).  You've written this code many times, so go ahead and add it to
+your windowClosing() event, after the println() statement.  Then test your program
+by clicking the close button, then click "No" when asked if you want to quit.  See
+what comes up in the text area:</p>
+
+<p><img src="images/windowEvents3.png" alt="window deactivated event occurs when confirm exit dialog appears" /></p>
+
+<p>See how, when the confirm dialog appears, the windowClosing() event occurs,
+    followed by the windowDeactivated() event (because the dialog becomes the active
+    window, which deactivates your application's window).  Notice also that when
+    you click "No" in the dialog, the dialog disappears, putting the focus back
+    on your application window, which causes the windowDeactivate() method to
+    occur.</p>
+
+<p>You can now exit your program although you'll be unable to see the results of the
+    windowClosed() event, since it occurs after the window is closed.  A bit of a
+    conundrum, isn't it? ;)  </p>
+
+<div class="highlight">TIP:  When implementing a window listener that closes your
+    program when the Close (X) button is clicked, make sure you change the JFrame's
+    setDefaultCloseOperation() to JFrame.DO_NOTHING_ON_CLOSE.  In NetBeans, you can
+    set this using the defaultCloseOperation property in the properties window.  If you leave
+setDefaultCloseOperation as the default (to exit on close), you won't have any control
+over the windowClosing() event because the program will just exit.</div>
+
+<a name="multi"></a>
+<h3>Working with Multiple Windows</h3>
+
+<p>Most of your programs will include multiple windows.  You might click on a button or
+    menu item of a main window to open a second window.  The main window is usually referred
+    to as the <b>parent</b> window and the second window, which is spawned by the first
+    window, is referred to as the <b>child</b> window.</p>
+
+<p>The easiest way to have a parent window spawn a child window is to simply instantiate
+    and make visible the second window from the first one.  For example, imagine you have
+    a WindowOne class that includes a JButton object called cmdWin2.  WindowOne is your
+    parent window.  You then have a second class called WindowTwo that is your child window.
+    Clicking the cmdWin2 button on the WindowOne form will cause WindowTwo to appear.  You
+    might code similar to:</p>
+
+<pre>public class WindowOne extends JFrame implements ActionListener {
+     // ... code that configures and sets up your JFrame and its components
+     public void actionPerformed(ActionEvent event) {
+          if (event.getSource() == cmdWin2) {
+               WindowTwo win2 = new WindowTwo();
+               // any code you might want to add to set up
+               // the second window; this could also go in the
+               // WindowTwo constructor.
+               win2.setVisible(true);
+          } else if ..........
+          // whatever other code you have for event handler
+     }
+     // other code for this class
+}</pre>
+
+<p>Let's try an example using multiple windows.  Add a label/text field pair to your
+    main GUI, and a command button.  Later we'll use the text box to pass data to a
+    second (child) form.  The command button will be used to open the second form,
+    which we'll create in a moment.</p>
+
+<p>In the image below, my text field is called txtDataSent and my button is called
+    cmdWindow2.</p>
+<p><img src="images/windowEvents4.png" alt="add a text field and button to the GUI" /></p>
+
+<p>Once you've updated your main application, add a second JFrame to your project and
+    set it up like the image shown below.  This will be the child form that will be
+shown when the user clicks the button on the parent form.</p>
+
+<p><img src="images/windowEvents5.png" alt="second window see description below" /></p>
+
+<p>This window should have:</p>
+<ul class="outer">
+    <li>A label/text field pair where the user can type something.  My text field is
+    called txtInput.</li>
+    <!--<li>A set of grouped radio buttons captioned "Leave this Window Open" and
+        "Close this Window".  I called my radio buttons optOpen and optClose.</li>-->
+    <li>A "Back to Main Form" button.  Mine is called cmdBack.</li>
+    <li>A label/text area pair that will show data that is recieved from the parent
+        form.  My text are is called txtData.</li>
+</ul>
+
+<p>Additionally, we'll be writing window and action event handlers for the child form,
+    so write the necessary code to implement both interfaces, register the necessary
+    components, and add the event handler methods.</p>
+
+<p>To start with, let's have the parent form show the second form when the user clicks
+    cmdWindow2:</p>
+
+<ol>
+    <li>Implement the ActionListener in your first GUI.</li>
+    <li>Add the actionPerformed() method.</li>
+    <li>Register cmdWindow2 with the action listener.</li>
+    <li>Add the if-statement to check and make sure the event source is the cmdWindow2
+        button.</li>
+    <li>Inside the if-statement, add the statements to instantiate the child GUI and
+        make it visible (in my example below, my second JFrame class is called
+        Window2)</li>
+</ol>
+
+<pre>public void actionPerformed(ActionEvent event) {
+     if (event.getSource() == cmdWindow2) {
+          Window2 w2 = new Window2();
+          w2.setVisible(true);
+     }
+}
+</pre>
+
+<p>Now run your main application and click the button.  You'll see that the
+    windowDeactivated() event occurs as the second window appears.</p>
+
+<p><img src="images/windowEvents6.png" alt="deactivate event occurs as second window appears" /></p>
+
+<p>Notice also that you can click back and forth between the windows and see the main
+    frame's activate and deactivate events occuring.</p>
+
+<p>Now, once we have the child form open, we might wish to close it.  What happens
+    if you click the close button on the second form?  The program terminates!</p>
+
+<p>We discussed this earlier - the default of the defaultCloseOperation property is
+    EXIT_ON_CLOSE, which is the equivalent of invoking the System.exit(0) method.  This
+    causes the entire program to terminate, when instead we want to go back to the
+    main form without ending the whole application.</p>
+
+<p>So we know the solution to this already - change the defaultCloseOperation property
+    on the second form.  Recall from the beginning of the course that there are four
+    possible values for this property:</p>
+
+<ul class="outer">
+    <li>EXIT_ON_CLOSE - terminates the program, as if System.exit(0) was invoked.</li>
+    <li>HIDE - hides the frame, but keeps it in memory.  This is the equivalent of
+    invoking the setVisible(false) method.</li>
+    <li>DO_NOTHING - nothing; the frame stays visible and stays in memory.</li>
+    <li>DISPOSE - disposes of the frame from memory.  This causes the form to hide
+    and unloads it from memory: all of its resources are freed. This is the equivalent
+    of calling a frame's dispose() method.</li>
+</ul>
+
+<p>Note that when a frame is disposed, your program will stay running as long as there is
+    another window in memory (even if that window is invisible, oops!).  Once the last
+    window is memory is disposed, the program will terminate.</p>
+
+<p>So which value should be use for the second form?  We can choose HIDE, to make
+    the form invisible, but still in memory, or we can use DISPOSE to unload the
+    form from memory completely.  If you know you'll be flipping back to the second
+    form often, you'll prefer HIDE since you won't have to reload the form every
+    single time.  You should then update your event handler in the main form so
+    that you're not instantiating a new version of the form if it already exists.
+We'll see how we can do this later.</p>
+
+<p>A better idea, for this example (may not be a better idea for other programs, it
+    depends on what you're trying to do) is to take the second form completely
+    out of memory, since we're just going to instantiate a new one next time
+    we click the Window2 button.</p>
+
+<p>Go to your second form's properties and change the defaultCloseOperation
+    property to DISPOSE for now.  We will change this later.</p>
+
+<p>Now try your program - you can bring up the second form, and then close it by
+    clicking its close (X) button.</p>
+
+<p>What happens if you click the button on the main form again, while the second
+    form is still open?  If you try this, you'll
+see that another instance of the child form is created.  In fact, you can do this as
+many times as your computer allows, although each new instance of the child form is
+taking up quite a bit of memory.  You might notice your computer slows down if you
+click the button too many times.  When you're done, be sure to close all the child
+forms and exit the program so you can release the resources used by all the JFrame
+objects.</p>
+
+<div class="puzzle">If you're interested in Java applications that allow for multiple
+copies of the same child window, you'll want to learn more about
+<a href="http://java.sun.com/products/jlf/ed2/book/HIG.Windows4.html">MDI
+(Multiple Document Interface)</a> in Java.</div>
+
+<p>In most programs, you'll want to ensure that only one instance of the child form
+    is allowed to be instantiated, especially if your parent and child forms are
+    passing data back and forth to each other (which we'll learn to do later). </p>
+
+<p>One very easy way to handle this problem is to make the parent form invisible when
+    the user clicks the button to show the 2nd form.  Of course, this means you'll have to
+    do likewise in the 2nd form when you want to go back:  make the child form invisible
+    and show the main form.  You can try this now:  Add the code to your cmdWindow2
+    button's event handler on the main form to show the child form and hide the main
+    form:</p>
+
+<pre><font color="#666666">Window2 w2 = new Window2();
+w2.setVisible(true);</font>
+<font color="maroon">this.setVisible(false);</font></pre>
+
+<p>In your second form, make sure the defaultCloseOperation is set to DO_NOTHING.
+    When the user clicks the "Back to Main Form" button or the close button, we want
+    to show the parent form and hide the main form.  The first will be done in the
+    back button's action event handler, the second in the windowClosing() event of
+    the form.  Therefore, it makes sense to write a single method and then call it
+    from both places.</p>
+
+<p>However, how do we access the parent form from inside the child form?  An easy way
+    is to pass a reference of the parent form into the child form when we instantiate it.
+    We can store this reference in a private data member of the child form so that
+    we can access it from inside our method, or anywhere else in the child form's code.</p>
+
+<p>Make sure your cmdWindow2 event handler is making the main form
+invisible after the second form is made visible (you did this earlier).</p>
+
+<p>So now, your cmdWindow2 event handler should have the following code:</p>
+
+<pre>if (event.getSource() == cmdWindow2) {
+     Window2 w2 = new Window2(this);
+     w2.setVisible(true);
+     this.setVisible(false);
+}</pre>
+
+<p>When the user is on the second form and clicks the "Back to Main Form" button, we want
+    the child form to disappear and unload from memory, and the main form to appear
+    again.  In order to allow access to the main window from the child window, we
+    must give the child form a reference to the parent.  We can do this
+    by creating a private data member to hold the reference to the parent.</p>
+
+<p>In your child form, create a private data member for your main form.  In my application,
+    the main form class is called WindowEventsExample:</p>
+
+<pre>private WindowEventsExample parent;</pre>
+
+<p>Now, when the child form is instantiated, we need to pass the parent window's
+    reference to the child.  We can do this via an extra constructor method that we
+    add to the child:</p>
+
+<pre>public Window2(WindowEventsExample w) {
+    parent = w;
+}</pre>
+
+<p>Here, we've created a second constructor that accepts a WindowEventsExample object
+    (remember to put the name of your own main class here, if yours is different).
+    Then, we assign that parameter value to the parent data member.  Now, our child
+    form can access the parent form using the parent data member!</p>
+
+<p>However, the child's default constructor contains the call to
+    the initComponents() method, so we have to make sure that executes.  An easy
+    way to do this is to call the default constructor from the single-param
+    constructor using this():</p>
+
+<pre>public Window2(WindowEventsExample w) {
+    this();
+    parent = w;
+}</pre>
+
+<p>Now we can tell the parent form to re-appear in our Window2.cmdBack button.</p>
+
+<p>The code we put into the cmdBack button will show the main form and then
+    dispose of the second form.  We need to dispose of the second form rather than
+    just hide it because our main form's Window2 button is creating a new instance
+    of the second form each time it's clicked.  If we don't dispose of the second
+    form when we're done with it, many copies could exist in memory and slow down
+    our application.</p>
+<p>This exact same code will go into the windowClosing() event also,
+    since we want the same thing to occur when the user clicks the second window's
+    close (X) button.  Therefore, let's make a method to do the job and then call
+    it from both event handlers:</p>
+
+<pre>private void goBackToMain() {
+     parent.setVisible(true);
+     this.dispose();
+}
+public void windowClosing(WindowEvent event) {
+     goBackToMain();
+}
+public void actionPerformed(ActionEvent event) {
+     if (event.getSource() == cmdBack) {
+          goBackToMain();
+     }
+}</pre>
+
+<p>Give it a try.  You'll see that the parent form disappears and the second form
+appears when the Window2 button is clicked; when the Back to Main Form button is clicked
+on the child form, it disappears and the main form reappears.</p>
+
+<!--
+<p>However, what happens if you try to click the Window2 button on the main form again?
+    The second form doesn't appear.  This is because we're only instantiating and
+    showing the second window if the child data member isn't null.  When we return back
+    to the main form, we need to make sure we dispose of the child form and set the
+    child data member back to null.  We could do this in the windowActivated() method
+    of the parent form.  We check first to make sure there's something in the child
+    data member, since this method could also occur if we happened to flip to another
+    application.</p>
+
+<pre>public void windowActivated(WindowEvent event) {
+     txtDisplay.append("Window Activated Event occurs\n");
+     if (child != null) {
+          child.dispose();
+          child = null;
+     }
+}</pre>
+
+<p>Try the program again.  You can now use the buttons to go back and forth
+    between the two windows.</p>
+-->
+<!--<p>We will cover this solution in the next section, <a href="data">Passing Data/Objects
+        Between Windows</a></p>-->
+
+<!--
+<h4>Keeping the Main Window Open</h4>
+
+<p>What if you want to keep the main window open while you view the second form?
+    In this case you need to be careful because as we discovered, it's easy for the
+    user to return to the main form and click the Window2 button as many times as
+    they want.  We need to make sure that even if we keep the main window open,
+    only one child form will appear.</p>
+
+<p>To solve this problem, we
+     create a private data member in the parent form that contains a
+    reference to the child form, just as we did when we wanted the child form
+    to have a way of accessing the parent.</p>
+
+<p>For this example, we'll use a third form so we can keep the code for our second one.
+    Create a third JFrame with a label/text field pair for entering data, which we will
+    later pass back to the main form, a button that allows us to return to the main form,
+    and a label where we can later display data passed into the third form from the
+    first one.</p>
+
+<p><img src="images/windowEvents7.png" alt="a third form to view" /></p>
+
+<p>On my form, I called my text box txtInput, my label lblData, and my button cmdBack.</p>
+
+<p>Set the defaultCloseOperation property of your third form to DISPOSE.</p>
+
+<p>As you did with the second window, set up your third form so that the button can
+    fire events and the frame can fire window events.</p>
+
+<p>Next, add a second button to your main form to show the third window.  Make sure
+    you register this button with the action listener.</p>
+
+<p><img src="images/windowEvents8.png" alt="add another button to the main form" /></p>
+
+<p>On my form, I called my button cmdWindow3.</p>
+
+
+<p>Now we need to start writing the code that allows the user to view and use both
+    forms at the same time without being able to instantiate multiple instances of
+    the child form.</p>
+
+<ol>
+    <li>Add a private data member to hold an instance of your child form.  My child
+        form's class is called Window3, so my declaration would look like:</li>
+    <pre>private Window3 child = null;</pre>
+
+    <li>In your event handler, delete the statements for the cmdWindow2 button and 
+    add the code to only instantiate the child form if it doesn't already exist:</li>
+</ol>
+
+<pre>if (child == null) {
+     child = new Window3();
+     child.setVisible(true);
+}</pre>
+
+<p>By checking first, to see if the child form hasn't already been created, we can keep
+    the user from instantiating multiple instances of the cihld form:  if the child
+    data member is a null object, then the child form
+    doesn't exist and we can create it.  However, if the variable does not contain
+    a null object, the child form exists already and it should not be instantiated
+    again.</p>
+
+<p>Now you can click the cmdWindow3 button multiple times and only one instance
+    of the child form appears.</p>
+
+
+<p>After closing the third window, try clicking the Window3 button again.  What
+    happens?  Nothing!</p>
+<p>This is because the third window still lives on in memory, so
+    <font face="Courier New"><b>child == null</b></font> is false and the
+    child window is not instantiated.  It doesn't matter that the third
+    window's defaultCloseOperation is set to DISPOSE.  As long as there is at
+least one reference to an object in memory, it's resources will not be cleared away.</p>
+
+<p>One solution to this problem is to ensure that when we return to the main form
+from the child form, we remove the reference to the child form inside the parent. We
+might think to use the windowActivated() event to set child = null; however, that
+means that if we leave the child window open, clicking the cmdWindow2 button on the
+main form will erase the memory reference and allow us to instantiate a second 
+instance of the child form, which we're trying to avoid.</p>
+
+<p>It seems the only way to solve this is to somehow have the child form tell the parent
+    form that it can dispose of the child form and clear the child data member.  Then
+    a user can easily instantiate a new child, but only if it doesn't already exist.  To
+    do this, we need to learn how to pass data back and forth between two JFrames.</p>
+
+- change window3 close op to do nothing
+-->
+<a name="data"></a>
+
+<h3>Passing Data/Objects Between Windows</h3>
+
+<p>There are different ways to pass data back and forth between two windows.  The
+    techniques we see here aren't necessarily the only ones, and even though your
+    sample application will use multiple techniques, it's not required that you always
+    use all of these in one application.  Use whatever works for you, for your
+    application.</p>
+
+<p>First, let's try passing data into the second window.  This is easy!
+    You already did this when you passed a reference of the main window
+    into the secondary window.  We can pass data in the same way.  For example,
+    if the user types some text in the "Send Data: " text field on the main
+    form, we can make it appear in the "Received Data:" text area on the
+    secondary form by passing it into one of the constructors.  Remember
+    that you need a matching constructor in your second window's class!
+I'm going to create a third constructor, in case I don't want to always
+pass a string value along with the parent window reference:</p>
+
+<pre>// Main Window class:
+if (event.getSource() == cmdWindow2) {
+Window2 w2;
+if (txtDataSent.getText().trim().equals("")) {
+     w2 = new Window2(this);
+} else {
+     w2 = new Window2(this, txtDataSent.getText());
+}
+w2.setVisible(true);
+this.setVisible(false);
+
+// Window2 class:
+public Window2(WindowEventsExample w, String recdData) {
+     this(w);
+     txtData.setText(recdData);
+}</pre>
+
+<p>An alternative method allows a little more flexibility.  You
+    can store the data in a data member inside Window2.  This
+    way, the data is available anywhere inside the Window2
+    class.  This is my preferred way of passing data into a secondary
+    form:</p>
+
+<pre>// Window2 class:
+private String receivedData = "";
+
+// .....
+public Window2(WindowEventsExample w, String recdData) {
+     this(w);
+     receivedData = recdData;
+}</pre>
+
+<p>Note that you might prefer using a mutator method to set
+    the received data, in case you're worried that bad data
+    could be passed into the form.</p>
+
+<h4>Passing Data Back</h4>
+
+<p>Now, what if we wanted to pass data back from the child
+    form to the parent form?  This is also relatively easy,
+    but you need to add some things.</p>
+
+<p>First, you need some way of being able to publicly access
+    the data from your secondary form.  I like to use a private
+    data member with a public accessor method.  For example,
+    if I were passing back a login name, I would have a private
+    instance variable loginName and then create a getLoginName()
+    method that would allow me to retrieve the value of that
+    data member outside of the Window2 class.  This is important
+    because we'll need to access the data from the parent window.</p>
+
+<p>So first, let's create a private data member for the data
+    that Window2 is passing back, and create an accessor for it.</p>
+
+<pre>// in Window2 Class:
+private String userInput = "";
+// .......
+public String getUserInput() {
+   return userInput;
+}</pre>
+
+<p>Now we need to make sure that the user input is set properly
+    when the user goes back to the main window.  Recall that
+    in a previous exercise we wrote the goBackToMain() method
+    which is called from the Back button's action performed,
+    and from the windowClosing() events.  This method should
+    update the instance variable with the user's input, if
+    valid</p>
+
+<p>Furthermore, we need to comment out or delete the displose()
+    statement in this method.  Later, we're going to be accessing
+    the child form's data from the parent, and we won't be able
+    to do that if the child form has been disposed of.</p>
+
+<pre>private void goBackToMain() {
+     parent.setVisible(true);
+     // comment out this next line:
+     <font color="red">//this.dispose();</font>
+     if (!txtInput.getText().trim().equals("")) {
+          // add any other data validation you need here
+          userInput = txtInput.getText().trim();
+     }
+}</pre>
+
+<p>Next, we need to be able to retrieve that data value in
+    our parent form.  To do this, the parent needs a way to access
+    the child form, so we could, for example, say something like:</p>
+
+<p>String getData = childForm.getUserInput();</p>
+
+<p>We did this in the child form earlier when we needed access
+    to the parent form - we created a private data member in the
+    child form with a reference to the main window, so we could
+    access the parent form where we needed inside the secondary
+    form.  We can also do this inside the main window with the
+    child form:</p>
+
+<pre>// Main Window class:
+private Window2 child = null;</pre>
+
+<p>Next, we need to alter our code for the Window2 button:
+    When the button is clicked we want to store the instance
+    of the child form into the child data member:</p>
+
+<pre>if (event.getSource() == cmdWindow2) {
+     if (txtDataSent.getText().trim().equals("")) {
+          child = new Window2(this);
+     } else {
+          child = new Window2(this, txtDataSent.getText());
+     }
+     child.setVisible(true);
+     this.setVisible(false);
+} // ....</pre>
+
+<p>Here, we store the new window into the child variable before we
+    show it and hide the main form.</p>
+
+<p>Next, when the user returns to the main form, we want to grab
+    the data from the child form and use it.  One place where we
+    can get the child form's data when we return to our main
+    window is in the windowActivated() method:  this method
+    executes when the form returns as the active window.</p>
+
+<p>Since the windowActivated() event could occur at any time,
+    not just when viewing the second form, we should make sure
+    we only refer to the child form if it's already in existence.
+    If the child form doesn't exist, then the activate event
+    probably occurred when the user flipped to another application
+    and back, or viewed a pop-up dialog box.  If we try to
+    access the child form's input data when the child form
+    hasn't been instantiated yet, the program could crash:</p>
+
+<pre>public void windowActivated(WindowEvent event) {
+     txtDisplay.append("Window Activated Event occurs\n");
+     // just in case, make sure there's a child form
+     if (child != null) {
+          if (!child.getUserInput().trim().equals("")) {
+              txtDisplay.append("    USER INPUT: " + child.getUserInput() + "\n");
+          }
+          child.dispose();
+          child = null;
+     }
+}</pre>
+
+<p>Notice the last two statemenents inside the if-block:<br />
+child.dispose();<br />
+child = null;<br />
+After we are finished with the child form, we need to ensure
+that it is disposed of.  Remember that we might want to view this
+form again later, so be sure that you dispose of the form when
+you're done.  Also, we set the child data member to null, to
+ensure there are also no longer any references to the child form
+in memory (otherwise, its resources won't be released from
+memory).</p>
+
+<p>That's it!!  Using those examples, you can easily pass valid
+    data back and forth between two or more forms.  You can
+    even use the same techniques to pass objects, or even an
+    entire array of data or an array list of objects.</p>
+
+<script language="JavaScript" type="text/javascript" src="../scripts/copynote.js"></script>
+
+
+</body>
+</html>

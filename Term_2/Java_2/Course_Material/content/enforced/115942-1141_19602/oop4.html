@@ -1,0 +1,254 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Inheritance 1</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+
+</head>
+
+<body onload='window.focus()'>
+<h2>Inheritance 1</h2>
+<h3>Topics Covered:</h3>
+<ul>
+<li>Inheritance Defined</li>
+<li>Method Overriding</li>
+</ul>
+<h3>Things To Do Before Reading This Section:</h3>
+<ul>
+<li>Read chapter 11 in your textbook (up to and including chapter 11.5).</li>
+<li>Answer questions 11.1 to 11.9 on pages 398 to 399.</li>
+<li>Try programming exercise 11.1 on page 403 (GeometricObject.java is defined in listing 11.1 on page 375-76).</li>
+</ul>
+<h3>Things To Do After Reading This Section</h3>
+<ul>
+<li>Read chapters 11.6 to 11.10 in your textbook</li>
+<li>Do any homework assigned by your professor.</li>
+</ul>
+<h3>Inheritance Defined</h3>
+<p>Chapter 11 introduces you to one of the most important topics in object-oriented programming: Inheritance. After reading this section, you should be familiar with the following concepts:</p>
+<ul>
+<li>why inheritance is useful in oop</li>
+<li>what inheritance means</li>
+<li>terms:</li>
+<ul>
+<li>child class, sub class, derived class</li>
+<li>parent class, super class, base class</li>
+<li>multiple-inheritance, single-inheritance (or simple inheritance)</li>
+<li>class hierarchy</li>
+<li>method overriding</li>
+</ul>
+<li>What members of a parent class are available to a child class?</li>
+</ul>
+<h4>Example</h4>
+<p>This programming example should help clarify the concepts you've read in the textbook. Imagine the classes Circle and Cylinder with the following members:</p>
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Class : Circle</strong></td>
+</tr>
+<tr>
+<td>
+<p><strong>Data Members</strong>:</p>
+<p>- radius : double</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Methods</strong>:</p>
+<p>+Circle()</p>
+<p>+Circle(double radius)</p>
+<p>+setRadius(double radius) : void</p>
+<p>+getRadius() : double</p>
+<p>+getArea() : double</p>
+<p>+toString() : String</p>
+<p>+equals(Circle c) : boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Class : Cylinder</strong></td>
+</tr>
+<tr>
+<td>
+<p><strong>Data Members:</strong></p>
+<p>- radius : double</p>
+<p>- height : double</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Methods</strong>:</p>
+<p>+Cylinder()</p>
+<p>+Cylinder(double radius, double height)&nbsp;</p>
+<p>+setRadius(double radius):void</p>
+<p>+getRadius():double&nbsp;</p>
+<p>+setHeight(double height):void</p>
+<p>+getHeight():double&nbsp;</p>
+<p>+getArea():double</p>
+<p>+getVolume():double&nbsp;</p>
+<p>+toString():String</p>
+<p>+equals(Cylinder c):boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;You will see some redundancies between these two classes. Not only does this mean the programmer is writing some code twice, but any modifications need to be made to the common code in the future will result in a lot of unnecessary maintenance. This is not desirable and goes against the point of object-oriented programming.</p>
+<p>Inheritance means that one class can inherit or use code from another class as long as there is a child-parent relationship between the classes. If we make Circle the parent class, we can then program Cylinder as the child class. This will allow Cylinder to make use of code in the Circle class.</p>
+<p>To see how this works, write the code for the Circle class:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Circle { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">private double radius;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Circle() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">radius = 1;&nbsp; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Circle(double radius) throws IllegalArgumentException { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">setRadius(radius); &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public void setRadius(double radius) { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">if (radius &lt;= 0) &nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 120px;"><span style="font-family: courier new,courier;">throw new IllegalArgumentException("Invalid value for radius."); &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">else &nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 120px;"><span style="font-family: courier new,courier;">this.radius = radius; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public double getRadius() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return radius; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public double getArea() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return Math.PI * Math.pow(radius, 2); &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public String toString() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return "Circle: radius=" + radius; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public boolean equals(Circle c) { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return (c.getRadius() == this.radius); &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">} </span></p>
+<p>Test your class to make sure everything works. Then we can start writing the Cylinder class.</p>
+<p>When designing Cylinder, we realize that the radius attribute and its accessor and mutator methods are already defined in Circle. We also see that we have three methods that are the same (getArea(), toString(), and equals()) but will have different code. We will focus on these items as we go through this example.</p>
+<p>To indicate that a class is inheriting from another class, you use the extends keyword in the class signature:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Cylinder extends Circle { &nbsp; }</span></p>
+<p>This indicates that Cylinder is a child class of Circle. You don't have to define the radius variable or its get and set methods in Cylinder. We do need to define the height variable and it's accessor and mutator methods:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Cylinder extends Circle {&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">private double height;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public void setHeight(double height) {&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">if (height &lt;= 0)&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 120px;"><span style="font-family: courier new,courier;">throw new IllegalArgumentException("Invalid value for height.");&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">else&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 120px;"><span style="font-family: courier new,courier;">this.height = height;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public double getHeight() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return height; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">} </span></p>
+<p>We also need the two constructors for this method. Our default constructor should set radius and height to the default values, and two-parameter constructor will need to validate radius and height by using their set methods.</p>
+<p>In the default constructor, we could just assign radius and height a value of 1:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Cylinder extends Circle { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">private double height;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Cylinder() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">radius = 1; &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">height = 1; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} &nbsp;....</span></p>
+<p>&nbsp;However, radius is private inside the Circle class.. we can't access it! We could use the setRadius() method.. since that's a public method inside the Circle class, it's inherited by Cylinder. Instead, it would be easier to just tell the parent class's default constructor to execute. You can call a parent constructor from a child constructor by using the <strong>super</strong> keyword:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Cylinder extends Circle { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">private double height;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Cylinder() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">super(); &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">height = 1; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} &nbsp;....</span></p>
+<p>&nbsp;In this case, we first call the parent class default constructor (which sets the radius to a default value of 0) and then we assign a default value of 1 to the height.</p>
+<p>In the second constructor, we want to set radius and height to the programmer-specified values. Here we can use the set method for radius (defined in the parent class) and the set method for height we just added to our Cylinder class:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public Cylinder(double radius, double height) { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">setRadius(radius); &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">setHeight(height); </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">} </span></p>
+<p>Test this class in your test program from earlier. You'll notice that everything works, even though we didn't define anything in Cylinder for radius. This is because of the inheritance that allows Cylinder to implement code from Circle.</p>
+<p>Our 2-param constructor works fine, but what if we had other code in the Circle's constructors that needed to execute when we instantiated a Cylinder? We are already calling the parent constructor in the Cylinder's default constructor, but what about Cylinder's 2-param constructor? This often happens, so when you have any kind of constructor in a child class, you should always call the parent constructor. In the case of the Cylinder 2-param constructor, you can call the Circle's 1-param constructor and give it the radius:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public Cylinder(double radius, double height) {&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">super(radius);&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">setHeight(height); </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">}</span></p>
+<p>This code will invoke the single-parameter Circle constructor, passing the value of radius into it. Obviously this will run the setRadius() method in the Circle class, which validates and sets the radius variable. This is a common way for programmers to set values that are inherited from the parent class.</p>
+<table style="background-color: #99ffff;">
+<tbody>
+<tr>
+<td>When calling <strong>super(),</strong> it must always be the first statement in the constructor!</td>
+</tr>
+</tbody>
+</table>
+<p>Our Cylinder class so far should appear as:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public class Cylinder extends Circle { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">private double height;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Cylinder() { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">super(); &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">height = 1; &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public Cylinder(double radius, double height) { &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">setRadius(radius); &nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">setHeight(height); &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">&nbsp;public void setHeight(double height) {&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">if (height &lt;= 0)&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 120px;"><span style="font-family: courier new,courier;">throw new IllegalArgumentException("Invalid value for height.");&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">else&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 120px;"><span style="font-family: courier new,courier;">this.height = height;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">}</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">public double getHeight() {&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier;">return height;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">} </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">}</span></p>
+<h3>Method Overriding</h3>
+<p>When you create a child class, you may want to inherit methods from the parent class as we did with the radius accessor and mutator. You can also add methods and instance variables as we did with height and its accessor and mutator methods. You can also modify methods that are inherited from the parent class. This is referred to as method overriding -- think of it as overriding or creating a different version of an inherited method.</p>
+<p>When you override a method, the method signature must remain the same as the method in the parent class. The body of the method can be different (and generally, that's the point). In Cylinder, the getArea() method will perform differently: it will calculate and return the cylinder's surface area according to the following formula:</p>
+<p style="padding-left: 30px;"><strong>2 * PI * radius2 + height * 2 * PI * radius</strong></p>
+<p>You should have noticed that the PI * radius2 part of this formula is actually the circle's area! This will become useful when we code our method, as we can tell Cylinder's getArea() to go and get the result from Circle's getArea()! To do this, you use the super keyword to refer to the parent class's getArea() method:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public double getArea() { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">return 2 * super.getArea() * height * 2 * Math.PI * radius; </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">}</span></p>
+<p>super refers to the Circle class definition, so this piece of the statement is invoking the getArea() method from Circle. You must include super here, otherwise the getArea() method will try to call itself (this is called recursion).</p>
+<p>What happens when you compile the Cylinder class now? You'll get the following error:</p>
+<p style="padding-left: 30px;"><strong>Cylinder.java:33: radius has private access in Circle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>
+<p style="padding-left: 60px;"><strong>return 2 * super.getArea() * height * 2 * Math.PI * radius; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>
+<p style="padding-left: 30px;"><strong>^ 1 error</strong></p>
+<p>The radius variable is private in the Circle class -- you must use the getRadius() method to access it!</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">public double getArea() { &nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier;">return 2 * super.getArea() * height * 2 * Math.PI * getRadius(); </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier;">}</span></p>
+<h4>Exercises</h4>
+<ol>
+<li>a) Override toString() method, and add the getVolume() method in the Cylinder class. A cylinder's volume is its height * the circle's area. (b) Add an equals() method to your classes. What makes two circles equal? What would make two cylinder's equal?</li>
+<li>Write a class called Sphere with the following specifications:</li>
+</ol>
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Class : Sphere extends Circle</strong></td>
+</tr>
+<tr>
+<td>
+<p><strong>Data Members</strong>:</p>
+<p>-radius:double</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Methods</strong>:</p>
+<p>+Sphere()</p>
+<p>+Sphere(double radius)&nbsp;</p>
+<p>+getRadius():double</p>
+<p>+setRadius(double radius):void&nbsp;</p>
+<p>+getArea():double</p>
+<p>+getVolume():double</p>
+<p>+toString():String</p>
+<p>+equals(Sphere s):boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;The surface area of a sphere is 4 * PI * radius2 (4 times circle area) and the volume of a sphere is 4/3 * PI * r3, which could also be written as 4/3 * radius * the circle area.</p>
+</body>
+</html>

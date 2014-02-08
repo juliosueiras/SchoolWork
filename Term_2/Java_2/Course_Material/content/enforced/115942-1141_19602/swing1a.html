@@ -1,0 +1,250 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Swing GUI [Interface Components]</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+
+</head>
+
+<body onload='window.focus()'>
+
+<h2>Swing GUI - Interface Components</h2>
+
+<h3>Topics Covered:</h3>
+
+<ul class="outer">
+	<li><a href="#comp">More Component Objects</a>
+</ul>
+
+<h3>Things To Do Before Reading This Section</h3>
+<ul class="outer">
+	<li>Read Chapter 16.1 to 16.9.
+	<li>Check the following URLs:
+	<ul class="inner">
+        <li><a href="http://java.sun.com/docs/books/tutorial/ui/features/components.html" target="_new">Visual Index to Swing Components</a>
+        <li><a href="http://java.sun.com/docs/books/tutorial/uiswing/index.html" target="_new">Creating a GUI with JFC/Swing</a>
+	<li><a href="http://java.sun.com/docs/books/tutorial/uiswing/components/toplevel.html" target="_new">Using Top-Level Containers</a>
+    </ul>
+</ul>
+
+<h3>Things To Do After Reading This Section</h3>
+<ul class="outer">
+	<li>Go through the tutorials at Sun's <a href="http://java.sun.com/docs/books/tutorial/uiswing/layout/index.html" target="_new">Laying Out Components Within a Container</a> page.
+
+</ul>
+
+<a name="comp"><h3>More Component Objects</h3></a>
+
+<h4>JTextArea and JScrollPane</h4>
+
+<p>The JTextArea class allows you to create text field objects that can
+have multiple lines of input.  These are useful for fields where the
+user might want to enter paragraphs of text, or things like addresses
+that require more than one line.  When you construct a JTextArea
+component, you should indicate how many rows and character-columns
+the text field should have:</p>
+
+<pre>JTextArea comments = new JTextArea(3, 40);</pre>
+
+<p>This JTextArea object called comments has 3 rows and 40
+character-columns.</p>
+
+<p>You can also specify some default text as the first argument:</p>
+
+<pre>JTextArea comments = new JTextArea("I liked this course because ", 3, 40);</pre>
+
+<p>The JTextArea also has the following useful methods (there are
+additional methods you might want to check out in the documentation):</p>
+
+<ul class="outer">
+	<li><b>append(String)</b> - adds the String to the text in the text area.
+	<li><b>insert(String s, int i)</b> - inserts the String s at the position i in the text area.
+	<li><b>setLineWrap(boolean b)</b> - turns line wrap on and off.
+	<li><b>setWrapStyleWord(boolean b)</b> - when set to true, wraps the current word to the next line.  When set to false, wraps the current character to the next line, even if it's in the middle of a word.
+</ul>
+
+<p>If you create a JTextArea object you will need to make sure
+that it has enough rows for the user's input.  If you are unsure
+of the number of rows that could possibly be entered, you can add
+some scrollbars to your JTextArea object.  This ensures that scrollbars
+appear if the user's input goes beyond the number of rows or columns
+your text area has.</p>
+
+<p>To add scrollbars to a JTextArea (or other control, as you'll see
+later), you need to create a JScrollPane object.  A JScrollPane object
+is a special pane or panel that contains scrollbars (you can indicate
+how you want the scrollbars to behave, as you'll see in a moment).
+If you want scrollbars attached to a control, you simply create a
+JScrollPane object and place your component inside the scroll pane.</p>
+
+<p>When creating a JScrollPane object, you need to indicate how you
+want the vertical and horizontal scrollbars to behave.  You can choose
+from a set of ScrollPaneConstants:</p>
+
+<p><font face="Courier New">ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS</font> - always shows the vertical scrollbar.<br>
+<font face="Courier New">ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED</font> - show the vertical scrollbar only when it is needed, such as when the user types more lines of text than the number of visible rows.<br>
+<font face="Courier New">ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER</font> - never shows the vertical scrollbar, even when the user's text input goes beyond the number of rows.<br>
+<font face="Courier New">ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS</font> - always shows the horizontal scrollbar.<br>
+<font face="Courier New">ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED</font> - show the horizontal scrollbar only when it is needed, such as when the user types more characters than the number of visible character-columns (assuming wrapping is off).<br>
+<font face="Courier New">ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER</font> - never shows the horizontal scrollbar, even when the user's text input goes beyond the number of columns.</p>
+
+<p>To construct a JScrollPane object, you need to give the constructor
+the text area you want to attach to the scroll pane, the vertical
+scrollbar behavior, and the horizontal scrollbar behavior:</p>
+
+<pre>JTextArea comments = new JTextArea(3, 40);
+comments.setLineWrap(true);
+comments.setWrapStyleWord(true);
+JScrollPane scrComments = new JScrollPane(comments, 
+	ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,	
+	ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</pre>
+
+<p>When you want to add the text area to your content pane and it is
+contained in a scroll pane, <b>you must add the scroll pane object</b>!  If your text area has no scroll pane, then you just add the text area object to the content pane.</p>
+
+<h4>JCheckBox and JRadioButton</h4>
+
+<p>Check boxes can be used for two different reasons:</p>
+
+<ol>
+	<li>A yes/no option.  For example, you might have a checkbox that
+    asks the user if they would like to have their ordered delivered.
+    If the user wants delivery, the box would be checked.  If they
+    wanted to pick up their order, the box would be unchecked.
+	<li>Selecting multiple options from a list.  For example, you
+    might be asking the user to select a set of options for an
+    elliptical treadmill.  You might list things like Heart Rate
+    Monitor, Magnetic Resistance, Pre-Programmed Courses, and
+    Adjustable Stride Length.  A customer could pick any number of
+    these options, or could even pick none of these options.
+</ol>
+
+<p>Radio buttons are used when you are presenting a list of options
+and the user must choose exactly one item from the list (not none,
+not all or some, just one).  For example, you might have a set of
+radio buttons that asked the user which size of pizza they wanted.
+A pizza can be small, medium, large, or extra large -- the user can't
+choose two or more sizes for one pizza, and they can't choose no size
+or they won't be getting a pizza!  The user must choose exactly one
+option, so radio buttons are appropriate for this type of selection.</p>
+
+<p>When you construct a JCheckBox or JRadioButton object, you need
+to specify the caption or text that goes with the check box or radio
+button:</p>
+
+<pre>JCheckBox chkDelivery = new JCheckBox("Customer requests delivery.");
+JRadioButton optSmallPizza = new JRadioButton("Small");</pre>
+
+<p>You can also add an optional boolean parameter that indicates the
+check box should be checked upon construction:</p>
+
+<pre>JCheckBox chkDelivery = new JCheckBox("Customer requests delivery.", true);
+JCheckBox optSmallPizza = new JRadioButton("Small", true);</pre>
+
+<p>The following methods might also be useful:</p>
+<ul class="outer">
+	<li><b>setSelected(boolean)</b> - selects or deselects the control.  You might choose to select or deselect a control using code if you were resetting an input screen back to its original state after a user has finished with it.
+	<li><b>isSelected()</b> - returns true or false if selected or
+    unselected.
+</ul>
+
+<p>By default, these controls are <b>mutually nonexclusive</b>.  This
+means that you can select any number of the controls that are in a
+group.  This might be fine for check boxes (remember that they are
+typically used when the user may select any number of items from a list)
+but this doesn't work for radio buttons (where a user must select
+exactly one item from a list).  To make a set of JRadioButtons mutually
+exclusive (only one can be selected), we have to set them up in a
+ButtonGroup object.</p>
+
+<p>A ButtonGroup object is a <i>logical container</i> for a group of
+radio buttons.  It is not a physical container:  You don't actually
+see the buttons inside a button group object like you would see a text
+area inside a scroll pane.  A button group is a logical grouping of
+buttons so that they act mutually exclusive.  To use a button group,
+you create the ButtonGroup object, then use the add() method to add
+the radio buttons to the button group.  Then you add the radio buttons
+to the content pane:</p>
+
+<pre>ButtonGroup pizzaSize = new ButtonGroup();
+pizzaSize.add(optSmallPizza);
+pizzaSize.add(optMediumPizza);
+pizzaSize.add(optLargePizza);
+pizzaSize.add(optXLargePizza);
+Container contentPane = this.getContentPane();
+contentPane.setLayout(new FlowLayout(FlowLayout.LEFT, 1, 1));
+contentPane.add(optSmallPizza);
+contentPane.add(optMediumPizza);
+contentPane.add(optLargePizza);
+contentPane.add(optXLargePizza);</pre>
+
+<h4>JList</h4>
+
+<p>The JList control gives you a list of items from which the user
+can select one or more items (depending on how the list is configured).
+A list box in Java does not automatically have scrollbars, so you need
+to place it in a JScrollPane if you want to have a list with more items
+than visible rows.</p>
+
+<p>You can construct a JList if you already have a String array of
+items to put in it:</p>
+
+<pre>String[] toppings = {"pepperoni", "mushroom", "green pepper", "onions", "extra cheese"};
+JList lstToppings = new JList(toppings);</pre>
+
+<p>There are a lot of methods that allow you to configure your JList:</p>
+
+<ul class="outer">
+	<li><b>setSelectionMode(int sel)</b> - sets the selection mode, or the way in which a user is allowed to select an item or items.  Possible values come from constants that are defined in the ListSelectionModel class:
+		<ul class="inner"><li>ListSelectionModel.SINGLE_SELECTION - user can select only one item from the list.
+		<li>ListSelectionModel.SINGLE_INTERVAL_SELECTION - user can select a set of items that are adjacent to each other by using the Shift key.
+		<li>ListSelectionModel.MULTIPLE_INTERVAL_SELECTION - user can select a set of items that are not adjacent to each other by using the Control key.</ul>
+	<li><b>getSelectedIndex()</b> - returns the index of the first selected item in the list.
+	<li><b>setSelectedIndex(int index)</b> - selects an item by it's index value.
+	<li><b>getSelectedIndices()</b> - returns an int array of all the selected items' indexes.
+	<li><b>setSelectedIndices(int[] indices)</b> - selects a set of elements as defined by the integers in the indices[] array parameter.
+	<li><b>getSelectedValue()</b> - returns the first selected value in the list.
+	<li><b>setSelectedValue(Object anObject, boolean shouldScroll)</b> - Selects the given Object from the list.  If anObject exists in the list and shouldScroll is true, the list will scroll to that object in the list.
+	<li><b>getSelectedValues()</b> - returns an Object array of all selected values in the list.
+	<li><b>isSelectedIndex(int index)</b> - true if the index value is selected; false if the index value is not selected.
+	<li><b>isSelectionEmpty()</b> - true if there are no elements selected; false if one or more items are selected.
+	<li><b>setVisibleRowCount(int i)</b> - determines how many rows should appear in the list.
+</ul>
+
+<h4>JComboBox</h4>
+
+<p>A combo box is similar to a list in that it contains a list of
+String values.  However, the programmer has the option of allowing a
+user to also type additional values into the combo box.</p>
+
+<p>You don't need an array to place items in the combo box.  You can
+use the addItem() method.  For example:</p>
+
+<pre>JComboBox cmbLanguages = new JComboBox();
+cmbLanguages.addItem("Java");
+cmbLanguages.addItem("C#");
+cmbLanguages.addItem("PHP");
+cmbLanguages.addItem("Perl");</pre>
+
+<p>If you want the items listed alphabetically, you will need to add
+them in alphabetical order.  Alternatively, you can store them in an
+array, sort the array, then place the items in the combo box.</p>
+
+<p>Other methods commonly used with combo boxes include:</p>
+
+<ul class="outer">
+	<li><b>getItemAt(int index)</b> - returns the item at the specified index value (first item is 0).
+	<li><b>getItemCount()</b> - returns the number of items in the list.
+	<li><b>getSelectedIndex()</b> - returns the index # of the currently selected item.
+	<li><b>getSelectedItem()</b> - returns the text of the currently selected item.
+	<li><b>setSelectedIndex(int index)</b> - selects the item at the specified index.
+	<li><b>setSelectedIndex(Object o)</b> - selects the specified Object in the list.
+	<li><b>setMaximumRowCount(int)</b> - sets the number of rows in the box that can be displayed at one time.
+</ul>
+
+<script type="text/javascript" src="../scripts/copynote.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+</head>
+<body style="font-family: 'PTSansRegular', Verdana, sans-serif;">
+<p><span style="font-family: courier new,courier; font-size: 10pt;">import java.util.Scanner;</span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">/**&nbsp;&nbsp;</span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">*&nbsp;Here is a sample app class to reverse-print an input string&nbsp;</span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">* @author Matt Swan</span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">*/ </span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;"></span>&nbsp;</p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">public class ReverseStringPrint {&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier; font-size: 10pt;">private static Scanner inText = new Scanner(System.in);</span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">&nbsp;&nbsp;&nbsp; public static void main(String[] args) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier; font-size: 10pt;">String sReverseText = "";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier; font-size: 10pt;">System.out.println("Please type in a sentence.");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier; font-size: 10pt;">String sText = inText.nextLine();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier; font-size: 10pt;">for(int i=sText.length(); i != 0; i--)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 90px;"><span style="font-family: courier new,courier; font-size: 10pt;">sReverseText +=&nbsp;sText.substring(i-1,i);&nbsp;</span><span style="font-family: courier new,courier; font-size: 10pt;">&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: courier new,courier; font-size: 10pt;">System.out.println("Result: " + sReverseText);&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier; font-size: 10pt;">}&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p><span style="font-family: courier new,courier; font-size: 10pt;">}</span></p>
+</body>
+</html>

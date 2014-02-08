@@ -1,0 +1,149 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Deployment</title>
+<script type="text/javascript" src="scripts/header.js"></script>
+<link rel="stylesheet" type="text/css" href="css/prog.css">
+
+
+</head>
+
+<body  onload='window.focus()'>
+
+    
+
+<h2>Application Deployment - Making an Install File</h2>
+
+<p><a href="files/Deployment.ppt">Download the slides</a> for this lesson.</p>
+
+<p>Once you've completed (created, tested, and
+debugged) an application, you might be ready to
+deploy it.  Deployment in Netbeans is relatively
+easy!  You might want to re-read the lesson on
+<a href="http://www-acad.sheridanc.on.ca/~jollymor/prog24178/library.html#jar">Creating a Jar File</a>
+before you proceed with this lesson.</p>
+
+<p>To deploy a program, you just collect all the files
+required to run your program and put them into a single
+install file, such as a ZIP or RAR (those who are very
+familiar with these utilties can even make self-extracting
+files!)  To create your Install File, just perform the
+following steps:</p>
+
+<h3>Step 1: Create a JAR</h3>
+
+<p>The first step is to create a JAR file for your
+project.  Just right-click the project node and
+select "Clean and Build" once you've set the
+properties for your jar file (see previous
+<a href="http://www-acad.sheridanc.on.ca/~jollymor/prog24178/library.html#jar">Creating a Jar File</a>
+lesson).</p>
+
+<p>When you create a JAR file for an application,
+Netbeans will update the Manifest.mf file to indicate
+which class is the "start-up" or main() class. The JAR
+will also include any libraries you've added to the
+project's Libraries node.</p>
+
+<p>Once you're JAR file has been created, you should
+check your project's "dist" folder and see what's there:</p>
+
+<p><img src="images/deployDistDir.jpg" /></p>
+
+<p>Notice the README.TXT file - you can read this
+if you like, as it contains information about how to
+run your jar file.  You might wish to edit this file
+if there's anything important your user needs to know
+about installing or using your application.</p>
+
+<p>You'll also see a "lib" folder.  When you made
+your JAR, Netbeans created this folder and added your
+project's libraries (anything in your Libraries folder)
+to it.  This ensures that your library code used in
+this project is included in the application.</p>
+
+<p><b>NOTE:</b>  If your project contains multiple classes with a
+    main() method, you'll need to configure your project properties and
+    make sure the manifest is updated with the name of the startup
+    form or class (the one with the main() method that starts
+    your program):</p>
+
+<p><img src="images/setMainClass.png" alt="set main class configuration" /></p>
+
+<ol>
+    <li>Right-click on your main project node in the Projects
+        window.</li>
+    <li>Select Properties.</li>
+    <li>In the Project Properties window, select the category
+    "Run".</li>
+    <li>In the second field, titled "Main Class"  see if your
+        startup class/window is already set.  If not, click
+        the Browse button.</li>
+    <li>Select your startup class/window from the list, then
+    click the "Select Main Class" button.</li>
+    <li>Click OK to clear the Project Properties window.</li>
+</ol>
+
+<p>Check that when you "Clean and Build", your JAR file executes
+    with the proper startup window/class.</p>
+
+<h3>Step 2:  Add Additional Files/Directories</h3>
+
+<p>If your project includes data files, images, and
+other important files, you should include these in
+your dist folder.  Just copy them over.</p>
+
+<p>You can see in the image shown earlier that the
+main project had a "data" folder and an "images"
+folder.  Copy these folders into your "dist"
+directory:</p>
+
+<p><img src="images/deployAddExtras.jpg" /></p>
+
+<h3>Step 3: Archive Your Project for Distribution</h3>
+
+<p>The last step is to archive your project for
+distribution.  This simply involves taking all the
+files and folders in the "dist" directory and adding
+them to a ZIP or RAR file.  Do not include
+the "dist" folder, just the files it contains.  Also,
+make sure when you create your archive, you configure
+it so that the sub-directories (like "lib") are added
+"as is".  The steps below take you through this
+process using WinZIP:</p>
+
+<ol>
+    <li>Select all your files in the "dist" folder.
+    <li>Right-click the selected files and select "WinZip",
+    then "Add to Zip file.."</li>
+    <p><img src="images/deployAddToZip.jpg" /></p>
+    <li>Pick a location on your computer, or just use the default
+    location for your zip file (shown in image below)
+    and add a name for your file.  This should be
+    the name of your application (example below if for an
+    app called "Bibs' Book Tracker").</li>
+    <li>Make sure the "Save full path info" check box is
+    <b>unchecked</b>.
+    <li>Click the Add button to create the archive file.
+</ol>
+<p><img src="images/deployConfigZip.jpg" /></p>
+<p>You should now see a list of the contents of your archive,
+similar to the example shown in the image below:</p>
+
+<p><img src="images/deployZipped.jpg" /></p>
+
+<p>You can now close WinZip.  Locate your project .zip file:
+you will likely need to add it to another archive or file
+for your final submission.</p>
+
+<p><b><i>HINT:</i></b> Have a friend help you test your program:
+Put the install file on their computer, unpack the contents, and
+then try to run the program! (make sure they have a JRE installed!)</p>
+
+<p>You should find these steps
+are similar when using WinRAR.</p>
+
+<script typte="text/javascript" src="scripts/copynote.js"></script>
+
+</body>
+</html>

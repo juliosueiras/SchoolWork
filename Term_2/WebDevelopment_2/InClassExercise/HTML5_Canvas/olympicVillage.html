@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+On the eve of the 2014 Winter Olympics, here
+is an example that demonstrates basic shapes, lines,
+and text.
+
+Justin Alerta
+February 2014
+-->
+<html>
+    <head>
+        <title>An Example of Olympic Proportions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>
+            <canvas id="olympicVillage" width="800" height="700">
+                Your browser does not support the canvas tag...
+            </canvas>
+            <br>
+            <div style="text-align:center;width:800px">
+                <input type="button" value="Draw Olympic Rings" 
+                       onclick="drawRings();">
+                <input type="button" value="Draw Village Base"
+                       onclick="drawBase();">
+                <input type="button" value="Draw Village Structure"
+                       onclick="drawStructure();">
+                <input type="button" value="Display Text"
+                       onclick="displayText();">
+                <input type="button" value="Display Flag"
+                       onclick="displayFlag();">
+                <input type="button" value="Clear Canvas"
+                       onclick="clearCanvas();">
+            </div>
+        </div>
+        <script type="text/javascript">
+            // Get the <canvas> from the DOM
+            var canvas = document.getElementById("olympicVillage");
+            
+            // Returns an object that allows you to draw 2D images on the canvas
+            var context = canvas.getContext("2d");
+            
+            /* Each ring is drawn by calling stroke(). Recall that: 
+             * 0 radians --> "3 o-clock"
+             * PI / 2 radians --> "6 o-clock"
+             * PI radians --> "9 o-clock"
+             * 3 PI / 2 radians --> "12 o-clock"
+             * 2 PI --> "3 o-clock"
+             * 
+             * arc(x, y, r, startPoint, endPoint)
+             * x --> x-coordinate of the center of the circle
+             * y --> y-coordinate of the center of the circle
+             * r --> the radius of the circle
+             * startPoint --> the starting angle of the arc in radians
+             * endPoint --> the ending angle of the arc in radians
+             * 
+             * Use beginPath() to reset the current path.
+             * Use the strokeStyle property to set the stroke colour.
+             */
+            function drawRings() {
+                
+                context.beginPath();
+                context.strokeStyle = "blue";
+                context.arc(100, 200, 90, 0, 2 * Math.PI);
+                context.stroke();
+
+                context.beginPath();
+                context.strokeStyle = "yellow";
+                context.arc(225, 300, 90, 0, 2 * Math.PI);
+                context.stroke();
+
+                context.beginPath();
+                context.strokeStyle = "black";
+                context.arc(350, 200, 90, 0, 2 * Math.PI);
+                context.stroke();
+
+                context.beginPath();
+                context.strokeStyle = "green";
+                context.arc(475, 300, 90, 0, 2 * Math.PI);
+                context.stroke();
+
+                context.beginPath();
+                context.strokeStyle = "red";
+                context.arc(600, 200, 90, 0, 2 * Math.PI);
+                context.stroke();
+            }
+            
+            /*
+             * Draws the base of the village using a filled, brown rectangle.
+             * 
+             * fillRect(x, y, width, height)
+             * x --> the x-coordinate of the upper left corner of the rectangle
+             * y --> the y-coordinate of the upper left corner of the rectangle
+             * width --> the number of pixels across the x-axis
+             * height --> the number of pixels down the y-axis
+             */
+            function drawBase() {
+                // Draw the base of the village
+                context.beginPath();
+                context.fillStyle = "brown";
+                context.fillRect(150, 500, 200, 100);
+            }
+            
+            /*
+             * Draws the village structure.
+             * 
+             * ROOF:
+             * Use numerous lineTo() function to draw the outline of the roof.
+             * Use fillStyle property to set the fill colour and fill() to draw
+             * a filled in path.
+             * 
+             * WINDOWS:
+             * Draws two filled, white rectangles
+             * 
+             * DOOR/DOOR KNOB:
+             * Draw filled, red rectangle for the door and a filled circle
+             * for the knob.
+             * 
+             */
+            function drawStructure() {
+                // Draw the roof of the village
+                context.beginPath();
+                context.fillStyle = "purple";
+                context.moveTo(150, 500);
+                context.lineTo(100, 500);
+                context.lineTo(250, 425);
+                context.lineTo(400, 500);
+                context.lineTo(350, 500);
+                context.fill();
+
+                // Draw the windows
+                context.beginPath();
+                context.fillStyle = "white";
+                context.fillRect(180, 520, 20, 20);
+                context.fillRect(300, 520, 20, 20);
+
+                // Draw the door
+                context.beginPath();
+                context.fillStyle = "red";
+                context.fillRect(230, 560, 40, 40);
+
+                // Draw the door knob
+                context.beginPath();
+                context.fillStyle = "black";
+                context.arc(260, 580, 5, 0, 2 * Math.PI);
+                context.fill();                
+            }
+            
+            /*
+             * Displays text at the top of the canvas.
+             */
+            function displayText() {
+                context.font = "32px Arial";
+                // Add gradient to text
+                var gradient = context.createLinearGradient(0, 50, 300, 50);
+                gradient.addColorStop("0", "red");
+                gradient.addColorStop("0.5", "black");
+                gradient.addColorStop("1.0", "red");
+                context.fillStyle = gradient;
+                context.fillText("Canadian Olympic Village", 0, 50);               
+            }
+
+            /*
+             * Display an image of the Canadian flag beside the text.
+             */
+            function displayFlag() {
+                var img = new Image();
+                img.src = "images/flag-of-canada.jpg";
+                img.onload = function() {
+                    context.drawImage(img, 400, 0, 150, 100);
+                };
+            }
+            
+            /*
+             * Clears the canvas contents.
+             */
+            function clearCanvas() {
+                // Clear the entire canvas area
+                context.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        </script>
+    </body>
+</html>
