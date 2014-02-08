@@ -29,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="9" selection-start="113" selection-end="113" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="522">
+            <state line="9" column="9" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="522">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="oldSchoolExample.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oldSchoolExample.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="14" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-0.0" vertical-offset="1098" max-vertical-offset="3096">
+            <state line="61" column="14" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="3096">
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="happyFace.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/happyFace.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="22" selection-start="4844" selection-end="4844" vertical-scroll-proportion="0.23151125" vertical-offset="2736" max-vertical-offset="4392">
+            <state line="165" column="12" selection-start="5062" selection-end="5062" vertical-scroll-proportion="0.4270073" vertical-offset="2736" max-vertical-offset="4392">
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -122,7 +122,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -143,6 +142,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,6 +156,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.happyFace.html">
     <configuration default="false" name="happyFace.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/HTML5_Canvas/happyFace.html">
@@ -168,6 +169,14 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -178,23 +187,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -268,18 +269,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781458" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2536349" sideWeight="0.49863014" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39569536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2536349" sideWeight="0.50136983" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25767368" sideWeight="0.49833888" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25767368" sideWeight="0.5016611" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -305,11 +306,33 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/olympicVillage.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="23" selection-start="4752" selection-end="4752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
+        <state line="9" column="9" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="522">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oldSchoolExample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="14" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="3096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/happyFace.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="22" selection-start="4844" selection-end="4844" vertical-scroll-proportion="0.0" vertical-offset="2736" max-vertical-offset="4392">
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/olympicVillage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="23" selection-start="4752" selection-end="4752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldSchoolExample.html">
@@ -333,28 +356,22 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2355" column="0" selection-start="38338" selection-end="38338" vertical-scroll-proportion="0.3321739" vertical-offset="42199" max-vertical-offset="68634">
-          <folding />
-        </state>
+        <state line="2355" column="0" selection-start="38338" selection-end="38338" vertical-scroll-proportion="0.3321739" vertical-offset="42199" max-vertical-offset="68634" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1170" column="35" selection-start="19677" selection-end="19677" vertical-scroll-proportion="0.3322785" vertical-offset="20850" max-vertical-offset="39240">
-          <folding />
-        </state>
+        <state line="1170" column="35" selection-start="19677" selection-end="19677" vertical-scroll-proportion="0.3322785" vertical-offset="20850" max-vertical-offset="39240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/olympicVillage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="23" selection-start="4752" selection-end="4752" vertical-scroll-proportion="0.27818182" vertical-offset="2043" max-vertical-offset="3420">
-          <folding />
-        </state>
+        <state line="122" column="23" selection-start="4752" selection-end="4752" vertical-scroll-proportion="0.27818182" vertical-offset="2043" max-vertical-offset="3420" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="113" selection-end="113" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="522">
+        <state line="9" column="9" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="522">
           <folding />
         </state>
       </provider>
@@ -368,7 +385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/happyFace.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="22" selection-start="4844" selection-end="4844" vertical-scroll-proportion="0.23151125" vertical-offset="2736" max-vertical-offset="4392">
+        <state line="165" column="12" selection-start="5062" selection-end="5062" vertical-scroll-proportion="0.4270073" vertical-offset="2736" max-vertical-offset="4392">
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
