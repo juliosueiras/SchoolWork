@@ -25,12 +25,59 @@
     <option name="FILTER_MARKED_AS_FIXED" value="false" />
     <option name="SHOW_CLOSE_PROMPT" value="true" />
     <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
-    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="false" />
+    <SELECTED_DEBUG_PROJECT id="project2" />
+    <SELECTED_DEBUG_PROJECT id="project1" />
+    <SELECTED_DEBUG_TYPE id="bt1" />
     <treeState key="project">
+      <expandedPath>
+        <pathElement>
+          <option name="myNodeId" value="project1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="project2" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+      </expandedPath>
       <selectedPath>
         <pathElement>
-          <option name="myNodeId" value="helperText" />
-          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.LinkedTextDescriptor" />
+          <option name="myNodeId" value="project1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="project2" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="bt1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.BuildTypeDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
+    <treeState key="selectConfigurations.debug">
+      <expandedPath>
+        <pathElement>
+          <option name="myNodeId" value="project1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="project2" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+      </expandedPath>
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="project1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="project2" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.ProjectDescriptor" />
+        </pathElement>
+        <pathElement>
+          <option name="myNodeId" value="bt1" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.BuildTypeDescriptor" />
         </pathElement>
       </selectedPath>
     </treeState>
@@ -38,10 +85,6 @@
   <component name="ChangeListManager">
     <list id="4845d365-96e4-4ce9-8ac9-0ddc91e51a0d" name="Default" comment="Java2-2 Finish the test cases&#10;" />
     <list default="true" id="089ed686-37b6-40d4-b0ec-8d0b598c4e1d" name="Java2-2 Finish the test cases" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/junit-4.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assignment_2.iml" afterPath="$PROJECT_DIR$/Assignment_2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Assignment_2.iws" />
@@ -116,7 +159,7 @@
     <splitter proportion="0.5" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Assignment_2$Run_All_Test.coverage" NAME="Run_All_Test Coverage Results" MODIFIED="1391924777991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Assignment_2$Run_All_Test.coverage" NAME="Run_All_Test Coverage Results" MODIFIED="1391926761509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>hero.*</FILTER>
       <FILTER>launch.*</FILTER>
       <FILTER>model.*</FILTER>
@@ -177,13 +220,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BatmanTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gameplay.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="342">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BatmanTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/hero/BatmanTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.1420765" vertical-offset="2" max-vertical-offset="5310">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="280" column="0" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0" vertical-offset="5040" max-vertical-offset="5310">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlashTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/hero/FlashTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strategist.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="1.13089" vertical-offset="0" max-vertical-offset="324">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -284,6 +352,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -359,7 +428,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,11 +437,11 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.applicationServers" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="SearchEverywhereHistory" value=";" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
@@ -386,6 +454,11 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -656,10 +729,11 @@
       <changelist id="089ed686-37b6-40d4-b0ec-8d0b598c4e1d" name="Java2-2 Finish the test cases" comment="Java2-2 Finish the test cases" />
       <created>1391920186767</created>
       <option name="issue" value="true" />
-      <updated>1391924375743</updated>
+      <updated>1391928416171</updated>
       <workItem from="1391924375800" duration="215000" />
       <workItem from="1391924618446" duration="380000" />
-      <workItem from="1391925024608" duration="277000" />
+      <workItem from="1391925024608" duration="6105000" />
+      <workItem from="1391985604394" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="Java2-2 Finish the test cases">
       <created>1391924524681</created>
@@ -681,7 +755,31 @@
       <created>1391924812514</created>
       <updated>1391924812514</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1391925314075</created>
+      <updated>1391925314075</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1391926222779</created>
+      <updated>1391926222779</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1391926349891</created>
+      <updated>1391926349891</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1391926390338</created>
+      <updated>1391926390338</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1391926551122</created>
+      <updated>1391926551122</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1391926703013</created>
+      <updated>1391926703013</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <option name="createBranch" value="false" />
     <servers>
       <YouTrack shared="false" url="http://localhost:8112">
@@ -701,7 +799,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19343000" />
+    <option name="totallyTimeSpent" value="25413000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -728,12 +826,13 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32781458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60264903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35218093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35218093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -744,17 +843,17 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6539735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UML Diagrams" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781458" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Graphical Navigator" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34652665" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -819,7 +918,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
+        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
@@ -833,7 +934,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512" />
+        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
@@ -875,7 +978,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
+        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
@@ -889,7 +994,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512" />
+        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
@@ -931,7 +1038,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
+        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
@@ -945,7 +1054,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1062" />
+        <state line="7" column="7" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1062">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
@@ -1039,12 +1150,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
+        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
@@ -1058,10 +1166,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/hero/BatmanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.1420765" vertical-offset="2" max-vertical-offset="5310">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="280" column="0" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0" vertical-offset="4946" max-vertical-offset="5310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/hero/FlashTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="1.13089" vertical-offset="0" max-vertical-offset="324">
+          <folding />
         </state>
       </provider>
     </entry>
