@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="All_Test_in_Assignment_2" type="JUnit" factoryName="JUnit">
-    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" track_test_folders="true" runner="idea">
+    <extension name="coverage" enabled="false" merge="false" track_test_folders="true" runner="idea">
       <pattern>
         <option name="PATTERN" value="test.*" />
         <option name="ENABLED" value="true" />
