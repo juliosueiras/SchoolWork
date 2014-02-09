@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_assignment_2" default="compile.module.assignment_2">
+  <dirname property="module.assignment_2.basedir" file="${ant.file.module_assignment_2}"/>
+  
+  <property name="module.jdk.home.assignment_2" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.assignment_2" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.assignment_2" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.assignment_2" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="assignment_2.output.dir" value="${module.assignment_2.basedir}/../../../compilerOutput/production/Assignment_2"/>
+  <property name="assignment_2.testoutput.dir" value="${module.assignment_2.basedir}/../../../compilerOutput/test/Assignment_2"/>
+  
+  <path id="assignment_2.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="assignment_2.module.production.classpath">
+    <path refid="${module.jdk.classpath.assignment_2}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  <path id="assignment_2.runtime.production.module.classpath">
+    <pathelement location="${assignment_2.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  <path id="assignment_2.module.classpath">
+    <path refid="${module.jdk.classpath.assignment_2}"/>
+    <pathelement location="${assignment_2.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  <path id="assignment_2.runtime.module.classpath">
+    <pathelement location="${assignment_2.testoutput.dir}"/>
+    <pathelement location="${assignment_2.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.assignment_2">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.assignment_2">
+    <patternset refid="excluded.from.module.assignment_2"/>
+  </patternset>
+  
+  <path id="assignment_2.module.sourcepath">
+    <dirset dir="${module.assignment_2.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  <path id="assignment_2.module.test.sourcepath">
+    <dirset dir="${module.assignment_2.basedir}">
+      <include name="test"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.assignment_2" depends="compile.module.assignment_2.production,compile.module.assignment_2.tests" description="Compile module Assignment_2"/>
+  
+  <target name="compile.module.assignment_2.production" depends="register.custom.compilers" description="Compile module Assignment_2; production classes">
+    <mkdir dir="${assignment_2.output.dir}"/>
+    <javac2 destdir="${assignment_2.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.assignment_2}/javac">
+      <compilerarg line="${compiler.args.assignment_2}"/>
+      <bootclasspath refid="assignment_2.module.bootclasspath"/>
+      <classpath refid="assignment_2.module.production.classpath"/>
+      <src refid="assignment_2.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.assignment_2"/>
+    </javac2>
+    
+    <copy todir="${assignment_2.output.dir}">
+      <fileset dir="${module.assignment_2.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.assignment_2.tests" depends="register.custom.compilers,compile.module.assignment_2.production" description="compile module Assignment_2; test classes" unless="skip.tests">
+    <mkdir dir="${assignment_2.testoutput.dir}"/>
+    <javac2 destdir="${assignment_2.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.assignment_2}/javac">
+      <compilerarg line="${compiler.args.assignment_2}"/>
+      <bootclasspath refid="assignment_2.module.bootclasspath"/>
+      <classpath refid="assignment_2.module.classpath"/>
+      <src refid="assignment_2.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.assignment_2"/>
+    </javac2>
+    
+    <copy todir="${assignment_2.testoutput.dir}">
+      <fileset dir="${module.assignment_2.basedir}/test">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.assignment_2" description="cleanup module">
+    <delete dir="${assignment_2.output.dir}"/>
+    <delete dir="${assignment_2.testoutput.dir}"/>
+  </target>
+</project>
