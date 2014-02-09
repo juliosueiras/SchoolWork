@@ -561,7 +561,7 @@
       <created>1391920186767</created>
       <option name="issue" value="true" />
       <updated>1391924375743</updated>
-      <workItem from="1391924375800" duration="174000" />
+      <workItem from="1391924375800" duration="183000" />
     </task>
     <task id="LOCAL-00001" summary="Java2-2 Finish the test cases">
       <created>1391924524681</created>
@@ -571,7 +571,11 @@
       <created>1391924544754</created>
       <updated>1391924544754</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Java2-2 Finish the test cases">
+      <created>1391924554660</created>
+      <updated>1391924554660</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <option name="createBranch" value="false" />
     <servers>
       <YouTrack shared="false" url="http://localhost:8112">
@@ -591,7 +595,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18645000" />
+    <option name="totallyTimeSpent" value="18654000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
