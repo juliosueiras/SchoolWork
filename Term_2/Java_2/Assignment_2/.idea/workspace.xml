@@ -38,7 +38,6 @@
   <component name="ChangeListManager">
     <list id="4845d365-96e4-4ce9-8ac9-0ddc91e51a0d" name="Default" comment="Java2-2 Finish the test cases&#10;" />
     <list default="true" id="089ed686-37b6-40d4-b0ec-8d0b598c4e1d" name="Java2-2 Finish the test cases" comment="Java2-2 Finish the test cases">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_All_Test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Assignment_2.iws" />
@@ -562,13 +561,17 @@
       <created>1391920186767</created>
       <option name="issue" value="true" />
       <updated>1391924375743</updated>
-      <workItem from="1391924375800" duration="161000" />
+      <workItem from="1391924375800" duration="174000" />
     </task>
     <task id="LOCAL-00001" summary="Java2-2 Finish the test cases">
       <created>1391924524681</created>
       <updated>1391924524682</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Java2-2 Finish the test cases">
+      <created>1391924544754</created>
+      <updated>1391924544754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <option name="createBranch" value="false" />
     <servers>
       <YouTrack shared="false" url="http://localhost:8112">
@@ -588,7 +591,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18632000" />
+    <option name="totallyTimeSpent" value="18645000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
