@@ -39,7 +39,7 @@
     </option>
     <envs />
     <dir value="$PROJECT_DIR$" />
-    <fork_mode value="method" />
+    <fork_mode value="class" />
     <patterns />
     <RunnerSettings RunnerId="Cover" />
     <ConfigurationWrapper RunnerId="Cover" />
