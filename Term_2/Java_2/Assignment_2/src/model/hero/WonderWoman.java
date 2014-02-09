@@ -13,6 +13,11 @@ public class WonderWoman extends Superhero implements Strategist,Brawler
     private boolean armed;
     private int mysticEnergy;
 
+    public WonderWoman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    {
+        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+    }
+
     /**
      * Deflect void.
      */

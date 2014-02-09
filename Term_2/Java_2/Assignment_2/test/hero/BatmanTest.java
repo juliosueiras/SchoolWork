@@ -1,35 +1,63 @@
-package test;
+package hero;
 
-import model.hero.Flash;
-import org.junit.Before;
+
 import org.junit.Test;
 
 /**
  * Created by julio on 2/8/14.
  */
-public class FlashTest
+public class BatmanTest
 {
-    @Before
-    public void setUp() throws Exception
-    {
-        Flash testFlashObject = new Flash(1,1,1,3,4,5,6,7,"Flash","",true,1,"Something",true,false);
-        testFlashObject.
-    }
-
     @Test
-    public void testCyclone() throws Exception
+    public void testNightVision() throws Exception
     {
 
     }
 
     @Test
-    public void testVibrate() throws Exception
+    public void testBlind() throws Exception
     {
 
     }
 
     @Test
-    public void testSupersonic() throws Exception
+    public void testThermalGrenade() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testIntimidate() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testSurprise() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testAnalyzeWeakness() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testCommand() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testBrawl() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testGrapple() throws Exception
     {
 
     }

@@ -1,31 +1,12 @@
-package test;
+package hero;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * Created by julio on 2/8/14.
  */
-public class SupermanTest extends TestCase
+public class GreenLanternTest
 {
-    @Test
-    public void testHeatVision() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testColdBreath() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testXRayVision() throws Exception
-    {
-
-    }
-
     @Test
     public void testFly() throws Exception
     {
@@ -33,25 +14,25 @@ public class SupermanTest extends TestCase
     }
 
     @Test
-    public void testBrawl() throws Exception
+    public void testShield() throws Exception
     {
 
     }
 
     @Test
-    public void testGrapple() throws Exception
+    public void testConstruct() throws Exception
     {
 
     }
 
     @Test
-    public void testDefend() throws Exception
+    public void testShoot() throws Exception
     {
 
     }
 
     @Test
-    public void testCrush() throws Exception
+    public void testBlastArea() throws Exception
     {
 
     }

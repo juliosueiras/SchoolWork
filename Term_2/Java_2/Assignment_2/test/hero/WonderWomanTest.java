@@ -1,38 +1,51 @@
-package test;
+package hero;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * Created by julio on 2/8/14.
  */
-public class GreenLanternTest
+public class WonderWomanTest extends TestCase
 {
     @Test
-    public void testFly() throws Exception
+    public void testDeflect() throws Exception
     {
 
     }
 
     @Test
-    public void testShield() throws Exception
+    public void testLasso() throws Exception
     {
 
     }
 
     @Test
-    public void testConstruct() throws Exception
+    public void testInterrogate() throws Exception
     {
 
     }
 
     @Test
-    public void testShoot() throws Exception
+    public void testAnalyzeWeakness() throws Exception
     {
 
     }
 
     @Test
-    public void testBlastArea() throws Exception
+    public void testCommand() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testBrawl() throws Exception
+    {
+
+    }
+
+    @Test
+    public void testGrapple() throws Exception
     {
 
     }

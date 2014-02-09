@@ -27,6 +27,10 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/Term_2/Java_2/Assignment_2/codeCoverageReport" />
+  </component>
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />
     <option name="effort" value="default" />
@@ -240,7 +244,7 @@
     <option name="OPTION_INCLUDE_LIBS" value="false" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
-    <output url="file://$USER_HOME$" />
+    <output url="file://$PROJECT_DIR$/compilerOutput" />
   </component>
   <component name="SuppressionsComponent">
     <option name="suppComments" value="[]" />

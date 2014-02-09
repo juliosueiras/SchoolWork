@@ -1,51 +1,78 @@
-package test;
+package hero;
 
-import junit.framework.TestCase;
-import org.junit.Test;
+import model.Avatar;
+import model.Superhero;
+import model.hero.Batman;
+import model.hero.Flash;
+
+import org.junit.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 /**
  * Created by julio on 2/8/14.
  */
-public class WonderWomanTest extends TestCase
+public class FlashTest
 {
+    Flash testFlashObject = new Flash(1, 1, 1, 3, 4, 5, 6, 7, "Flash", "", true, 1, "Something", true, false);
+    Avatar enemy = new Superhero(1, 1, 1, 1, 1, 1, 1, 1, "Test", "Enemy", true, 1, "Home town test");
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @Before
+    public void setUpStreams()
+    {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @After
+    public void cleanUpStreams()
+    {
+        System.setOut(null);
+    }
+
     @Test
-    public void testDeflect() throws Exception
+    public void testCyclone() throws Exception
+    {
+        testFlashObject.cyclone();
+        Assert.assertEquals("Cyclone method fail",outContent.toString() , "Flash use cyclone!\n");
+    }
+
+    @Test
+    public void testVibrate() throws Exception
+    {
+        testFlashObject.vibrate();
+        Assert.assertEquals("Vibrate method fail",outContent.toString() , "Flash use vibrate!\n");
+    }
+
+    @Test
+    public void testSupersonic() throws Exception
+    {
+        testFlashObject.supersonic();
+        Assert.assertEquals("Supersonic method fail",outContent.toString() , "Flash use supersonic!\n");
+    }
+
+    @Test
+    public void testStealthAttack() throws Exception
+    {
+        testFlashObject.stealthAttack(enemy);
+        Assert.assertEquals("Supersonic method fail",outContent.toString() ,"Flash use stealth attack on Test Enemy\n");
+    }
+
+    @Test
+    public void testEvade() throws Exception
     {
 
     }
 
     @Test
-    public void testLasso() throws Exception
+    public void testShoot() throws Exception
     {
 
     }
 
     @Test
-    public void testInterrogate() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testAnalyzeWeakness() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testCommand() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testBrawl() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGrapple() throws Exception
+    public void testBlastArea() throws Exception
     {
 
     }

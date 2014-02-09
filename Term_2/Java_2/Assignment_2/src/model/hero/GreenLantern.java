@@ -12,6 +12,11 @@ public class GreenLantern extends Superhero implements Shooter
     private int sector;
     private double ringCharge;
 
+    public GreenLantern(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    {
+        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+    }
+
     /**
      * Fly void.
      */

@@ -10,8 +10,13 @@ import model.interfaces.*;
  */
 public class Superman extends Superhero implements Tank, Brawler
 {
-    private Civilian girlfriend = new Civilian();
-    private Civilian friend = new Civilian();
+    private Civilian girlfriend = new Civilian(1,1,1,1,1,1,1,1,"","");
+    private Civilian friend = new Civilian(1,1,1,1,1,1,1,1,"","");
+
+    public Superman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    {
+        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+    }
 
     /**
      * Heat vision.

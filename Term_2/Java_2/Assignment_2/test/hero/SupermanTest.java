@@ -1,51 +1,33 @@
-package test;
+package hero;
 
-
+import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * Created by julio on 2/8/14.
  */
-public class BatmanTest
+public class SupermanTest extends TestCase
 {
     @Test
-    public void testNightVision() throws Exception
+    public void testHeatVision() throws Exception
     {
 
     }
 
     @Test
-    public void testBlind() throws Exception
+    public void testColdBreath() throws Exception
     {
 
     }
 
     @Test
-    public void testThermalGrenade() throws Exception
+    public void testXRayVision() throws Exception
     {
 
     }
 
     @Test
-    public void testIntimidate() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSurprise() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testAnalyzeWeakness() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testCommand() throws Exception
+    public void testFly() throws Exception
     {
 
     }
@@ -63,25 +45,13 @@ public class BatmanTest
     }
 
     @Test
-    public void testStealthAttack() throws Exception
+    public void testDefend() throws Exception
     {
 
     }
 
     @Test
-    public void testEvade() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testShoot() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testBlastArea() throws Exception
+    public void testCrush() throws Exception
     {
 
     }
