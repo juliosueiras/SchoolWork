@@ -15,7 +15,7 @@ import java.io.PrintStream;
  */
 public class FlashTest
 {
-    Flash testFlashObject = new Flash(1, 1, 1, 3, 4, 5, 6, 7, "Flash", "", true, 1, "Something", true, false);
+    Flash testFlashObject = new Flash(1, 1, 1, 3, 4, 5, 6, 7, "Flash", " ", true, 1, "Something", true, false);
     Avatar enemy = new Superhero(1, 1, 1, 1, 1, 1, 1, 1, "Test", "Enemy", true, 1, "Home town test");
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -62,192 +62,28 @@ public class FlashTest
     @Test
     public void testEvade() throws Exception
     {
-
+        Assert.assertFalse("Evade method fail",testFlashObject.evade());
     }
 
     @Test
     public void testShoot() throws Exception
     {
-
+        testFlashObject.shoot("weapon",enemy);
+        Assert.assertEquals("Shoot method fail",outContent.toString(),"Flash shoot Test Enemy with weapon\n");
     }
 
     @Test
     public void testBlastArea() throws Exception
     {
-
+        testFlashObject.blastArea();
+        Assert.assertEquals("Blast Area method fail",outContent.toString(),"Flash blasted the area away with his speed\n");
     }
 
     @Test
     public void testFight() throws Exception
     {
-
-    }
-
-    @Test
-    public void testIsSecretIdentity() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetSecretIdentity() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetEnergy() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetEnergy() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetHomeTown() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetHomeTown() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testFight1() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testFight2() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetFighting() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetFighting() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetAgility() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetAgility() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetStrength() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetStrength() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetReason() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetReason() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetEndurance() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetEndurance() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetIntuition() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetIntuition() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetPsyche() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetPsyche() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetFirstName() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetFirstName() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetLastName() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetLastName() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testGetHitPoints() throws Exception
-    {
-
-    }
-
-    @Test
-    public void testSetHitPoints() throws Exception
-    {
+        testFlashObject.fight(enemy);
+        Assert.assertEquals("Fight method fail",outContent.toString() ,"Flash fight Test Enemy with his speed punch\n");
 
     }
 }

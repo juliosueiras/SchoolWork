@@ -1,22 +1,49 @@
 package hero;
 
 
-import org.junit.Test;
+import model.Avatar;
+import model.Superhero;
+import model.hero.Batman;
+import model.hero.Flash;
+import org.junit.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 /**
  * Created by julio on 2/8/14.
  */
 public class BatmanTest
 {
+    Batman testBatmanObject = new Batman(1, 1, 1, 3, 4, 5, 6, 7, "Batman", " ", true, 1, "Something", true);
+    Avatar enemy = new Superhero(1, 1, 1, 1, 1, 1, 1, 1, "Test", "Enemy", true, 1, "Home town test");
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @Before
+    public void setUpStreams()
+    {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @After
+    public void cleanUpStreams()
+    {
+        System.setOut(null);
+    }
+
+
     @Test
     public void testNightVision() throws Exception
     {
-
+        testBatmanObject.nightVision();
+        Assert.assertEquals("Night Vision method fail",outContent.toString(),"Batman use night vision!\n");
     }
 
     @Test
     public void testBlind() throws Exception
     {
+        testBatmanObject.blind(enemy);
+        Assert.assertEquals("Blind method fail",outContent.toString(),"Batman use blind on Test Enemy\n");
 
     }
 

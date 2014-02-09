@@ -11,6 +11,8 @@ public abstract class Avatar
                 psyche,
                 hitPoints;
 
+    private String firstName,lastName;
+
     protected Avatar(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName)
     {
         this.fighting = fighting;
@@ -25,7 +27,7 @@ public abstract class Avatar
         this.lastName = lastName;
     }
 
-    private String firstName,lastName;
+
 
     public abstract void fight(Avatar avatarName);
 
