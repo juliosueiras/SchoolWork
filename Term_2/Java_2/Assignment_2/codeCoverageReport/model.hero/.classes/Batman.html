@@ -50,18 +50,18 @@
 </td>
 <td class="coverageStat">
   <span class="percent">
-    13.3%
+    20%
   </span>
   <span class="absValue">
-    (2/ 15)
+    (3/ 15)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    20%
+    29.4%
   </span>
   <span class="absValue">
-    (6/ 30)
+    (5/ 17)
   </span>
 </td>
 </tr>
@@ -89,105 +89,104 @@
 <i>15</i>&nbsp;    private boolean armed;
 <b class="fc"><i>16</i>&nbsp;    private Superhero sideKick = new Superhero(1,1,1,1,1,1,1,1,&quot;Robin&quot;,&quot;Sidekick&quot;,true,1,&quot;Gotham&quot;);</b>
 <i>17</i>&nbsp;
-<i>18</i>&nbsp;    public Batman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean armed, boolean sideKick)
+<i>18</i>&nbsp;    public Batman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean armed)
 <i>19</i>&nbsp;    {
 <b class="fc"><i>20</i>&nbsp;        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);</b>
 <b class="fc"><i>21</i>&nbsp;        this.armed = armed;</b>
-<i>22</i>&nbsp;        //this.sideKick = sideKick;
-<b class="fc"><i>23</i>&nbsp;    }</b>
-<i>24</i>&nbsp;
-<i>25</i>&nbsp;    public void nightVision()
-<i>26</i>&nbsp;    {
-<b class="fc"><i>27</i>&nbsp;        System.out.println(&quot;Batman use night vision!&quot;);</b>
-<b class="fc"><i>28</i>&nbsp;    }</b>
-<i>29</i>&nbsp;
-<i>30</i>&nbsp;    /***
-<i>31</i>&nbsp;     *
-<i>32</i>&nbsp;     * @param avatarName
-<i>33</i>&nbsp;     */
-<i>34</i>&nbsp;    public void blind(Avatar avatarName)
-<i>35</i>&nbsp;    {
-<b class="nc"><i>36</i>&nbsp;        System.out.println(&quot;Batman use blind on &quot; + avatarName);</b>
-<b class="nc"><i>37</i>&nbsp;    }</b>
-<i>38</i>&nbsp;
-<i>39</i>&nbsp;    /***
-<i>40</i>&nbsp;     *
-<i>41</i>&nbsp;     */
-<i>42</i>&nbsp;    public void thermalGrenade()
-<i>43</i>&nbsp;    {
-<b class="nc"><i>44</i>&nbsp;        System.out.println(&quot;Batman use thermal Grenade!&quot;);</b>
-<b class="nc"><i>45</i>&nbsp;    }</b>
-<i>46</i>&nbsp;
-<i>47</i>&nbsp;    public void intimidate(Avatar avatarName)
-<i>48</i>&nbsp;    {
-<b class="nc"><i>49</i>&nbsp;        System.out.println(&quot;Batman use intimidate on &quot; + avatarName);</b>
-<b class="nc"><i>50</i>&nbsp;    }</b>
-<i>51</i>&nbsp;
-<i>52</i>&nbsp;    public void surprise(Avatar avatarName)
-<i>53</i>&nbsp;    {
-<b class="nc"><i>54</i>&nbsp;        System.out.println(&quot;Batman use surprise on &quot; + avatarName);</b>
-<b class="nc"><i>55</i>&nbsp;    }</b>
-<i>56</i>&nbsp;
-<i>57</i>&nbsp;    @Override
-<i>58</i>&nbsp;    public void analyzeWeakness(Avatar avatarName)
-<i>59</i>&nbsp;    {
-<b class="nc"><i>60</i>&nbsp;        System.out.println(&quot;Batman use analyze weakness on&quot; + avatarName + &quot;, now Batman know all weakness&quot;);</b>
-<b class="nc"><i>61</i>&nbsp;    }</b>
-<i>62</i>&nbsp;
-<i>63</i>&nbsp;    @Override
-<i>64</i>&nbsp;    public boolean command(String strategy)
-<i>65</i>&nbsp;    {
-<b class="nc"><i>66</i>&nbsp;        return false;</b>
-<i>67</i>&nbsp;    }
-<i>68</i>&nbsp;
-<i>69</i>&nbsp;    @Override
-<i>70</i>&nbsp;    public void brawl(Avatar avatarName)
-<i>71</i>&nbsp;    {
-<b class="nc"><i>72</i>&nbsp;        System.out.println(&quot;Batman use brawl on &quot; + avatarName);</b>
-<b class="nc"><i>73</i>&nbsp;    }</b>
-<i>74</i>&nbsp;
-<i>75</i>&nbsp;    @Override
-<i>76</i>&nbsp;    public void grapple(Avatar avatarName)
-<i>77</i>&nbsp;    {
-<b class="nc"><i>78</i>&nbsp;        System.out.println(&quot;Batman use grapple on &quot; + avatarName);</b>
-<b class="nc"><i>79</i>&nbsp;    }</b>
-<i>80</i>&nbsp;
-<i>81</i>&nbsp;    @Override
-<i>82</i>&nbsp;    public void stealthAttack(Avatar avatarName)
-<i>83</i>&nbsp;    {
-<b class="nc"><i>84</i>&nbsp;        System.out.println(&quot;Batman use stealth attack on &quot; + avatarName);</b>
-<b class="nc"><i>85</i>&nbsp;    }</b>
-<i>86</i>&nbsp;
-<i>87</i>&nbsp;    @Override
-<i>88</i>&nbsp;    public boolean evade()
-<i>89</i>&nbsp;    {
-<b class="nc"><i>90</i>&nbsp;        return false;</b>
-<i>91</i>&nbsp;    }
-<i>92</i>&nbsp;
-<i>93</i>&nbsp;    @Override
-<i>94</i>&nbsp;    public void shoot(String weaponName, Avatar avatarName)
-<i>95</i>&nbsp;    {
-<b class="nc"><i>96</i>&nbsp;        System.out.println(&quot;Batman use &quot; + weaponName + &quot; on &quot; + avatarName);</b>
-<b class="nc"><i>97</i>&nbsp;    }</b>
-<i>98</i>&nbsp;
-<i>99</i>&nbsp;    @Override
-<i>100</i>&nbsp;    public void blastArea()
-<i>101</i>&nbsp;    {
-<b class="nc"><i>102</i>&nbsp;        System.out.println(&quot;Batman blast the area away with his power attack!&quot;);</b>
-<b class="nc"><i>103</i>&nbsp;    }</b>
-<i>104</i>&nbsp;
-<i>105</i>&nbsp;    @Override
-<i>106</i>&nbsp;    public void fight(Avatar avatarName)
-<i>107</i>&nbsp;    {
-<b class="nc"><i>108</i>&nbsp;        System.out.println(&quot;Batman attack &quot; + avatarName + &quot; with his takedown&quot;);</b>
-<b class="nc"><i>109</i>&nbsp;    }</b>
-<i>110</i>&nbsp;}
+<i>22</i>&nbsp;    }
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    public void nightVision()
+<i>25</i>&nbsp;    {
+<b class="fc"><i>26</i>&nbsp;        System.out.println(&quot;Batman use night vision!&quot;);</b>
+<i>27</i>&nbsp;    }
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;    /***
+<i>30</i>&nbsp;     *
+<i>31</i>&nbsp;     * @param avatarName
+<i>32</i>&nbsp;     */
+<i>33</i>&nbsp;    public void blind(Avatar avatarName)
+<i>34</i>&nbsp;    {
+<b class="fc"><i>35</i>&nbsp;        System.out.println(&quot;Batman use blind on &quot; + (avatarName.getFirstName() + &quot; &quot; + avatarName.getLastName()));</b>
+<i>36</i>&nbsp;    }
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    /***
+<i>39</i>&nbsp;     *
+<i>40</i>&nbsp;     */
+<i>41</i>&nbsp;    public void thermalGrenade()
+<i>42</i>&nbsp;    {
+<b class="nc"><i>43</i>&nbsp;        System.out.println(&quot;Batman use thermal Grenade!&quot;);</b>
+<i>44</i>&nbsp;    }
+<i>45</i>&nbsp;
+<i>46</i>&nbsp;    public void intimidate(Avatar avatarName)
+<i>47</i>&nbsp;    {
+<b class="nc"><i>48</i>&nbsp;        System.out.println(&quot;Batman use intimidate on &quot; + avatarName);</b>
+<i>49</i>&nbsp;    }
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;    public void surprise(Avatar avatarName)
+<i>52</i>&nbsp;    {
+<b class="nc"><i>53</i>&nbsp;        System.out.println(&quot;Batman use surprise on &quot; + avatarName);</b>
+<i>54</i>&nbsp;    }
+<i>55</i>&nbsp;
+<i>56</i>&nbsp;    @Override
+<i>57</i>&nbsp;    public void analyzeWeakness(Avatar avatarName)
+<i>58</i>&nbsp;    {
+<b class="nc"><i>59</i>&nbsp;        System.out.println(&quot;Batman use analyze weakness on&quot; + avatarName + &quot;, now Batman know all weakness&quot;);</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    @Override
+<i>63</i>&nbsp;    public boolean command(String strategy)
+<i>64</i>&nbsp;    {
+<b class="nc"><i>65</i>&nbsp;        return false;</b>
+<i>66</i>&nbsp;    }
+<i>67</i>&nbsp;
+<i>68</i>&nbsp;    @Override
+<i>69</i>&nbsp;    public void brawl(Avatar avatarName)
+<i>70</i>&nbsp;    {
+<b class="nc"><i>71</i>&nbsp;        System.out.println(&quot;Batman use brawl on &quot; + avatarName);</b>
+<i>72</i>&nbsp;    }
+<i>73</i>&nbsp;
+<i>74</i>&nbsp;    @Override
+<i>75</i>&nbsp;    public void grapple(Avatar avatarName)
+<i>76</i>&nbsp;    {
+<b class="nc"><i>77</i>&nbsp;        System.out.println(&quot;Batman use grapple on &quot; + avatarName);</b>
+<i>78</i>&nbsp;    }
+<i>79</i>&nbsp;
+<i>80</i>&nbsp;    @Override
+<i>81</i>&nbsp;    public void stealthAttack(Avatar avatarName)
+<i>82</i>&nbsp;    {
+<b class="nc"><i>83</i>&nbsp;        System.out.println(&quot;Batman use stealth attack on &quot; + avatarName);</b>
+<i>84</i>&nbsp;    }
+<i>85</i>&nbsp;
+<i>86</i>&nbsp;    @Override
+<i>87</i>&nbsp;    public boolean evade()
+<i>88</i>&nbsp;    {
+<b class="nc"><i>89</i>&nbsp;        return false;</b>
+<i>90</i>&nbsp;    }
+<i>91</i>&nbsp;
+<i>92</i>&nbsp;    @Override
+<i>93</i>&nbsp;    public void shoot(String weaponName, Avatar avatarName)
+<i>94</i>&nbsp;    {
+<b class="nc"><i>95</i>&nbsp;        System.out.println(&quot;Batman use &quot; + weaponName + &quot; on &quot; + avatarName);</b>
+<i>96</i>&nbsp;    }
+<i>97</i>&nbsp;
+<i>98</i>&nbsp;    @Override
+<i>99</i>&nbsp;    public void blastArea()
+<i>100</i>&nbsp;    {
+<b class="nc"><i>101</i>&nbsp;        System.out.println(&quot;Batman blast the area away with his power attack!&quot;);</b>
+<i>102</i>&nbsp;    }
+<i>103</i>&nbsp;
+<i>104</i>&nbsp;    @Override
+<i>105</i>&nbsp;    public void fight(Avatar avatarName)
+<i>106</i>&nbsp;    {
+<b class="nc"><i>107</i>&nbsp;        System.out.println(&quot;Batman attack &quot; + avatarName + &quot; with his takedown&quot;);</b>
+<i>108</i>&nbsp;    }
+<i>109</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-02-08 21:31</div>
+    <div style="float:right;">generated on 2014-02-09 18:22</div>
 </div>
 </body>
 </html>

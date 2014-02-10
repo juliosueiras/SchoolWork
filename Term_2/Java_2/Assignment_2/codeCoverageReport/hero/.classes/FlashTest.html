@@ -61,7 +61,7 @@
     100%
   </span>
   <span class="absValue">
-    (31/ 31)
+    (21/ 21)
   </span>
 </td>
 </tr>
@@ -97,61 +97,61 @@
 <i>23</i>&nbsp;    public void setUpStreams()
 <i>24</i>&nbsp;    {
 <b class="fc"><i>25</i>&nbsp;        System.setOut(new PrintStream(outContent));</b>
-<b class="fc"><i>26</i>&nbsp;    }</b>
+<i>26</i>&nbsp;    }
 <i>27</i>&nbsp;
 <i>28</i>&nbsp;    @After
 <i>29</i>&nbsp;    public void cleanUpStreams()
 <i>30</i>&nbsp;    {
 <b class="fc"><i>31</i>&nbsp;        System.setOut(null);</b>
-<b class="fc"><i>32</i>&nbsp;    }</b>
+<i>32</i>&nbsp;    }
 <i>33</i>&nbsp;
 <i>34</i>&nbsp;    @Test
 <i>35</i>&nbsp;    public void testCyclone() throws Exception
 <i>36</i>&nbsp;    {
 <b class="fc"><i>37</i>&nbsp;        testFlashObject.cyclone();</b>
 <b class="fc"><i>38</i>&nbsp;        Assert.assertEquals(&quot;Cyclone method fail&quot;,outContent.toString() , &quot;Flash use cyclone!\n&quot;);</b>
-<b class="fc"><i>39</i>&nbsp;    }</b>
+<i>39</i>&nbsp;    }
 <i>40</i>&nbsp;
 <i>41</i>&nbsp;    @Test
 <i>42</i>&nbsp;    public void testVibrate() throws Exception
 <i>43</i>&nbsp;    {
 <b class="fc"><i>44</i>&nbsp;        testFlashObject.vibrate();</b>
 <b class="fc"><i>45</i>&nbsp;        Assert.assertEquals(&quot;Vibrate method fail&quot;,outContent.toString() , &quot;Flash use vibrate!\n&quot;);</b>
-<b class="fc"><i>46</i>&nbsp;    }</b>
+<i>46</i>&nbsp;    }
 <i>47</i>&nbsp;
 <i>48</i>&nbsp;    @Test
 <i>49</i>&nbsp;    public void testSupersonic() throws Exception
 <i>50</i>&nbsp;    {
 <b class="fc"><i>51</i>&nbsp;        testFlashObject.supersonic();</b>
 <b class="fc"><i>52</i>&nbsp;        Assert.assertEquals(&quot;Supersonic method fail&quot;,outContent.toString() , &quot;Flash use supersonic!\n&quot;);</b>
-<b class="fc"><i>53</i>&nbsp;    }</b>
+<i>53</i>&nbsp;    }
 <i>54</i>&nbsp;
 <i>55</i>&nbsp;    @Test
 <i>56</i>&nbsp;    public void testStealthAttack() throws Exception
 <i>57</i>&nbsp;    {
 <b class="fc"><i>58</i>&nbsp;        testFlashObject.stealthAttack(enemy);</b>
 <b class="fc"><i>59</i>&nbsp;        Assert.assertEquals(&quot;Supersonic method fail&quot;,outContent.toString() ,&quot;Flash use stealth attack on Test Enemy\n&quot;);</b>
-<b class="fc"><i>60</i>&nbsp;    }</b>
+<i>60</i>&nbsp;    }
 <i>61</i>&nbsp;
 <i>62</i>&nbsp;    @Test
 <i>63</i>&nbsp;    public void testEvade() throws Exception
 <i>64</i>&nbsp;    {
 <b class="fc"><i>65</i>&nbsp;        Assert.assertFalse(&quot;Evade method fail&quot;,testFlashObject.evade());</b>
-<b class="fc"><i>66</i>&nbsp;    }</b>
+<i>66</i>&nbsp;    }
 <i>67</i>&nbsp;
 <i>68</i>&nbsp;    @Test
 <i>69</i>&nbsp;    public void testShoot() throws Exception
 <i>70</i>&nbsp;    {
 <b class="fc"><i>71</i>&nbsp;        testFlashObject.shoot(&quot;weapon&quot;,enemy);</b>
 <b class="fc"><i>72</i>&nbsp;        Assert.assertEquals(&quot;Shoot method fail&quot;,outContent.toString(),&quot;Flash shoot Test Enemy with weapon\n&quot;);</b>
-<b class="fc"><i>73</i>&nbsp;    }</b>
+<i>73</i>&nbsp;    }
 <i>74</i>&nbsp;
 <i>75</i>&nbsp;    @Test
 <i>76</i>&nbsp;    public void testBlastArea() throws Exception
 <i>77</i>&nbsp;    {
 <b class="fc"><i>78</i>&nbsp;        testFlashObject.blastArea();</b>
 <b class="fc"><i>79</i>&nbsp;        Assert.assertEquals(&quot;Blast Area method fail&quot;,outContent.toString(),&quot;Flash blasted the area away with his speed\n&quot;);</b>
-<b class="fc"><i>80</i>&nbsp;    }</b>
+<i>80</i>&nbsp;    }
 <i>81</i>&nbsp;
 <i>82</i>&nbsp;    @Test
 <i>83</i>&nbsp;    public void testFight() throws Exception
@@ -159,14 +159,14 @@
 <b class="fc"><i>85</i>&nbsp;        testFlashObject.fight(enemy);</b>
 <b class="fc"><i>86</i>&nbsp;        Assert.assertEquals(&quot;Fight method fail&quot;,outContent.toString() ,&quot;Flash fight Test Enemy with his speed punch\n&quot;);</b>
 <i>87</i>&nbsp;
-<b class="fc"><i>88</i>&nbsp;    }</b>
+<i>88</i>&nbsp;    }
 <i>89</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2014-02-08 21:31</div>
+    <div style="float:right;">generated on 2014-02-09 18:22</div>
 </div>
 </body>
 </html>

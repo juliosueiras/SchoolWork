@@ -85,6 +85,73 @@
   <component name="ChangeListManager">
     <list id="4845d365-96e4-4ce9-8ac9-0ddc91e51a0d" name="Default" comment="Java2-2 Finish the test cases&#10;" />
     <list default="true" id="089ed686-37b6-40d4-b0ec-8d0b598c4e1d" name="Java2-2 Finish the test cases" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Avatar.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Avatar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Batman.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Batman.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/BatmanTest.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/BatmanTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Civilian.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Civilian.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Flash.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Flash.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/FlashTest.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/FlashTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/.classes/Gameplay.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/.classes/Gameplay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launch/Gameplay.java" afterPath="$PROJECT_DIR$/src/launch/Gameplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/GreenLantern.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/GreenLantern.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/GreenLanternTest.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/GreenLanternTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Superhero.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Superhero.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Superman.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Superman.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/SupermanTest.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/SupermanTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Villain.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Villain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/WonderWoman.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/WonderWoman.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/WonderWomanTest.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/WonderWomanTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_BLOCK.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_BLOCK.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_BLOCK.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_BLOCK.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_BLOCK.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_BLOCK.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_BLOCK_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_BLOCK_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_BLOCK_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_BLOCK_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_BLOCK_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_BLOCK_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_CLASS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_CLASS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_CLASS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_CLASS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_CLASS.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_CLASS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_CLASS_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_CLASS_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_CLASS_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_CLASS_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_CLASS_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_CLASS_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_LINE.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_LINE.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_LINE.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_LINE.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_LINE.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_LINE.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_LINE_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_LINE_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_LINE_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_LINE_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_LINE_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_LINE_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_METHOD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_METHOD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_METHOD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_METHOD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_METHOD.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_METHOD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_METHOD_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_METHOD_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_METHOD_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_METHOD_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_METHOD_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_METHOD_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_NAME_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_NAME_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_NAME_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_NAME_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_NAME_DESC.html" afterPath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_NAME_DESC.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Assignment_2.iws" />
@@ -159,7 +226,7 @@
     <splitter proportion="0.5" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Assignment_2$Run_All_Test.coverage" NAME="Run_All_Test Coverage Results" MODIFIED="1391926761509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Assignment_2$Run_All_Test.coverage" NAME="Run_All_Test Coverage Results" MODIFIED="1391988137180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>hero.*</FILTER>
       <FILTER>launch.*</FILTER>
       <FILTER>model.*</FILTER>
@@ -220,19 +287,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gameplay.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
+      <file leaf-file-name="Avatar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Avatar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="342">
-              <folding />
+            <state line="5" column="11" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2538">
+              <folding>
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1039#1040#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#1140#1141#0" expanded="true" />
+                <element signature="e#1162#1163#0" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1354#1355#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1424#1425#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
+                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1679#1680#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="e#1787#1788#0" expanded="true" />
+                <element signature="e#1823#1824#0" expanded="true" />
+                <element signature="e#1863#1864#0" expanded="true" />
+                <element signature="e#1895#1896#0" expanded="true" />
+                <element signature="e#1949#1950#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+                <element signature="e#2030#2031#0" expanded="true" />
+                <element signature="e#2061#2062#0" expanded="true" />
+                <element signature="e#2113#2114#0" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#2222#2223#0" expanded="true" />
+                <element signature="e#2273#2274#0" expanded="true" />
+                <element signature="e#2315#2316#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BatmanTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/hero/BatmanTest.java">
+      <file leaf-file-name="Gameplay.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="0" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0" vertical-offset="5040" max-vertical-offset="5310">
+            <state line="9" column="34" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strategist.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
               <folding />
             </state>
           </provider>
@@ -241,17 +360,59 @@
       <file leaf-file-name="FlashTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/hero/FlashTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1710">
+            <state line="19" column="43" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1710">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Strategist.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
+      <file leaf-file-name="Flash.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/hero/Flash.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="1.13089" vertical-offset="0" max-vertical-offset="324">
+            <state line="25" column="0" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1332">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WonderWomanTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/hero/WonderWomanTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="197" column="16" selection-start="2476" selection-end="2476" vertical-scroll-proportion="0.0" vertical-offset="3403" max-vertical-offset="4158">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Superhero.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="114" selection-start="167" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1062">
+              <folding>
+                <element signature="e#644#645#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+                <element signature="e#1012#1013#0" expanded="true" />
+                <element signature="e#1064#1065#0" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BatmanTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/hero/BatmanTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="36" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="5310">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -286,10 +447,8 @@
         <option value="$PROJECT_DIR$/src/model/interfaces/Brawler.java" />
         <option value="$PROJECT_DIR$/src/model/interfaces/Shooter.java" />
         <option value="$PROJECT_DIR$/src/model/interfaces/MartialArtist.java" />
-        <option value="$PROJECT_DIR$/src/model/Avatar.java" />
         <option value="$PROJECT_DIR$/src/model/Superheroes.java" />
         <option value="$PROJECT_DIR$/src/model/Superheroe.java" />
-        <option value="$PROJECT_DIR$/src/model/Superhero.java" />
         <option value="$PROJECT_DIR$/src/model/Villains.java" />
         <option value="$PROJECT_DIR$/src/model/Villain.java" />
         <option value="$PROJECT_DIR$/src/model/Civilians.java" />
@@ -300,6 +459,10 @@
         <option value="$PROJECT_DIR$/src/model/hero/WonderWoman.java" />
         <option value="$PROJECT_DIR$/src/model/hero/Flash.java" />
         <option value="$PROJECT_DIR$/src/model/hero/Batman.java" />
+        <option value="$PROJECT_DIR$/src/model/AvatarBuilder.java" />
+        <option value="$PROJECT_DIR$/src/launch/Gameplay.java" />
+        <option value="$PROJECT_DIR$/src/model/Avatar.java" />
+        <option value="$PROJECT_DIR$/src/model/Superhero.java" />
       </list>
     </option>
   </component>
@@ -447,7 +610,7 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.10.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/codeCoverageReport" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
@@ -733,7 +896,7 @@
       <workItem from="1391924375800" duration="215000" />
       <workItem from="1391924618446" duration="380000" />
       <workItem from="1391925024608" duration="6105000" />
-      <workItem from="1391985604394" duration="242000" />
+      <workItem from="1391985604394" duration="4827000" />
     </task>
     <task id="LOCAL-00001" summary="Java2-2 Finish the test cases">
       <created>1391924524681</created>
@@ -799,7 +962,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25413000" />
+    <option name="totallyTimeSpent" value="29998000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -823,42 +986,42 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1280" height="739" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60264903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2807309" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35218093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2358643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2358643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6539735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UML Diagrams" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Graphical Navigator" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39938557" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -891,6 +1054,69 @@
     <option name="showOnlyWarnings" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/model/hero/GreenLantern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="3" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1278" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/interfaces/MartialArtist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="11" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/hero/Flash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1332" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2070">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1062">
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Tank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="288" />
@@ -927,7 +1153,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2070">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -947,67 +1173,20 @@
     <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Tank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Shooter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hero/GreenLantern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="3" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1278" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/interfaces/MartialArtist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hero/Flash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1332" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2070">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1062">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +1226,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="6" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1854">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1067,7 +1246,20 @@
     <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="792">
-          <folding />
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,11 +1288,6 @@
         <state line="10" column="15" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Avatar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Villain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="20" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
@@ -1109,13 +1296,6 @@
     <entry file="file://$PROJECT_DIR$/src/model/Civilian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="21" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
@@ -1143,11 +1323,6 @@
         <state line="7" column="11" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hero/Flash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1332" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
@@ -1159,36 +1334,122 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="5" selection-start="812" selection-end="812" vertical-scroll-proportion="0.15789473" vertical-offset="378" max-vertical-offset="2070">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/hero/BatmanTest.java">
+    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="0" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0" vertical-offset="4946" max-vertical-offset="5310">
+        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="406">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/hero/FlashTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1566">
+        <state line="19" column="43" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1710">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/hero/WonderWomanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="16" selection-start="2476" selection-end="2476" vertical-scroll-proportion="0.0" vertical-offset="3403" max-vertical-offset="4158">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/hero/Flash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="114" selection-start="167" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1062">
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
+        <state line="9" column="34" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Avatar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="1.13089" vertical-offset="0" max-vertical-offset="324">
-          <folding />
+        <state line="5" column="11" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2538">
+          <folding>
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1679#1680#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1863#1864#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#1949#1950#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2030#2031#0" expanded="true" />
+            <element signature="e#2061#2062#0" expanded="true" />
+            <element signature="e#2113#2114#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <element signature="e#2273#2274#0" expanded="true" />
+            <element signature="e#2315#2316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/hero/BatmanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="36" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="5310">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
