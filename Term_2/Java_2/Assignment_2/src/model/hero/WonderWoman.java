@@ -1,21 +1,75 @@
 package model.hero;
 
 import model.Avatar;
+import model.PointSystem;
 import model.Superhero;
 import model.interfaces.*;
 
-
 /**
- * Created by julio on 2/6/14.
+ * The type Wonder woman.
  */
-public class WonderWoman extends Superhero implements Strategist,Brawler
+public class WonderWoman extends Superhero implements Strategist, Brawler
 {
     private boolean armed;
     private int mysticEnergy;
 
-    public WonderWoman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    /**
+     * Instantiates a new Wonder woman.
+     *
+     * @param inputPoints    the input points
+     * @param firstName      the first name
+     * @param lastName       the last name
+     * @param secretIdentity the secret identity
+     * @param energy         the energy
+     * @param homeTown       the home town
+     * @param armed          the armed
+     * @param mysticEnergy   the mystic energy
+     */
+    public WonderWoman(PointSystem inputPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean armed, int mysticEnergy)
     {
-        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        super(inputPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        this.armed = armed;
+        this.mysticEnergy = mysticEnergy;
+    }
+
+    /**
+     * Gets mystic energy.
+     *
+     * @return the mystic energy
+     */
+    public int getMysticEnergy()
+    {
+        return mysticEnergy;
+    }
+
+    /**
+     * Sets mystic energy.
+     *
+     * @param mysticEnergy the mystic energy
+     */
+    public void setMysticEnergy(int mysticEnergy)
+    {
+        this.mysticEnergy = mysticEnergy;
+    }
+
+    /**
+     * Is armed.
+     *
+     * @return the boolean
+     */
+    public boolean isArmed()
+    {
+        return armed;
+    }
+
+    /**
+     * Sets armed.
+     *
+     * @param armed the armed
+     */
+    public void setArmed(boolean armed)
+    {
+        this.armed = armed;
     }
 
     /**
@@ -55,6 +109,7 @@ public class WonderWoman extends Superhero implements Strategist,Brawler
     @Override
     public boolean command(String strategy)
     {
+        System.out.println("Wonder Woman fail to do " + strategy + " command");
         return false;
     }
 

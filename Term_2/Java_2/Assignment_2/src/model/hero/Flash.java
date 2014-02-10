@@ -1,37 +1,98 @@
 package model.hero;
 
 import model.Avatar;
+import model.PointSystem;
 import model.Superhero;
 import model.interfaces.MartialArtist;
 import model.interfaces.Shooter;
 
-import java.util.Arrays;
 
 /**
- * Created by julio on 2/6/14.
+ * Flash:a superhero with greate speed
  */
 public class Flash extends Superhero implements MartialArtist, Shooter
 {
-    private boolean invisible,
-                    intangible;
+    private boolean invisible;
+    private boolean intangible;
 
-    public Flash(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean invisible, boolean intangible)
+    /**
+     * create new Flash.
+     *
+     * @param pointSystem    the point system
+     * @param firstName      the first name
+     * @param lastName       the last name
+     * @param secretIdentity the secret identity
+     * @param energy         the energy
+     * @param homeTown       the home town
+     * @param invisible      the invisible
+     * @param intangible     the intangible
+     */
+    public Flash(PointSystem pointSystem, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean invisible, boolean intangible)
     {
-        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        super(pointSystem, firstName, lastName, secretIdentity, energy, homeTown);
         this.invisible = invisible;
         this.intangible = intangible;
     }
 
+    /**
+     * Is intangible.
+     *
+     * @return the boolean
+     */
+    public boolean isIntangible()
+    {
+        return intangible;
+    }
+
+    /**
+     * Sets intangible.
+     *
+     * @param intangible the intangible
+     */
+    public void setIntangible(boolean intangible)
+    {
+        this.intangible = intangible;
+    }
+
+    /**
+     * Is invisible.
+     *
+     * @return the boolean
+     */
+    public boolean isInvisible()
+    {
+        return invisible;
+    }
+
+    /**
+     * Sets invisible.
+     *
+     * @param invisible the invisible
+     */
+    public void setInvisible(boolean invisible)
+    {
+        this.invisible = invisible;
+    }
+
+    /**
+     * Cyclone void.
+     */
     public void cyclone()
     {
         System.out.println("Flash use cyclone!");
     }
 
+    /**
+     * Vibrate void.
+     */
     public void vibrate()
     {
         System.out.println("Flash use vibrate!");
     }
 
+    /**
+     * Supersonic void.
+     */
     public void supersonic()
     {
         System.out.println("Flash use supersonic!");
@@ -46,7 +107,8 @@ public class Flash extends Superhero implements MartialArtist, Shooter
     @Override
     public boolean evade()
     {
-        return false;
+        System.out.println("Flash evaded");
+        return true;
     }
 
     @Override

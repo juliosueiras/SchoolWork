@@ -1,24 +1,80 @@
 package model.hero;
 
 import model.Avatar;
+import model.PointSystem;
 import model.Superhero;
 import model.interfaces.Shooter;
 
+
 /**
- * Created by julio on 2/6/14.
+ * Green Lantern: the superhero with the green ring to construct object
  */
 public class GreenLantern extends Superhero implements Shooter
 {
     private int sector;
     private double ringCharge;
 
-    public GreenLantern(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    /**
+     * create Green lantern.
+     *
+     * @param inputPoints    the points system
+     * @param firstName      the first name
+     * @param lastName       the last name
+     * @param secretIdentity the secret identity
+     * @param energy         the energy
+     * @param homeTown       the home town
+     * @param sector         the sector
+     * @param ringCharge     the ring charge
+     */
+    public GreenLantern(PointSystem inputPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, int sector, double ringCharge)
     {
-        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        super(inputPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        this.sector = sector;
+        this.ringCharge = ringCharge;
     }
 
     /**
-     * Fly void.
+     * Gets sector.
+     *
+     * @return the sector
+     */
+    public int getSector()
+    {
+        return sector;
+    }
+
+    /**
+     * Sets sector.
+     *
+     * @param sector the sector
+     */
+    public void setSector(int sector)
+    {
+        this.sector = sector;
+    }
+
+    /**
+     * Gets ring charge.
+     *
+     * @return the ring charge
+     */
+    public double getRingCharge()
+    {
+        return ringCharge;
+    }
+
+    /**
+     * Sets ring charge.
+     *
+     * @param ringCharge the ring charge
+     */
+    public void setRingCharge(double ringCharge)
+    {
+        this.ringCharge = ringCharge;
+    }
+
+    /**
+     * make Green Lantern Fly
      */
     public void fly()
     {
@@ -26,7 +82,7 @@ public class GreenLantern extends Superhero implements Shooter
     }
 
     /**
-     * Shield void.
+     * make green lantern use shield to protect himself
      *
      * @param avatarName the enemy name
      */
@@ -36,15 +92,15 @@ public class GreenLantern extends Superhero implements Shooter
     }
 
     /**
-     * Construct void.
+     * make green lantern construct something with his ring
      *
-     * @param constructObject the construct object
+     * @param constructObject the object that green lantern is going to construct
      */
     public void construct(String constructObject)
     {
         System.out.println("Green lantern have construct " + constructObject + " with his ring");
     }
-    
+
     @Override
     public void shoot(String weaponName, Avatar avatarName)
     {
@@ -54,7 +110,7 @@ public class GreenLantern extends Superhero implements Shooter
     @Override
     public void blastArea()
     {
-        System.out.println("Green blasted the area away!");
+        System.out.println("Green Lantern blasted the area away!");
     }
 
     @Override

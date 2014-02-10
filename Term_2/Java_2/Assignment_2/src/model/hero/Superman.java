@@ -2,42 +2,79 @@ package model.hero;
 
 import model.Avatar;
 import model.Civilian;
+import model.PointSystem;
 import model.Superhero;
 import model.interfaces.*;
 
 /**
- * Created by julio on 2/6/14.
+ * Superman: greatest superhero
  */
 public class Superman extends Superhero implements Tank, Brawler
 {
-    private Civilian girlfriend = new Civilian(1,1,1,1,1,1,1,1,"","");
-    private Civilian friend = new Civilian(1,1,1,1,1,1,1,1,"","");
+    private Civilian girlfriend;
+    private Civilian friend;
 
     /**
-     * Instantiates a new Superman.
+     * create new Superman.
      *
-     * @param fighting the fighting
-     * @param agility the agility
-     * @param strength the strength
-     * @param endurance the endurance
-     * @param reason the reason
-     * @param intuition the intuition
-     * @param psyche the psyche
-     * @param hitPoints the hit points
-     * @param firstName the first name
-     * @param lastName the last name
+     * @param inputPoints    the input points
+     * @param firstName      the first name
+     * @param lastName       the last name
      * @param secretIdentity the secret identity
-     * @param energy the energy
-     * @param homeTown the home town
+     * @param energy         the energy
+     * @param homeTown       the home town
+     * @param girlfriend     the girlfriend
+     * @param friend         the friend
      */
-    public Superman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
+    public Superman(PointSystem inputPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, Civilian girlfriend, Civilian friend)
     {
-        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        super(inputPoints, firstName, lastName, secretIdentity, energy, homeTown);
+        this.girlfriend = girlfriend;
+        this.friend = friend;
+    }
+
+    /**
+     * Gets friend.
+     *
+     * @return the friend
+     */
+    public Civilian getFriend()
+    {
+        return friend;
+    }
+
+    /**
+     * Sets friend.
+     *
+     * @param friend the friend
+     */
+    public void setFriend(Civilian friend)
+    {
+        this.friend = friend;
+    }
+
+    /**
+     * Gets girlfriend.
+     *
+     * @return the girlfriend
+     */
+    public Civilian getGirlfriend()
+    {
+        return girlfriend;
+    }
+
+    /**
+     * Sets girlfriend.
+     *
+     * @param girlfriend the girlfriend
+     */
+    public void setGirlfriend(Civilian girlfriend)
+    {
+        this.girlfriend = girlfriend;
     }
 
     /**
      * Heat vision.
-     *
      */
     public void heatVision()
     {
@@ -61,7 +98,7 @@ public class Superman extends Superhero implements Tank, Brawler
     }
 
     /**
-     * Fly void.
+     * Fly
      */
     public void fly()
     {
@@ -77,7 +114,7 @@ public class Superman extends Superhero implements Tank, Brawler
     @Override
     public void grapple(Avatar avatarName)
     {
-        System.out.println("Superman grapple" + avatarName);
+        System.out.println("Superman grapple " + avatarName);
     }
 
     @Override

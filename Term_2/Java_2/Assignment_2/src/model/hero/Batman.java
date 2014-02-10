@@ -1,42 +1,38 @@
 package model.hero;
 
 import model.Avatar;
+import model.PointSystem;
 import model.Superhero;
 import model.interfaces.*;
 
 
 /**
- * Created by julio on 2/6/14.
+ * Batman: the superhero with no power
  */
 public class Batman extends Superhero implements Strategist, Shooter,MartialArtist,Brawler
 {
 
     private boolean armed;
+
     private Superhero sideKick;
 
     /**
-     * Instantiates a new Batman.
+     * create new Batman.
      *
-     * @param fighting the fighting
-     * @param agility the agility
-     * @param strength the strength
-     * @param endurance the endurance
-     * @param reason the reason
-     * @param intuition the intuition
-     * @param psyche the psyche
-     * @param hitPoints the hit points
+     * @param inputPoints the input points
      * @param firstName the first name
      * @param lastName the last name
      * @param secretIdentity the secret identity
      * @param energy the energy
      * @param homeTown the home town
+     * @param sideKick the side kick
      * @param armed the armed
      */
-    public Batman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean armed, Superhero sideKick)
+    public Batman(PointSystem inputPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, Superhero sideKick, boolean armed)
     {
-        super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
-        this.armed = armed;
+        super(inputPoints, firstName, lastName, secretIdentity, energy, homeTown);
         this.sideKick = sideKick;
+        this.armed = armed;
     }
 
     /**
@@ -77,7 +73,7 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
     /**
      * Surprise void.
      *
-     * @param avatarName the avatar name
+     * @param avatarName the enemy name
      */
     public void surprise(Avatar avatarName)
     {
@@ -93,7 +89,7 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
     @Override
     public boolean command(String strategy)
     {
-        System.out.println("Batman fail to command");
+        System.out.println("Batman fail to do " + strategy + " command");
         return false;
     }
 
@@ -118,7 +114,8 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
     @Override
     public boolean evade()
     {
-        return false;
+        System.out.println("Batman have evaded!");
+        return true;
     }
 
     @Override
@@ -137,5 +134,45 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
     public void fight(Avatar avatarName)
     {
         System.out.println("Batman attack " + avatarName + " with his takedown");
+    }
+
+    /**
+     * Gets side kick.
+     *
+     * @return the side kick
+     */
+    public Superhero getSideKick()
+    {
+        return sideKick;
+    }
+
+    /**
+     * Sets side kick.
+     *
+     * @param sideKick the side kick
+     */
+    public void setSideKick(Superhero sideKick)
+    {
+        this.sideKick = sideKick;
+    }
+
+    /**
+     * Is armed.
+     *
+     * @return the boolean
+     */
+    public boolean isArmed()
+    {
+        return armed;
+    }
+
+    /**
+     * Sets armed.
+     *
+     * @param armed the armed
+     */
+    public void setArmed(boolean armed)
+    {
+        this.armed = armed;
     }
 }

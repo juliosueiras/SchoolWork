@@ -243,11 +243,19 @@
     <option name="OPEN_IN_BROWSER" value="true" />
     <option name="OPTION_INCLUDE_LIBS" value="false" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SuppressionsComponent">
     <option name="suppComments" value="[]" />
+  </component>
+  <component name="UMLDiagramComponent">
+    <diagram name="hero">
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="model.hero.Batman" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="launch.Gameplay" />
+      <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="model.Avatar" />
+      <compartment-visibility />
+    </diagram>
   </component>
 </project>
 
