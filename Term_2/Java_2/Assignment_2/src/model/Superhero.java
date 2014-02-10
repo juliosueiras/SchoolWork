@@ -46,6 +46,12 @@ public class Superhero extends Avatar
 
 
     @Override
+    public String toString()
+    {
+        return this.getClass().getSimpleName();
+    }
+
+    @Override
     public void fight(Avatar avatarName)
     {
 

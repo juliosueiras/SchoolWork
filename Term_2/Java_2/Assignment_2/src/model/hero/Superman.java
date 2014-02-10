@@ -13,6 +13,23 @@ public class Superman extends Superhero implements Tank, Brawler
     private Civilian girlfriend = new Civilian(1,1,1,1,1,1,1,1,"","");
     private Civilian friend = new Civilian(1,1,1,1,1,1,1,1,"","");
 
+    /**
+     * Instantiates a new Superman.
+     *
+     * @param fighting the fighting
+     * @param agility the agility
+     * @param strength the strength
+     * @param endurance the endurance
+     * @param reason the reason
+     * @param intuition the intuition
+     * @param psyche the psyche
+     * @param hitPoints the hit points
+     * @param firstName the first name
+     * @param lastName the last name
+     * @param secretIdentity the secret identity
+     * @param energy the energy
+     * @param homeTown the home town
+     */
     public Superman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown)
     {
         super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);

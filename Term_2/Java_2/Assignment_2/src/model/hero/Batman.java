@@ -12,7 +12,7 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
 {
 
     private boolean armed;
-    private Superhero sideKick = new Superhero(1,1,1,1,1,1,1,1,"Robin","Sidekick",true,1,"Gotham");
+    private Superhero sideKick;
 
     /**
      * Instantiates a new Batman.
@@ -32,10 +32,11 @@ public class Batman extends Superhero implements Strategist, Shooter,MartialArti
      * @param homeTown the home town
      * @param armed the armed
      */
-    public Batman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean armed)
+    public Batman(int fighting, int agility, int strength, int endurance, int reason, int intuition, int psyche, int hitPoints, String firstName, String lastName, boolean secretIdentity, int energy, String homeTown, boolean armed, Superhero sideKick)
     {
         super(fighting, agility, strength, endurance, reason, intuition, psyche, hitPoints, firstName, lastName, secretIdentity, energy, homeTown);
         this.armed = armed;
+        this.sideKick = sideKick;
     }
 
     /**

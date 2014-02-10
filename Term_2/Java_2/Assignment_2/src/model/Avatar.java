@@ -5,11 +5,7 @@ public abstract class Avatar
     private int fighting;
     private int agility;
 
-    @Override
-    public String toString()
-    {
-        return this.getFirstName() + " " + this.getLastName();
-    }
+
 
     private int strength;
     private int endurance;
@@ -138,5 +134,10 @@ public abstract class Avatar
         this.hitPoints = hitPoints;
     }
 
+    @Override
+    public String toString()
+    {
+        return this.getClass().getSimpleName();
+    }
 
 }

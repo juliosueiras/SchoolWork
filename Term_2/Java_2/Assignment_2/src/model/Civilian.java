@@ -35,4 +35,10 @@ public class Civilian extends Avatar
     {
 
     }
+
+    @Override
+    public String toString()
+    {
+        return this.getFirstName() + " " + this.getLastName();
+    }
 }
