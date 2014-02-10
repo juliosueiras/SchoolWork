@@ -40,7 +40,7 @@ public class Flash extends Superhero implements MartialArtist, Shooter
     @Override
     public void stealthAttack(Avatar avatarName)
     {
-        System.out.println("Flash use stealth attack on " + avatarName.getFirstName() + " " + avatarName.getLastName());
+        System.out.println("Flash use stealth attack on " + avatarName);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class Flash extends Superhero implements MartialArtist, Shooter
     @Override
     public void shoot(String weaponName, Avatar avatarName)
     {
-            System.out.println("Flash shoot " + (avatarName.getFirstName() + " " + avatarName.getLastName()) + " with " + weaponName);
+            System.out.println("Flash shoot " + avatarName + " with " + weaponName);
     }
 
     @Override
@@ -63,6 +63,6 @@ public class Flash extends Superhero implements MartialArtist, Shooter
     @Override
     public void fight(Avatar avatarName)
     {
-        System.out.println("Flash fight " + (avatarName.getFirstName() + " " + avatarName.getLastName()) + " with his speed punch");
+        System.out.println("Flash fight " + avatarName + " with his speed punch");
     }
 }

@@ -2,14 +2,21 @@ package model;
 
 public abstract class Avatar
 {
-    private int fighting,
-                agility,
-                strength,
-                endurance,
-                reason,
-                intuition,
-                psyche,
-                hitPoints;
+    private int fighting;
+    private int agility;
+
+    @Override
+    public String toString()
+    {
+        return this.getFirstName() + " " + this.getLastName();
+    }
+
+    private int strength;
+    private int endurance;
+    private int reason;
+    private int intuition;
+    private int psyche;
+    private int hitPoints;
 
     private String firstName,lastName;
 
