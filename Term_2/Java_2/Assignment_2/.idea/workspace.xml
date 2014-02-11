@@ -82,108 +82,10 @@
   <component name="ChangeListManager">
     <list id="4845d365-96e4-4ce9-8ac9-0ddc91e51a0d" name="Default" comment="Java2-2 Finish the test cases&#10;" />
     <list default="true" id="089ed686-37b6-40d4-b0ec-8d0b598c4e1d" name="Java2-2 Finish the test cases" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/PointSystem.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/.css/coverage.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/.img/arrowDown.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/.img/arrowUp.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/BatmanTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/FlashTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/GreenLanternTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/SupermanTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/.classes/WonderWomanTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_BLOCK.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_BLOCK_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_CLASS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_CLASS_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_LINE.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_LINE_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_METHOD.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_METHOD_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/hero/index_SORT_BY_NAME_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_BLOCK.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_BLOCK_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_CLASS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_CLASS_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_LINE.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_LINE_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_METHOD.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_METHOD_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/index_SORT_BY_NAME_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/.classes/Gameplay.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_BLOCK.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_BLOCK_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_CLASS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_CLASS_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_LINE.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_LINE_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_METHOD.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_METHOD_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/launch/index_SORT_BY_NAME_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Batman.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Flash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/GreenLantern.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/Superman.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/.classes/WonderWoman.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_BLOCK.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_BLOCK_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_CLASS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_CLASS_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_LINE.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_LINE_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_METHOD.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_METHOD_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model.hero/index_SORT_BY_NAME_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Avatar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Civilian.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Superhero.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/.classes/Villain.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_BLOCK.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_BLOCK_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_CLASS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_CLASS_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_LINE.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_LINE_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_METHOD.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_METHOD_DESC.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codeCoverageReport/model/index_SORT_BY_NAME_DESC.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/Avatar.class" afterPath="$PROJECT_DIR$/build/classes/model/Avatar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/hero/Batman.class" afterPath="$PROJECT_DIR$/build/classes/model/hero/Batman.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/interfaces/Brawler.class" afterPath="$PROJECT_DIR$/build/classes/model/interfaces/Brawler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/Civilian.class" afterPath="$PROJECT_DIR$/build/classes/model/Civilian.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/hero/Flash.class" afterPath="$PROJECT_DIR$/build/classes/model/hero/Flash.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/launch/Gameplay.class" afterPath="$PROJECT_DIR$/build/classes/launch/Gameplay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/hero/GreenLantern.class" afterPath="$PROJECT_DIR$/build/classes/model/hero/GreenLantern.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/interfaces/MartialArtist.class" afterPath="$PROJECT_DIR$/build/classes/model/interfaces/MartialArtist.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/interfaces/Shooter.class" afterPath="$PROJECT_DIR$/build/classes/model/interfaces/Shooter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/interfaces/Strategist.class" afterPath="$PROJECT_DIR$/build/classes/model/interfaces/Strategist.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/Superhero.class" afterPath="$PROJECT_DIR$/build/classes/model/Superhero.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/hero/Superman.class" afterPath="$PROJECT_DIR$/build/classes/model/hero/Superman.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/interfaces/Tank.class" afterPath="$PROJECT_DIR$/build/classes/model/interfaces/Tank.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/Villain.class" afterPath="$PROJECT_DIR$/build/classes/model/Villain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/model/hero/WonderWoman.class" afterPath="$PROJECT_DIR$/build/classes/model/hero/WonderWoman.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../.gitignore" afterPath="$PROJECT_DIR$/../../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assignment_2.iml" afterPath="$PROJECT_DIR$/Assignment_2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/hero/Batman.java" afterPath="$PROJECT_DIR$/src/model/hero/Batman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/interfaces/Brawler.java" afterPath="$PROJECT_DIR$/src/model/interfaces/Brawler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Civilian.java" afterPath="$PROJECT_DIR$/src/model/Civilian.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/hero/Flash.java" afterPath="$PROJECT_DIR$/src/model/hero/Flash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launch/Gameplay.java" afterPath="$PROJECT_DIR$/src/launch/Gameplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/hero/GreenLantern.java" afterPath="$PROJECT_DIR$/src/model/hero/GreenLantern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/interfaces/MartialArtist.java" afterPath="$PROJECT_DIR$/src/model/interfaces/MartialArtist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/interfaces/Shooter.java" afterPath="$PROJECT_DIR$/src/model/interfaces/Shooter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/interfaces/Strategist.java" afterPath="$PROJECT_DIR$/src/model/interfaces/Strategist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Superhero.java" afterPath="$PROJECT_DIR$/src/model/Superhero.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/hero/Superman.java" afterPath="$PROJECT_DIR$/src/model/hero/Superman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/interfaces/Tank.java" afterPath="$PROJECT_DIR$/src/model/interfaces/Tank.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Villain.java" afterPath="$PROJECT_DIR$/src/model/Villain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/hero/WonderWoman.java" afterPath="$PROJECT_DIR$/src/model/hero/WonderWoman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/.netbeans_automatic_build" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/.netbeans_update_resources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/classes/model/PointSystem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codeCoverageReport/model/.classes/PointSystem.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Assignment_2.iws" />
@@ -199,8 +101,8 @@
     <loadPerTestData>true</loadPerTestData>
     <filteredHighlight>-4144960</filteredHighlight>
     <relativeInitString>false</relativeInitString>
-    <lastProjectConfigTabSelected>0</lastProjectConfigTabSelected>
     <buildWithClover>true</buildWithClover>
+    <lastProjectConfigTabSelected>0</lastProjectConfigTabSelected>
     <periodicRefresh>false</periodicRefresh>
     <notCoveredStripe>-65536</notCoveredStripe>
     <projectRebuild class="com.atlassian.clover.idea.config.ProjectRebuild">ASK</projectRebuild>
@@ -209,8 +111,8 @@
     <alwaysExpandTestClasses>false</alwaysExpandTestClasses>
     <languageLevel>1.8 - lambda functions, virtual extension methods.</languageLevel>
     <manualInitString null="true" />
-    <flushInterval>5000</flushInterval>
     <autoRefreshInterval>2000</autoRefreshInterval>
+    <flushInterval>5000</flushInterval>
     <showInline>true</showInline>
     <showSummaryInToolwindow>true</showSummaryInToolwindow>
     <autoRefresh>true</autoRefresh>
@@ -220,8 +122,8 @@
     <alwaysCollapseTestClasses>false</alwaysCollapseTestClasses>
     <excludes null="true" />
     <filteredStripe>-12566464</filteredStripe>
-    <calculateTestCoverage>true</calculateTestCoverage>
     <instrumentTests>true</instrumentTests>
+    <calculateTestCoverage>true</calculateTestCoverage>
     <outOfDateHighlight>-32</outOfDateHighlight>
     <notCoveredHighlight>-341816</notCoveredHighlight>
     <hideFullyCovered>false</hideFullyCovered>
@@ -235,8 +137,8 @@
     <autoScroll>true</autoScroll>
     <useGeneratedInitString>true</useGeneratedInitString>
     <showGutter>true</showGutter>
-    <testCaseLayout class="com.atlassian.clover.idea.config.TestCaseLayout">TEST_CASES</testCaseLayout>
     <dumpInstrumentedSources>false</dumpInstrumentedSources>
+    <testCaseLayout class="com.atlassian.clover.idea.config.TestCaseLayout">TEST_CASES</testCaseLayout>
     <failedCoveredStripe>-14336</failedCoveredStripe>
     <regexpContexts class="java.util.ArrayList" />
     <autoScrollFromSource>false</autoScrollFromSource>
@@ -328,10 +230,8 @@
       <file leaf-file-name="Batman.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="4" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="3096">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="30" column="4" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="3312">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -339,10 +239,8 @@
       <file leaf-file-name="Gameplay.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="10" column="23" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1728">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -350,29 +248,26 @@
       <file leaf-file-name="Villain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Villain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="14" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="1242">
+            <state line="24" column="14" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1458">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheet.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="stylesheet.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/javadoc/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="13" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.62068963" vertical-offset="1278" max-vertical-offset="8640">
+            <state line="78" column="13" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="8640">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Avatar.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Avatar.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/Avatar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="0" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0" vertical-offset="1687" max-vertical-offset="3726">
-              <folding>
-                <element signature="e#2309#2310#0" expanded="true" />
-                <element signature="e#2336#2337#0" expanded="true" />
-              </folding>
+            <state line="216" column="0" selection-start="3744" selection-end="3744" vertical-scroll-proportion="2.2025316" vertical-offset="2448" max-vertical-offset="3672">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -380,7 +275,7 @@
       <file leaf-file-name="Flash.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/hero/Flash.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="2160">
+            <state line="12" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2448">
               <folding />
             </state>
           </provider>
@@ -389,7 +284,7 @@
       <file leaf-file-name="PointSystem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/PointSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1836">
+            <state line="9" column="23" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2268">
               <folding />
             </state>
           </provider>
@@ -407,12 +302,12 @@
                 <node x="0.0" y="353.0">model.Superhero</node>
                 <node x="745.0" y="632.0">netscape</node>
                 <node x="0.0" y="968.0">junit</node>
-                <node x="373.0" y="895.0">oracle</node>
                 <node x="799.0" y="968.0">org</node>
-                <node x="0.0" y="895.0">META-INF</node>
+                <node x="373.0" y="895.0">oracle</node>
                 <node x="547.0" y="895.0">javafx</node>
-                <node x="0.0" y="632.0">model.PointSystem</node>
+                <node x="0.0" y="895.0">META-INF</node>
                 <node x="483.0" y="968.0">sun</node>
+                <node x="0.0" y="632.0">model.PointSystem</node>
                 <node x="0.0" y="1041.0">junit3.8.1</node>
                 <node x="860.75" y="559.0">model.hero</node>
                 <node x="1496.0" y="417.0">model.interfaces</node>
@@ -422,8 +317,8 @@
                 <node x="323.0" y="968.0">java</node>
                 <node x="547.0" y="374.0">model.Villain</node>
                 <node x="641.0" y="968.0">bsh</node>
-                <node x="508.5" y="0.0">model.Avatar</node>
                 <node x="532.0" y="632.0">launch.Gameplay</node>
+                <node x="508.5" y="0.0">model.Avatar</node>
               </nodes>
               <notes />
               <edges>
@@ -456,14 +351,16 @@
                   <point x="0.0" y="14.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.9" x="567.6666666666667" y="150.66666666666669" />
-              <SelectedNodes />
+              <settings layout="Hierarchic Group" zoom="0.9" x="568.0" y="151.0" />
+              <SelectedNodes>
+                <node>classes</node>
+              </SelectedNodes>
               <Categories>
-                <Category>Fields</Category>
                 <Category>Constructors</Category>
+                <Category>Fields</Category>
                 <Category>Methods</Category>
-                <Category>Properties</Category>
                 <Category>Inner Classes</Category>
+                <Category>Properties</Category>
               </Categories>
               <SCOPE>All</SCOPE>
               <VISIBILITY>private</VISIBILITY>
@@ -474,7 +371,7 @@
       <file leaf-file-name="Civilian.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Civilian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1296">
+            <state line="5" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1512">
               <folding />
             </state>
           </provider>
@@ -539,10 +436,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="29" />
-    <option name="width" value="1282" />
-    <option name="height" value="745" />
+    <option name="width" value="1280" />
+    <option name="height" value="739" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -588,6 +484,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Java2-2 Finish the test cases">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -648,17 +555,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Java2-2 Finish the test cases">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1028,7 +924,8 @@
       <workItem from="1392052263625" duration="4285000" />
       <workItem from="1392056731161" duration="1329000" />
       <workItem from="1392058085784" duration="8831000" />
-      <workItem from="1392069930540" duration="569000" />
+      <workItem from="1392069930540" duration="915000" />
+      <workItem from="1392130680325" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="Java2-2 Finish the test cases">
       <created>1391924524681</created>
@@ -1086,7 +983,11 @@
       <created>1392070537427</created>
       <updated>1392070537427</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;">
+      <created>1392070632025</created>
+      <updated>1392070632025</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <option name="createBranch" value="false" />
     <servers>
       <YouTrack shared="false" url="http://localhost:8112">
@@ -1106,7 +1007,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53121000" />
+    <option name="totallyTimeSpent" value="54265000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1129,11 +1030,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="29" width="1282" height="745" extended-state="6" />
+    <frame x="0" y="29" width="1280" height="739" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5232558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52491695" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1141,33 +1042,33 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35218093" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5017422" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.49913344" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23021002" sideWeight="0.4947735" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22940226" sideWeight="0.493007" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18604651" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.49913344" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6528239" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UML Diagrams" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32956383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3820598" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23021002" sideWeight="0.5052265" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22940226" sideWeight="0.5034965" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Graphical Navigator" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.49825785" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Graphical Navigator" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32883242" sideWeight="0.49825785" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32956383" sideWeight="0.5017422" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1185,6 +1086,7 @@
     <MESSAGE value="Java2-2 Finish the test cases" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;Term_2/Java_2/Assignment_2/.idea/workspace.xml&#10;&#10;" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1212,8 +1114,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1062">
           <folding>
-            <element signature="e#1711#1712#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1779#1780#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1245,25 +1147,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <folding />
-        </state>
+        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2070">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512">
-          <folding />
-        </state>
+        <state line="7" column="3" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1512" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
@@ -1275,8 +1171,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1062">
           <folding>
-            <element signature="e#1711#1712#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1779#1780#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1308,25 +1204,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <folding />
-        </state>
+        <state line="7" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="6" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1854">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1062">
-          <folding />
-        </state>
+        <state line="7" column="7" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1062" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
@@ -1338,8 +1228,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="22" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="792">
           <folding>
-            <element signature="e#1711#1712#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1779#1780#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1421,66 +1311,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/Superman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="4" selection-start="2708" selection-end="2708" vertical-scroll-proportion="0.892562" vertical-offset="1800" max-vertical-offset="2304">
-          <folding />
-        </state>
+        <state line="128" column="4" selection-start="2708" selection-end="2708" vertical-scroll-proportion="0.892562" vertical-offset="1800" max-vertical-offset="2304" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/GreenLantern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="2834" selection-end="2834" vertical-scroll-proportion="0.8863636" vertical-offset="1656" max-vertical-offset="2016">
-          <folding />
-        </state>
+        <state line="120" column="0" selection-start="2834" selection-end="2834" vertical-scroll-proportion="0.8863636" vertical-offset="1656" max-vertical-offset="2016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Strategist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="289" selection-end="289" vertical-scroll-proportion="0.5198556" vertical-offset="162" max-vertical-offset="540">
-          <folding />
-        </state>
+        <state line="17" column="31" selection-start="289" selection-end="289" vertical-scroll-proportion="0.5198556" vertical-offset="162" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/MartialArtist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.48160535" vertical-offset="126" max-vertical-offset="522">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.48160535" vertical-offset="126" max-vertical-offset="522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Shooter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="244" selection-end="244" vertical-scroll-proportion="0.32441473" vertical-offset="155" max-vertical-offset="504">
-          <folding />
-        </state>
+        <state line="14" column="7" selection-start="244" selection-end="244" vertical-scroll-proportion="0.32441473" vertical-offset="155" max-vertical-offset="504" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Brawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.18060201" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.18060201" vertical-offset="0" max-vertical-offset="522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/interfaces/Tank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.7826087" vertical-offset="180" max-vertical-offset="540">
-          <folding />
-        </state>
+        <state line="23" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.7826087" vertical-offset="180" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/hero/WonderWoman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="2232">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="2232" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Superhero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="55" selection-start="1974" selection-end="1974" vertical-scroll-proportion="2.6903915" vertical-offset="0" max-vertical-offset="1674">
           <folding>
-            <element signature="e#1711#1712#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1779#1780#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1502,14 +1376,14 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="243.5" y="109.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="244.0" y="109.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Fields</Category>
             <Category>Constructors</Category>
+            <Category>Fields</Category>
             <Category>Methods</Category>
-            <Category>Properties</Category>
             <Category>Inner Classes</Category>
+            <Category>Properties</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -1534,12 +1408,12 @@
             <node x="0.0" y="353.0">model.Superhero</node>
             <node x="745.0" y="632.0">netscape</node>
             <node x="0.0" y="968.0">junit</node>
-            <node x="373.0" y="895.0">oracle</node>
             <node x="799.0" y="968.0">org</node>
-            <node x="0.0" y="895.0">META-INF</node>
+            <node x="373.0" y="895.0">oracle</node>
             <node x="547.0" y="895.0">javafx</node>
-            <node x="0.0" y="632.0">model.PointSystem</node>
+            <node x="0.0" y="895.0">META-INF</node>
             <node x="483.0" y="968.0">sun</node>
+            <node x="0.0" y="632.0">model.PointSystem</node>
             <node x="0.0" y="1041.0">junit3.8.1</node>
             <node x="860.75" y="559.0">model.hero</node>
             <node x="1496.0" y="417.0">model.interfaces</node>
@@ -1549,8 +1423,8 @@
             <node x="323.0" y="968.0">java</node>
             <node x="547.0" y="374.0">model.Villain</node>
             <node x="641.0" y="968.0">bsh</node>
-            <node x="508.5" y="0.0">model.Avatar</node>
             <node x="532.0" y="632.0">launch.Gameplay</node>
+            <node x="508.5" y="0.0">model.Avatar</node>
           </nodes>
           <notes />
           <edges>
@@ -1583,27 +1457,19 @@
               <point x="0.0" y="14.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.9" x="567.6666666666667" y="150.66666666666669" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="0.9" x="568.0" y="151.0" />
+          <SelectedNodes>
+            <node>classes</node>
+          </SelectedNodes>
           <Categories>
-            <Category>Fields</Category>
             <Category>Constructors</Category>
+            <Category>Fields</Category>
             <Category>Methods</Category>
-            <Category>Properties</Category>
             <Category>Inner Classes</Category>
+            <Category>Properties</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Avatar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0" vertical-offset="1687" max-vertical-offset="3726">
-          <folding>
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#2336#2337#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1617,31 +1483,34 @@
     <entry file="file://$PROJECT_DIR$/src/model/hero/Batman.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="4" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="3096">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/launch/Gameplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="10" column="23" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Villain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="1242">
+        <state line="24" column="14" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="1242">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/javadoc/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="13" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.62068963" vertical-offset="1278" max-vertical-offset="8640">
+        <state line="78" column="13" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="8640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Avatar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="0" selection-start="3744" selection-end="3744" vertical-scroll-proportion="2.2025316" vertical-offset="2448" max-vertical-offset="3672">
           <folding />
         </state>
       </provider>
