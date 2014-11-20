@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="finalProjectMaven-ear:ear">
+    <output-path>$PROJECT_DIR$/finalProjectMaven-ear/target</output-path>
+    <root id="archive" name="finalProjectMaven-ear-1.0-SNAPSHOT.ear">
+      <element id="artifact" artifact-name="finalProjectMaven-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>
