@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: pricing.RentalFormValidatorTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE!
-initializationError(pricing.RentalFormValidatorTest)  Time elapsed: 0.001 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec <<< FAILURE!
+initializationError(pricing.RentalFormValidatorTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.Exception: Method testIsCustomerNull should have no parameters
 	at org.junit.runners.model.FrameworkMethod.validatePublicVoidNoArg(FrameworkMethod.java:69)
 	at org.junit.runners.ParentRunner.validatePublicVoidNoArgMethods(ParentRunner.java:131)
